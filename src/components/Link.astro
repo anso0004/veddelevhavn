@@ -2,16 +2,18 @@
 // Henter parametrene fra Astro.props
 const { href = "#", target = "_self", variant = "", size = "", hover = "", press = "", showIcon = true } = Astro.props;
 
-const linkClasses = "text-m_button lg:text-d_button font-opensans";
+const linkClasses = "";
 
 const variantClasses = {
-  primary: "bg-yellow-300 text-neutral-950 rounded-full lg:py-xs py-2xs px-m",
-  secondary: "bg-green-700  text-neutral-50 rounded-full lg:py-xs py-2xs px-m ",
-  tertiary: "text-neutral-950 rounded-full",
+  primary: "bg-yellow-300 text-neutral-950 rounded-full lg:py-xs py-2xs px-m text-m_button lg:text-d_button font-opensans",
+  secondary: "bg-green-700  text-neutral-50 rounded-full lg:py-xs py-2xs px-m text-m_button lg:text-d_button font-opensans ",
+  tertiary: "text-neutral-950 text-m_button lg:text-d_button font-opensans",
+  menupunkt: "text-neutral-950 lg:text-d_menupunkt text-m_menupunkt font-monsterrat",
+  undermenupunkt: "text-neutral-50 lg:text-d_menupunkt text-m_menupunkt font-monsterrat",
 };
 
 const sizeClasses = {
-  null: "w-fit flex items-center",
+  null: "w-fit",
   small: "w-fit flex items-center gap-m",
   large: "w-fit lg:py-xs lg:px-m flex items-center gap-5xl",
 };
@@ -27,10 +29,6 @@ const pressClasses = {
   secondary: "active:bg-green-800 hover:scale-105 transition-transform",
   tertiary: "",
 };
-
-// const ikonClasses ={
-//     ikon=""
-// }
 ---
 
 <a href={href} class="" target={target}>
@@ -45,5 +43,3 @@ const pressClasses = {
     }
   </div>
 </a>
-
-<!-- <img src="/public/pil.svg" alt="Mail" class="w-4 h-4" /> -->
