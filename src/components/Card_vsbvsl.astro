@@ -1,0 +1,15 @@
+---
+const { url = "#", overskrift = "", tekst = "" } = Astro.props;
+---
+
+<article class="my-11xl @container card bg-brown-100 px-l py-ml rounded-10">
+  <a href={url}>
+    <section class="flex flex-col gap-ml">
+      <div class="flex flex-col gap-m">
+        <h4 class="text-center text-m_h4 font-montserrat">{overskrift}</h4>
+        <p class="text-m_p font-opensans">{tekst}</p>
+      </div>
+      <p class="text-right text-m_button font-montserrat">Læs mere om sejlklubben</p>
+    </section>
+  </a>
+</article>
