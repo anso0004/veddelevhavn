@@ -3,14 +3,18 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Card_vsbvsl from "../components/Card_vsbvsl.astro";
+import Card_faciliteter from "../components/Card_faciliteter.astro";
 import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Titel">
-  <article class="px-5xl">
+  <article class="my-10xl mx-5xl">
     <div class="grid grid-cols-2 gap-10">
       <Card_vsbvsl url="" overskrift="VSB" tekst="Her skal teksten stå" />
       <Card_vsbvsl url="" overskrift="VSL" tekst="Her skal teksten stå" />
     </div>
+  </article>
+  <article class="my-10xl mx-5xl">
+    <Card_faciliteter icon="public/ikoner/bad.svg" iconalt="ikon af bad" overskrift="Bad og toilet" tekst="Her står der tekst." />
   </article>
 </MainLayout>
