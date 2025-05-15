@@ -5,7 +5,7 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
-  /* Primitives - Design */
+  /* Color */
   --color-green-50: rgba(246, 248, 247, 1);
   --color-green-100: rgba(222, 233, 231, 1);
   --color-green-200: rgba(188, 211, 205, 1);
@@ -50,14 +50,20 @@
   --color-neutral-800: rgba(99, 99, 99, 1);
   --color-neutral-900: rgba(48, 48, 48, 1);
   --color-neutral-950: rgba(26, 26, 26, 1);
-  --border_radius-7: 7px;
   --color-transparent: rgba(217, 217, 217, 0);
-  --border_radius-10: 10px;
-  --border_radius-15: 15px;
   --color-correct-primary: rgba(86, 185, 67, 1);
+  --color-baggrund-primary: rgba(255, 253, 249, 1);
+  --color-blue-primary: rgba(0, 15, 199, 1);
+  --color-error-primary: rgba(231, 66, 66, 1);
+  /* Borderradius */
+  --radius-5: 5px;
+  --radius-7: 7px;
+  --radius-10: 10px;
+  --radius-15: 15px;
+  --radius-full: 999px;
+  /* Spacing */
   --spacing-null: 0px;
   --spacing-4xs: 1px;
-  --border_radius-full: 999px;
   --spacing-3xs: 2px;
   --spacing-2xs: 4px;
   --spacing-xs: 8px;
@@ -86,13 +92,10 @@
   --spacing-18xl: 256px;
   --spacing-19xl: 272px;
   --spacing-20xl: 327px;
+  /* Border */
   --border-1: 1px;
   --border-7: 7px;
   --border-2: 2px;
-  --border_radius-5: 5px;
-  --color-baggrund-primary: rgba(255, 253, 249, 1);
-  --color-blue-primary: rgba(0, 15, 199, 1);
-  --color-error-primary: rgba(231, 66, 66, 1);
 }
 
 @layer base {
