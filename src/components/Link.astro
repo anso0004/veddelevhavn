@@ -1,5 +1,27 @@
 ---
 // Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const { href = "#", target = "_self", variant = "", size = "" } = Astro.props;
+
+const variantClasses = {
+  primary: "bg-yellow-400 text-neutral-50 rounded-full",
+  secondary: "bg-green-700  text-neutral-50 rounded-full",
+  tertiary: "text-neutral-950 rounded-full",
+};
+
+const sizeClasses = {
+  small: "w-fit w-3xl",
+  medium: "w-fit w-xl",
+  large: "w-fit py-xs px-m",
+};
+
+const hoverClasses = {
+  default: "",
+  hover: "bg-yellow-500",
+  press: "",
+  disabled: "",
+};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a href={href} class="" target={target}>
+  <div class:list={[variantClasses[variant], sizeClasses[size], "flex items-center gap-5xl"]}><slot /> <img src="/public/pil.svg" alt="Mail" class="w-4 h-4" /></div>
+</a>
