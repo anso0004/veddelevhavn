@@ -1,8 +1,8 @@
 ---
 // Henter parametrene fra Astro.props
-const { href = "#", target = "_self", variant = "", size = "", hover = "", press = "" } = Astro.props;
+const { href = "#", target = "_self", variant = "", size = "", hover = "", press = "", showIcon = true } = Astro.props;
 
-const linkClasses = "text-m_button lg:text-d_button";
+const linkClasses = "text-m_button lg:text-d_button font-opensans";
 
 const variantClasses = {
   primary: "bg-yellow-300 text-neutral-950 rounded-full lg:py-xs py-2xs px-m",
@@ -11,7 +11,7 @@ const variantClasses = {
 };
 
 const sizeClasses = {
-  null: "w-fit flex items-center gap-m",
+  null: "w-fit flex items-center",
   small: "w-fit flex items-center gap-m",
   large: "w-fit lg:py-xs lg:px-m flex items-center gap-5xl",
 };
@@ -27,14 +27,22 @@ const pressClasses = {
   secondary: "active:bg-green-800 hover:scale-105 transition-transform",
   tertiary: "",
 };
+
+// const ikonClasses ={
+//     ikon=""
+// }
 ---
 
 <a href={href} class="" target={target}>
   <div class:list={[linkClasses, variantClasses[variant], sizeClasses[size], hoverClasses[hover], pressClasses[press]]}>
     <slot />
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-    </svg>
+    {
+      showIcon && (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      )
+    }
   </div>
 </a>
 

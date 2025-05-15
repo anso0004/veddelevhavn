@@ -2,21 +2,19 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Formular_full from "../components/Formular_full.astro";
 ---
 
 <MainLayout title="Titel">
   <article class="">
-    <div class="bg-yellow-400 rounded-15 py-13xl">
-      <p>haliofofofo</p>
-    </div>
-    <h1 class="text-d_display font-montserrat">Sejlklub siden</h1>
-    <Button>Klik!</Button>
     <!-- <p>Link til <Link href="https://www.kea.dk" target="_blank" variant="primary">En anden side</Link></p> -->
     <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary">primary small</Link>
     <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary">primary large</Link>
     <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary">secondary small</Link>
     <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary">secondary large</Link>
     <Link href="#" target="_blank" variant="secondary" size="large" hover="secondary" press="secondary">Link der skal være secondary</Link>
-    <Link href="#" target="_blank" variant="tertiary" size="null" hover="tertiary">Link der skal være secondary</Link>
+    <Link href="#" target="_blank" variant="tertiary" size="null" hover="tertiary" showIcon={false}>Link der skal være secondary</Link>
   </article>
+
+  <Formular_full navn="Andersen" />
 </MainLayout>

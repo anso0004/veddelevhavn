@@ -1,0 +1,14 @@
+---
+const { navn = "", alder = "" } = Astro.props;
+---
+
+<form class="space-y-xl" name="sejlklubben" netlify>
+  <div class="flex flex-col gap-2xs">
+    <label class="text-d_h8" for="fuldenavn">Fuldenavn:</label>
+    <input class="border-none bg-brown-100 lg:rounded-15 py-s px-sm" id="fornavn" name="fornavn" type="text" placeholder="Anders Andersen" />
+  </div>
+  <div class="flex flex-col gap-2xs">
+    <label class="text-p font-bold" for="tel">Telefon nummer</label>
+    <input class="border-none" id="telefon" name="telefon" type="tel" placeholder="+45 12 34 56 78" />
+  </div>
+</form>
