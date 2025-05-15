@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import icon_telefon from "../assets/icons/telefon.svg";
+import icon_email from "../assets/icons/mail.svg";
+const { navn = "", telefonnummer = "", email = "" } = Astro.props;
+---
+
+<article class="space-y-3xs">
+  <p class="text-m_p lg:text-d_p font-opensans">{navn}</p>
+  <div class="flex gap-m">
+    <Image src={icon_telefon} alt="Ikon telefon" />
+    <p class="text-m_p lg:text-d_p font-opensans">{telefonnummer}</p>
+  </div>
+  <div class="flex gap-m">
+    <Image src={icon_email} alt="Ikon email" />
+    <p class="text-m_p lg:text-d_p font-opensans">{email}</p>
+  </div>
+</article>

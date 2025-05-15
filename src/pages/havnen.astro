@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Card_vsbvsl from "../components/Card_vsbvsl.astro";
 import Card_faciliteter from "../components/Card_faciliteter.astro";
+import Card_kontakt from "../components/Card_kontakt.astro";
 import { Image } from "astro:assets";
 ---
 
@@ -16,5 +17,20 @@ import { Image } from "astro:assets";
   </article>
   <article class="my-10xl mx-5xl">
     <Card_faciliteter icon="public/ikoner/bad.svg" iconalt="ikon af bad" overskrift="Bad og toilet" tekst="Her står der tekst." />
+  </article>
+  <article class="my-10xl mx-5xl grid grid-cols-3 gap-5">
+    <Card_kontakt overskrift="Large" navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+    <Card_kontakt overskrift="Large" navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+    <Card_kontakt overskrift="Large" navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+  </article>
+  <article class="my-10xl mx-5xl grid grid-cols-3 gap-5">
+    <Card_kontakt overskrift="Medium" navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+    <Card_kontakt overskrift="Medium" navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+    <Card_kontakt overskrift="Medium" navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+  </article>
+  <article class="my-10xl mx-5xl grid grid-cols-3 gap-5">
+    <Card_kontakt overskrift="Small" showText={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+    <Card_kontakt overskrift="Small" showText={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+    <Card_kontakt overskrift="Small" showText={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
   </article>
 </MainLayout>
