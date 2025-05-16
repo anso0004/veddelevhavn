@@ -1,5 +1,6 @@
 ---
-const { url = "#", overskrift = "", tekst = "" } = Astro.props;
+import Link from "../components/Link.astro";
+const { url = "#", overskrift = "", tekst = "", knap_tekst = "" } = Astro.props;
 ---
 
 <article class="@container card bg-brown-100 px-l py-ml rounded-10 lg:rounded-15">
@@ -9,7 +10,9 @@ const { url = "#", overskrift = "", tekst = "" } = Astro.props;
         <h4 class="text-center text-m_h4 lg:text-d_h4 font-montserrat">{overskrift}</h4>
         <p class="text-m_p lg:text-d_p font-opensans">{tekst}</p>
       </div>
-      <p class="text-right text-m_button lg:text-d_button font-montserrat">Læs mere om sejlklubben</p>
+      <div class="flex justify-end">
+        <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">{knap_tekst}</Link>
+      </div>
     </section>
   </a>
 </article>
