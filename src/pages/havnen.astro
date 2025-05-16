@@ -5,7 +5,10 @@ import Link from "../components/Link.astro";
 import Card_vsbvsl from "../components/Card_vsbvsl.astro";
 import Card_faciliteter from "../components/Card_faciliteter.astro";
 import Card_kontakt from "../components/Card_kontakt.astro";
+import Card_nyhed from "../components/Card_nyhed.astro";
+import Card_nyhed_full from "../components/Card_nyhed_full.astro";
 import { Image } from "astro:assets";
+import CardNyhedFull from "../components/Card_nyhed_full.astro";
 ---
 
 <MainLayout title="Titel">
@@ -71,5 +74,8 @@ import { Image } from "astro:assets";
         <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
       </div>
     </div>
+  </section>
+  <section class="my-10xl">
+    <Card_nyhed_full />
   </section>
 </MainLayout>

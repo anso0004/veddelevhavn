@@ -1,0 +1,36 @@
+---
+import Link from "../components/Link.astro";
+const { url = "#", billede = "", billede_alt = "", overskrift = "", variant = "", dato = "", maaned = "" } = Astro.props;
+
+const variantClasses = {
+  primary: "bg-baggrund-primary rounded-10 lg:rounded-15 text-neutral-950",
+  secondary: "bg-green-700 rounded-10 lg:rounded-15 text-neutral-100",
+};
+---
+
+<!-- Hover i samarbejde med ChatGPT -->
+<article class="@container card w-[326px] lg:w-[265px]">
+  <a href={url}>
+    <div class:list={[variantClasses[variant], "group relative"]}>
+      <!-- Dato badge -->
+      <div class="absolute z-50 bg-green-700 w-[46px] h-[63px] rounded-b-full ml-m pt-2">
+        <p class="text-labeldato font-montserrat text-neutral-100 text-center">{dato}</p>
+        <p class="text-labelmaaned font-montserrat text-neutral-100 text-center">{maaned}</p>
+      </div>
+      <!-- Billed-container med overlay -->
+      <div class="relative">
+        <img src={billede} alt={billede_alt} class="rounded-t-10 lg:rounded-t-15 w-full h-auto" />
+        <!-- Tekst nedenunder billedet -->
+        <div class="h-[90px] lg:h-[88px] flex items-center justify-center px-sm lg:px-xl">
+          <h6 class="text-m_h7 lg:text-d_h7 font-montserrat text-center">{overskrift}</h6>
+        </div>
+        <!-- Overlay (kun synlig på hover) -->
+        <div class="absolute inset-0 bg-baggrund-primary flex flex-col items-center justify-between text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-10 lg:rounded-15 pt-7xl pb-ml px-ml w-[265px] h-[333px]">
+          <p class="text-[27px] font-montserrat font-semibold text-neutral-950 pb-sm">Nyhed!</p>
+          <h6 class="text-d_h7 font-montserrat text-neutral-950">{overskrift}</h6>
+          <Link class="" href="#" target="_blank" variant="secondary" size="large" hover="primary" press="secondary">Læs mere</Link>
+        </div>
+      </div>
+    </div>
+  </a>
+</article>

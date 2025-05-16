@@ -1,0 +1,19 @@
+---
+import Link from "../components/Link.astro";
+import Card_nyhed from "../components/Card_nyhed.astro";
+const { url = "#", billede = "", billede_alt = "", overskrift = "", variant = "" } = Astro.props;
+---
+
+<article class="bg-brown-100 py-ml lg:py-5xl">
+  <div class="lg:max-w-[1078px] mx-auto">
+    <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Nyheder</h2>
+    <div class="flex flex-col lg:flex-row lg:justify-end gap-l lg:gap-xl">
+      <Card_nyhed variant="secondary" billede="/nyhed_1.webp" billede_alt="Billede af joller på havnen" overskrift="DM i finnjolle til sommer" dato="03" maaned="Maj" />
+      <Card_nyhed variant="secondary" billede="/nyhed_2.webp" billede_alt="Billede af bro med både" overskrift="Søsætning 2025" dato="20" maaned="Mar" />
+      <Card_nyhed variant="secondary" billede="/nyhed_3.webp" billede_alt="Billede af klubhus" overskrift="Generalforsamling i næste uge" dato="01" maaned="Jun" />
+    </div>
+    <div class="flex justify-end mt-m lg:mt-xl">
+      <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Se alle nyheder</Link>
+    </div>
+  </div>
+</article>
