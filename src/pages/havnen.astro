@@ -18,19 +18,58 @@ import { Image } from "astro:assets";
   <article class="my-10xl mx-5xl">
     <Card_faciliteter icon="public/ikoner/bad.svg" iconalt="ikon af bad" overskrift="Bad og toilet" tekst="Her står der tekst." />
   </article>
-  <article class="my-10xl mx-5xl grid grid-cols-3 gap-5">
-    <Card_kontakt overskrift="Large" navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
-    <Card_kontakt overskrift="Large" navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
-    <Card_kontakt overskrift="Large" navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
-  </article>
-  <article class="my-10xl mx-5xl grid grid-cols-3 gap-5">
-    <Card_kontakt overskrift="Medium" navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
-    <Card_kontakt overskrift="Medium" navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
-    <Card_kontakt overskrift="Medium" navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
-  </article>
-  <article class="my-10xl mx-5xl grid grid-cols-3 gap-5">
-    <Card_kontakt overskrift="Small" showText={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
-    <Card_kontakt overskrift="Small" showText={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
-    <Card_kontakt overskrift="Small" showText={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
-  </article>
+  <!-- Kontakt-cards opsætning på side -->
+  <section class="max-w-[1078px] mx-auto">
+    <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:text-center">Udvalg og bestyrrelser</h3>
+    <div class="space-y-ml">
+      <div class="grid gap-ml lg:grid-cols-2">
+        <Card_kontakt overskrift="Large" showText={true} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+        <Card_kontakt overskrift="Large" showText={true} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+      </div>
+      <div class="grid lg:grid-cols-3 gap-ml">
+        <div class="space-y-ml">
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+        </div>
+        <div>
+          <Card_kontakt overskrift="Medium" showText={true} showSpace={true} navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+        </div>
+        <div class="space-y-ml">
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Husk på vi er frivillige, så svartider kan varriere. Men vi gør vores bedste</h6>
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-ml">
+        <div class="space-y-ml">
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Kontakt os endelig, hvis du har spørgsmål. Vi hjælper dig gerne!</h6>
+        </div>
+        <div class="space-y-ml">
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+        </div>
+        <div>
+          <Card_kontakt overskrift="Medium" showText={true} showSpace={true} navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-ml">
+        <div>
+          <Card_kontakt overskrift="Medium" showText={true} showSpace={true} navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+        </div>
+        <div class="space-y-ml">
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+        </div>
+        <div class="space-y-ml">
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Er du i tvivl, om hvem der er den rigtige at kontakte, så skriv til havnefogeden. Han vil gerne vejlede dig</h6>
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-ml">
+        <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+        <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+        <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+      </div>
+    </div>
+  </section>
 </MainLayout>
