@@ -1,0 +1,32 @@
+---
+const { overskrift = "", underoverskrift = "", tekst = "", number = "" } = Astro.props;
+---
+
+<!-- <img src="/ramme2.png" /> -->
+<article class="@container card p-l space-y-sm relative custom-border">
+  <section class="flex flex-col justify-between gap-m">
+    <div class="flex flex-col gap-xs">
+      <h3 class="text-m_h3 lg:text-d_h3 text-center font-montserrat">{overskrift}</h3>
+      <p class="text-m_number lg:text-d_number text-center font-opensans">{number}</p>
+      <h8 class="text-m_h8 lg:text-d_h8 text-center font-montserrat">{underoverskrift}</h8>
+      <p class="text-m_p lg:text-d_p font-opensans">{tekst}</p>
+    </div>
+  </section>
+</article>
+
+<style>
+  .custom-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 7px; /* tykkelsen på "border" */
+    background: conic-gradient(#ffc943 0deg 90deg, #000fc7 90deg 180deg, #bcd3cd 180deg 270deg, #364f4c 270deg 360deg);
+    border-radius: inherit;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
+</style>
