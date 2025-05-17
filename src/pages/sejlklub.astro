@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Formular_full from "../components/Formular_full.astro";
+import Card_hjaelp from "../components/Card_hjaelp.astro";
 ---
 
 <MainLayout title="Titel">
@@ -18,5 +19,20 @@ import Formular_full from "../components/Formular_full.astro";
     <Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Menupunkt</Link>
   </article>
 
-  <Formular_full navn="Andersen" />
+  <!-- <Formular_full navn="Andersen" /> -->
+  <article class="my-10xl mx-5xl">
+    <div class="grid gap-ml lg:grid-cols-3">
+      <Card_hjaelp url="" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
+      <Card_hjaelp url="" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
+      <Card_hjaelp url="" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
+      <Card_hjaelp url="" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
+      <Card_hjaelp url="" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
+      <Card_hjaelp url="" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
+      <Card_hjaelp url="" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
+      <Card_hjaelp url="" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
+      <Card_hjaelp url="" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
+    </div>
+  </article>
+
+  <p class="pb-10xl">Tekst</p>
 </MainLayout>

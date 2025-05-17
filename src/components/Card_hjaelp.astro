@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+const { url = "", overskrift = "", tekst = "" } = Astro.props;
+---
+
+<article class="@container card bg-brown-100 rounded-10 lg:rounded-15 px-l py-ml space-y-sm hover:scale-105 transition-transform active:bg-brown-300">
+  <a href={url}>
+    <section class="flex flex-col justify-between h-full gap-m">
+      <div class="flex flex-col gap-xs">
+        <h7 class="text-m_h7 lg:text-d_h7 font-montserrat">{overskrift}</h7>
+        <p class="text-m_p lg:text-d_p font-opensans">{tekst}</p>
+      </div>
+      <div class="flex justify-end">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+        </svg>
+      </div>
+    </section>
+  </a>
+</article>
