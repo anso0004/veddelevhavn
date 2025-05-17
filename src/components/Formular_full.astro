@@ -1,14 +1,52 @@
 ---
+import Link from "../components/Link.astro";
+
 const { navn = "", alder = "" } = Astro.props;
 ---
 
-<form class="space-y-xl" name="sejlklubben" netlify>
-  <div class="flex flex-col gap-2xs">
-    <label class="text-d_h8" for="fuldenavn">Fuldenavn:</label>
-    <input class="border-none bg-brown-100 lg:rounded-15 py-s px-sm" id="fornavn" name="fornavn" type="text" placeholder="Anders Andersen" />
+<div class="bg-brown-100 p-ml lg:px-2xl lg:py-ml rounded-15">
+  <div class="lg:pb-2xl pb-sm">
+    <h5 class="text-m_h5 lg:text-d_h5 pb-xs">Tilmeld dig VSB Sejlklub</h5>
+    <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Se prisliste for medlemsskab</Link>
   </div>
-  <div class="flex flex-col gap-2xs">
-    <label class="text-p font-bold" for="tel">Telefon nummer</label>
-    <input class="border-none" id="telefon" name="telefon" type="tel" placeholder="+45 12 34 56 78" />
-  </div>
-</form>
+  <form class="lg:space-y-ml space-y-sm" name="sejlklubben" netlify>
+    <div class="grid lg:grid-cols-2 lg:gap-l space-y-sm lg:space-y-null">
+      <div class="flex flex-col gap-2xs">
+        <label class="text-m_h8 lg:text-d_h8" for="fuldenavn">Fulde navn:</label>
+        <input class="text-m_p lg:text-d_p border-none bg-brown-50 rounded-7 placeholder:text-brown-200 py-xs px-sm lg:py-s lg:px-sm" id="fornavn" name="fornavn" type="text" placeholder="Anders Andersen" />
+      </div>
+      <div class="flex flex-col gap-2xs">
+        <label class="text-m_h8 lg:text-d_h8" for="tel">Telefon nummer</label>
+        <input class="text-m_p lg:text-d_p border-none bg-brown-50 rounded-7 placeholder:text-brown-200 py-xs px-sm lg:py-s lg:px-sm" id="telefon" name="telefon" type="tel" placeholder="+45 12 34 56 78" />
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-2 lg:gap-l space-y-sm lg:space-y-null">
+      <div class="flex flex-col gap-2xs">
+        <label class="text-m_h8 lg:text-d_h8" for="email">E-mail:</label>
+        <input class="text-m_p lg:text-d_p border-none bg-brown-50 rounded-7 placeholder:text-brown-200 py-xs px-sm lg:py-s lg:px-sm" id="email" name="email" type="email" placeholder="andersen@gmail.dk" />
+      </div>
+      <div class="flex flex-col gap-2xs">
+        <label for="medlemsskab" class="text-m_h8 lg:text-d_h8">Vælg medlemsskab</label>
+        <div class="flex flex-col gap-2xs">
+          <select id="medlemsskab" name="medlemsskab" autocomplete="medlemsskab" class="text-m_p lg:text-d_p border-none bg-brown-50 rounded-7 py-xs px-sm lg:py-s lg:px-sm">
+            <option>Vælg medlemsskab</option>
+            <option>Junior medlemsskab</option>
+            <option>Ung medlemsskab</option>
+            <option>Senior samlevende medlemsskab</option>
+            <option>Senior medlemsskab</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="pt-xs">
+      <div class="flex flex-col gap-sm items-center lg:flex-row lg:justify-between">
+        <div>
+          <Link href="#" target="_blank" variant="tertiary" size="" hover="tertiary" showIcon={false}>Har du spørgsmål?</Link>
+        </div>
+        <!-- Button skal ind her og ligne link -->
+        <!-- <button type="button" class="">Tilmeld</button> -->
+        <Link href="#" target="_blank" variant="primary" size="small" hover="primary">Tilmeld</Link>
+      </div>
+    </div>
+  </form>
+</div>
