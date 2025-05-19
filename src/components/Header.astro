@@ -2,29 +2,25 @@
 import Link from "../components/Link.astro";
 ---
 
-<!-- Den nye menu --><!-- Sidebar -->
-<aside class="hidden lg:flex flex-col bg-green-700 w-[226px] h-screen sticky px-xl py-2xl top-0 p-4">
-  <nav id="desktopmenu" class="flex flex-col justify-between h-full">
-    <ul class="flex flex-col gap-sm">
-      <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a>
-      <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
-      <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Gæstesejler</Link></li>
-      <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Nyheder</Link></li>
-      <li class=""><Link href="/Kontakt" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Kontakt</Link></li>
-      <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>FAQ</Link></li>
-    </ul>
-    <ul class="lg:flex gap-xs">
-      <a href="/"><img src="/login.svg" alt="Logo" class="hidden lg:block" /> </a>
-      <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Login</Link></li>
-    </ul>
-  </nav>
-</aside>
-
-<!-- Mobile Burger Menu -->
-<div class="lg:hidden fixed top-0 left-0 z-50">
-  <button id="burger" class="m-4 p-2 bg-gray-800 text-white rounded"> ☰ </button>
-  <div id="mobileMenu" class="hidden absolute top-16 left-4 bg-gray-800 text-white rounded shadow-lg p-4 w-48">
-    <ul class="space-y-sm">
+<!-- Den nye menu --><!-- Sidebar --><!-- <div x-data="{ showmenu: false }" class=""> --><!-- <aside class="hidden lg:flex flex-col bg-green-700 w-[226px] h-screen sticky px-xl py-2xl top-0 p-4">
+    <nav id="desktopmenu" class="flex flex-col justify-between h-full">
+      <ul class="flex flex-col gap-sm">
+        <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a>
+        <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
+        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Gæstesejler</Link></li>
+        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Nyheder</Link></li>
+        <li class=""><Link href="/Kontakt" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Kontakt</Link></li>
+        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>FAQ</Link></li>
+      </ul>
+      <ul class="lg:flex gap-xs">
+        <a href="/"><img src="/login.svg" alt="Logo" class="hidden lg:block" /> </a>
+        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Login</Link></li>
+      </ul>
+    </nav>
+  </aside> --><!-- Mobile Burger Menu --><!-- <div class="lg:hidden fixed top-0 right-0 z-50">
+  <button id="burger" class="m-4 p-2 bg-green-700 text-white rounded"> ☰ </button>
+  <div id="mobileMenu" class="hidden fixed inset-0 bg-green-600 items-center justify-center z-40">
+    <ul class="flex flex-col items-center space-y-4">
       <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
       <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Gæstesejler</Link></li>
       <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Nyheder</Link></li>
@@ -32,45 +28,46 @@ import Link from "../components/Link.astro";
       <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>FAQ</Link></li>
       <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Login</Link></li>
     </ul>
-    <!-- <a href="/" class="block py-2 hover:bg-gray-700 rounded">Hjem</a>
-    <a href="/om" class="block py-2 hover:bg-gray-700 rounded">Om os</a>
-    <a href="/kontakt" class="block py-2 hover:bg-gray-700 rounded">Kontakt</a> -->
   </div>
-</div>
-
-<script>
+</div> --><!-- <script>
   const burger = document.getElementById("burger");
   const menu = document.getElementById("mobileMenu");
 
   burger.addEventListener("click", () => {
     menu.classList.toggle("hidden");
   });
-</script>
-
-<!-- Herfra starter saras menu --><!-- <div x-data="{ showmenu: false }" class="">
+</script> --><!-- Herfra starter saras menu -->
+<div x-data="{ showmenu: false }" class="">
   <div id="navbar" class="">
     <div id="logo" class="flex">
-      <nav id="desktopmenu" class="hidden lg:flex lg:flex-col lg:justify-between bg-green-700 w-[226px] h-screen sticky px-xl py-2xl">
-        <ul class="flex flex-col gap-sm">
-          <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a>
-          <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
-          <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Gæstesejler</Link></li>
-          <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Nyheder</Link></li>
-          <li class=""><Link href="/Kontakt" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Kontakt</Link></li>
-          <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>FAQ</Link></li>
-        </ul>
-        <ul class="lg:flex gap-xs">
-          <a href="/"><img src="/login.svg" alt="Logo" class="hidden lg:block" /> </a>
-          <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Login</Link></li>
-        </ul>
-      </nav>
-    </div> --><!-- Menu på mobil --><!-- <div class="lg:hidden px-ml py-xs z-50 bg-green-700 w-screen">
+      <aside class="hidden lg:flex flex-col bg-green-700 w-[226px] h-screen sticky px-xl py-2xl top-0 p-4">
+        <nav id="desktopmenu" class="flex flex-col justify-between h-full">
+          <ul class="flex flex-col gap-sm">
+            <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a>
+            <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
+            <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Gæstesejler</Link></li>
+            <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Nyheder</Link></li>
+            <li class=""><Link href="/Kontakt" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Kontakt</Link></li>
+            <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>FAQ</Link></li>
+          </ul>
+          <ul class="lg:flex gap-xs">
+            <a href="/"><img src="/login.svg" alt="Logo" class="hidden lg:block" /> </a>
+            <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Login</Link></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+    <!-- Menu på mobil -->
+    <div class="lg:hidden fixed px-ml py-xs z-50 bg-green-700 w-screen">
       <div class="flex justify-between">
         <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-[35px] lg:hidden" /> </a>
         <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
           <img :src="showmenu ? '/kryds.svg' : '/burgermenu.svg'" alt="Menu" />
         </button>
-      </div> --><!-- Åben burgermenu på mobil --><!-- <nav id="mobilmenu" class="flex flex-col content-left bg-green-700 h-screen pt-ml" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+      </div>
+      <!-- Åben burgermenu på mobil -->
+      <nav id="mobilmenu" class="flex flex-col content-left bg-green-700 h-screen pt-ml" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
         <ul class="space-y-sm">
           <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
           <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Gæstesejler</Link></li>
@@ -82,4 +79,4 @@ import Link from "../components/Link.astro";
       </nav>
     </div>
   </div>
-</div> -->
+</div>
