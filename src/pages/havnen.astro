@@ -10,12 +10,13 @@ import Card_nyhed_full from "../components/Card_nyhed_full.astro";
 import { Image } from "astro:assets";
 import CardNyhedFull from "../components/Card_nyhed_full.astro";
 import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp";
+import kort from "../assets/images/kort.webp";
 ---
 
 <MainLayout title="Titel">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-10xl grid lg:items-center lg:grid-cols-5 pt-ml lg:pt-8xl lg:gap-2xl xl:gap-3xl 2xl:gap-10xl">
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid lg:items-center lg:grid-cols-5 pt-ml lg:pt-8xl lg:gap-2xl xl:gap-3xl 2xl:gap-10xl">
       <div class="col-span-2 pb-ml">
         <h1 class="text-m_h1 lg:text-d_h1 font-montserrat pb-s">Havnen</h1>
         <p class="text-m_p lg:text-d_p font-opensans pb-sm lg:pb-ml">Veddelev Havn er en mindre lystbådehavn beliggende nord for Roskilde med en smuk udsigt over Roskilde Fjord.</p>
@@ -61,6 +62,58 @@ import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp"
           tekst4=""
           knap_tekst="Læs mere om andel"
         />
+      </div>
+    </section>
+    <!-- Få overblikket -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-10xl">
+      <div class="lg:grid lg:grid-cols-6">
+        <h2 class="lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-m lg:gap-ml">
+        <div class="col-span-2 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
+          <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-full object-cover object-[0%_25%]" />
+        </div>
+        <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
+          På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både
+          store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.
+        </p>
+      </div>
+    </section>
+    <!-- Link til pdf'er -->
+    <section class="px-ml lg:px-5xl xl:px-12xl 2xl:px-15xl bg-brown-100 py-2xl lg:py-6xl grid gap-4xl lg:grid-cols-3 lg:gap-13xl">
+      <div class="flex flex-col lg:items-center">
+        <div>
+          <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Regler for både og joller</h6>
+          <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
+        </div>
+      </div>
+      <div class="flex flex-col items-end lg:items-center">
+        <div>
+          <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Havnereglement</h6>
+          <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
+        </div>
+      </div>
+      <div class="flex flex-col lg:items-center">
+        <div>
+          <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Havnens love</h6>
+          <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
+        </div>
+      </div>
+    </section>
+    <!-- Faciliteter på havnen -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-10xl">
+      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter på havnen</h2>
+      <div class="grid gap-m lg:gap-4xl lg:grid-cols-2">
+        <Card_faciliteter icon="public/ikoner/klubhus.svg" iconalt="Ikon af klubhus" overskrift="Klubhus" tekst="Klubhuset han lejes af medlemmer af sejlklubben og har plads til op til 50 personer. Det er udstyret med køkken og egner sig både til faglige oplæg og private arrangementer." />
+        <Card_faciliteter icon="public/ikoner/bad.svg" iconalt="Ikon af bad" overskrift="Toilet og bad" tekst="Toilet- og badefaciliteterne findes i klubhuset. Gæstesejlere modtager en adgangskode til klubhuset, når betaling for havnepladsen er registreret." />
+        <Card_faciliteter icon="public/ikoner/vand.svg" iconalt="Ikon af vand" overskrift="Vand og strøm" tekst="Der er strømstandere og vandslanger på alle broer, så bådejere og gæstesejlere nemt kan tilkoble el eller fylde vandtanken." />
+        <Card_faciliteter icon="public/ikoner/grill.svg" iconalt="Ikon af grill" overskrift="Grill" tekst="Du må frit benytte klubhusets fælles grill. Du finder den til højre for klubhuset. Du må ikke benytte din egen grill på havnen." />
+        <Card_faciliteter icon="public/ikoner/udtoemning.svg" iconalt="Ikon af udtømning" overskrift="Udlagskumme for kemisk toilet" tekst="Du kan tømme dit kemiske toilet i vores udslagskumme. Den finder du ved skraldespandene på parkeingspladsen. " />
+        <Card_faciliteter icon="public/ikoner/havnekontor.svg" iconalt="Ikon af havnekontor" overskrift="Havnekontor" tekst="Havnekontoret ligger ved klubhuset og fungerer som base for havnefogeden, som står for den daglige drift og er kontaktperson ved spørgsmål." />
+        <Card_faciliteter icon="public/ikoner/kran.svg" iconalt="Ikon af kran" overskrift="Masteskur" tekst="Ved klubhuset ligger masteskuret, hvor bådejere kan opbevare deres master i vinterhalvåret. Desuden er havnen også udstyret med mastekran." />
+        <Card_faciliteter icon="public/ikoner/slaebested.svg" iconalt="Ikon af slæbested" overskrift="Slæbested" tekst="Som medlem af sejlklubben har du adgang til slæbestedet og kan frit benytte det til søsætning og optagning af din båd." />
+        <Card_faciliteter icon="public/ikoner/sejlerstue.svg" iconalt="Ikon af sejlerstue" overskrift="Sejlerstue" tekst="Sejlerstuen har åbent når der er medlemmer på havnen. Her finder du en kaffemaskine, opvaskeudstyr, køleskab og service. " />
+        <Card_faciliteter icon="public/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
       </div>
     </section>
 
