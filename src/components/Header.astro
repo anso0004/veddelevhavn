@@ -4,9 +4,8 @@ import Link from "../components/Link.astro";
 
 <div x-data="{ showmenu: false }" class="">
   <div id="navbar" class="">
-    <div id="logo" class="flex flex-row">
-      <!-- Menu på desktop -->
-      <nav id="desktopmenu" class="hidden lg:flex lg:flex-col lg:justify-between bg-green-700 w-[226px] h-screen fixed px-xl py-2xl">
+    <!-- <div id="logo" class="flex">
+      <nav id="desktopmenu" class="hidden lg:flex lg:flex-col lg:justify-between bg-green-700 w-[226px] h-screen sticky px-xl py-2xl">
         <ul class="flex flex-col gap-sm">
           <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a>
           <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
@@ -17,11 +16,10 @@ import Link from "../components/Link.astro";
         </ul>
         <ul class="lg:flex gap-xs">
           <a href="/"><img src="/login.svg" alt="Logo" class="hidden lg:block" /> </a>
-          <!-- Skal denne være mindre end de andre? -->
           <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Login</Link></li>
         </ul>
       </nav>
-    </div>
+    </div> -->
     <!-- Menu på mobil -->
     <div class="lg:hidden px-ml py-xs z-50 bg-green-700 w-screen">
       <div class="flex justify-between">
