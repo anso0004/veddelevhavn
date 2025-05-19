@@ -1,28 +1,72 @@
 ---
-const images = Array.from({ length: 10 }, (_, i) => `/images/bookeklubhuset_${i + 1}.webp`);
+import { Image } from "astro:assets";
+import klubhus1 from "../assets/images/bookeklubhuset_1.webp";
+import klubhus2 from "../assets/images/bookeklubhuset_2.webp";
+import klubhus3 from "../assets/images/bookeklubhuset_3.webp";
+import klubhus4 from "../assets/images/bookeklubhuset_4.webp";
+import klubhus5 from "../assets/images/bookeklubhuset_5.webp";
+import klubhus6 from "../assets/images/bookeklubhuset_6.webp";
+import klubhus7 from "../assets/images/bookeklubhuset_7.webp";
+import klubhus8 from "../assets/images/bookeklubhuset_8.webp";
+import klubhus9 from "../assets/images/bookeklubhuset_9.webp";
+import klubhus10 from "../assets/images/bookeklubhuset_10.webp";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 ---
 
-<div x-data="{ current: 0, images: {{ JSON.stringify(images) }} }" class="relative w-full max-w-4xl mx-auto" x-init="$watch('current', val => {
-       if (val < 0) current = images.length - 1;
-       if (val >= images.length) current = 0;
-     })">
-  <!-- Billeder -->
-  <div class="overflow-hidden rounded-2xl shadow-lg">
-    <template x-for="(img, index) in images" :key="index">
-      <div x-show="current === index" class="transition duration-500 ease-in-out">
-        <img :src="img" alt="" class="w-full h-64 object-cover" loading="lazy" />
-      </div>
-    </template>
+<div class="pt-13xl lg:pt-null">Luft til mobil</div>
+<div class="lg:grid lg:grid-cols-2">
+  <div class="order-2">
+    <h3 class="text-m_h3 lg:text-d_h3 font-montserrat">Som medlem har du mulighed for at booke klubhuset</h3>
+    <p class="text-m_p lg:text-d_p font-opensans">Som medlem af VSB Sejlklub har du mulighed for at leje klubhuset til private arrangementer. Huset har plads til op til 50 personer og er udstyret med køkken og service.</p>
+    <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary">Login på din VSB-profil</Link>
   </div>
+  <div class="relative w-full overflow-hidden">
+    <div class="carousel flex transition-transform duration-300 ease-in-out" id="carousel">
+      <Image src={klubhus1} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset indefra, viser opdækket bord" />
+      <Image src={klubhus3} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset indefra, viser udsigt til havnen henover et opdækket bord" />
+      <Image src={klubhus4} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset indefra, viser udsigt til havnen" />
+      <Image src={klubhus2} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Opdækket bord" />
+      <Image src={klubhus5} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Borde og stole inde i klubhuset" />
+      <Image src={klubhus6} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset når der ikke er arrangement" />
+      <Image src={klubhus7} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Køkkenet i klubhuset" />
+      <Image src={klubhus8} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Gardarobe i klubhuset" />
+      <Image src={klubhus9} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Udeareal af bordebænkesæt mod havnen" />
+      <Image src={klubhus10} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Udeareal af bordebænkesæt mod klubhuset" />
+    </div>
+    <div class="absolute transform -translate-y-1/2 top-1/2 left-0 right-0 flex flex-row justify-between px-4">
+      <button class="rounded-full p-xs text-6xl bg-yellow-300 hover:scale-110 transition-transform active:bg-yellow-400" id="prev" aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="lg:size-6 size-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
+        </svg>
+      </button>
+      <button class="rounded-full p-xs text-6xl bg-yellow-300 hover:scale-110 transition-transform active:bg-yellow-400" id="next" aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="lg:size-6 size-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+        </svg>
+      </button>
+    </div>
 
-  <!-- Forrige/Næste knapper -->
-  <button @click="current--" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 p-2 rounded-full shadow"> ◀ </button>
-  <button @click="current++" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 p-2 rounded-full shadow"> ▶ </button>
+    <script>
+      let currentIndex = 0;
+      const carousel = document.getElementById("carousel");
+      const slides = document.querySelectorAll(".carousel-item");
+      const totalSlides = slides.length;
 
-  <!-- Navigation dots -->
-  <div class="flex justify-center mt-4 space-x-2">
-    <template x-for="(img, index) in images" :key="index">
-      <button @click="current = index" :class="{'bg-blue-500': current === index, 'bg-gray-300': current !== index}" class="w-3 h-3 rounded-full focus:outline-none transition-all"></button>
-    </template>
+      const updateCarousel = () => {
+        const offset = -currentIndex * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
+      };
+
+      document.getElementById("next").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      });
+
+      document.getElementById("prev").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      });
+    </script>
   </div>
 </div>
