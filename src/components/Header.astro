@@ -2,12 +2,11 @@
 import Link from "../components/Link.astro";
 ---
 
-<!-- vores menu som ikke går helt ned som nu tager inspiration af vores github -->
 <aside class="hidden lg:flex flex-col bg-green-700 w-[226px] h-screen sticky px-xl py-2xl top-0 p-4">
-  <div x-data="{ showmenu: false }" class="">
+  <div x-data="{ showmenu: false }" class="h-full">
     <nav id="desktopmenu" class="flex flex-col justify-between h-full">
       <ul class="flex flex-col gap-sm">
-        <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a>
+        <li class="flex justify-center"><a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a></li>
         <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li>
         <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Gæstesejler</Link></li>
         <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Nyheder</Link></li>
