@@ -12,6 +12,8 @@ import joller1 from "../assets/images/jollerpaahavnen_1.webp";
 import joller2 from "../assets/images/jollerpaahavnen_2.webp";
 import laeratsejle from "../assets/images/laeratsejle_2.webp";
 import vaerefrivillig from "../assets/images/vaerefrivillig.webp";
+import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
+import ikon_video from "../assets/icons/video.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -23,13 +25,22 @@ import { Image } from "astro:assets";
         <h1 class="text-m_h1 lg:text-d_h1 font-montserrat pb-s">Sejlklub</h1>
         <p class="text-m_p lg:text-d_p font-opensans pb-sm lg:pb-ml">VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt.</p>
         <div class="flex flex-col gap-s lg:gap-m">
-          <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary">Medlemsskab</Link>
-          <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary">Kontakt</Link>
+          <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Medlemsskab</Link>
+          <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary" textcolor="secondary">Kontakt</Link>
         </div>
       </div>
       <div class="col-span-3">
-        <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
+        <!-- <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
           <Image src={billede_hero_kontakt} alt="Billede af..." class="w-full h-full object-cover object-[0%_25%]" />
+        </div> -->
+        <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
+          <div class="absolute top-sm right-sm">
+            <Image src={ikon_video} alt="" class="" />
+          </div>
+          <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+            <source src={video_mp4} type="" />
+            <!-- <source src="" type="video/webm" /> -->
+          </video>
         </div>
       </div>
     </section>
@@ -103,7 +114,7 @@ import { Image } from "astro:assets";
         </div>
       </div>
       <div class="pt-s lg:pt-sm">
-        <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Se alle priser for VSL Sejlklub</Link>
+        <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary" textcolor="primary">Se alle priser for VSL Sejlklub</Link>
       </div>
     </section>
     <!-- Karrusel klubhus -->
@@ -119,7 +130,7 @@ import { Image } from "astro:assets";
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:gap-5xl">
         <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
-        <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary">Læs mere om sejlerskolen</Link>
+        <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
       </div>
       <div class="relative w-full h-[350px] lg:h-[450px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
         <Image src={billede_hero_kontakt} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-2 xl:col-start-2 lg:col-span-6 xl:col-span-6 lg:row-start-1 lg:row-span-8 xl:row-start-1 xl:row-span-8 w-full h-full object-cover object-[52%_25%]" />
@@ -132,7 +143,7 @@ import { Image } from "astro:assets";
       <div class="grid lg:grid-cols-5 lg:items-end pb-ml lg:gap-ml">
         <div class="lg:order-2 lg:col-start-3 lg:col-span-2 pb-ml">
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Som frivillig kan du bidrage til alt fra praktiske opgaver i havnen til afvikling af arrangementer og aktiviteter. Det er en god måde at lære andre at kende og være en aktiv del af fællesskabet i VSB Sejlklub.</p>
-          <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary">Kontakt os</Link>
+          <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt os</Link>
         </div>
         <Image src={vaerefrivillig} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
       </div>
@@ -143,13 +154,13 @@ import { Image } from "astro:assets";
       <div class="flex flex-col lg:items-center">
         <div>
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Referater for generalforsamlinger</h6>
-          <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
+          <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary" textcolor="primary">Læs pdf</Link>
         </div>
       </div>
-      <div class="flex flex-col items-end lg:items-center">
+      <div class="flex flex-col lg:items-center">
         <div>
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Referater for bestyrelsesmøder</h6>
-          <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
+          <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary" textcolor="primary">Læs pdf</Link>
         </div>
       </div>
     </section>
@@ -158,7 +169,7 @@ import { Image } from "astro:assets";
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:gap-5xl">
         <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
-        <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary">Læs mere om joller</Link>
+        <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
       </div>
       <div class="relative w-full h-[350px] lg:h-[450px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
         <Image src={joller1} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-7 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_25%]" />
@@ -169,13 +180,25 @@ import { Image } from "astro:assets";
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vil du være med til kapsejladser?</h2>
       <div class="grid lg:grid-cols-5 pb-ml lg:gap-xl xl:gap-5xl">
-        <div class="lg:col-start-1 lg:col-span-3 xl:col-start-1 xl:col-span-2">
-          <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] lg:pb-ml">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
-          <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary">Læs mere om kapsejladser</Link>
+        <div class="lg:col-start-1 lg:col-span-3 xl:col-start-1 xl:col-span-2 pb-ml lg:pb-null">
+          <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-ml">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
+          <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om kapsejladser</Link>
         </div>
         <div class="lg:col-start-4 lg:col-span-2 xl:col-start-3 xl:col-span-3">
           <Image src={joller1} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-7 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_25%]" />
         </div>
+      </div>
+    </section>
+
+    <!-- Card_fakta -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <div class="grid gap-ml lg:grid-cols-3 items-start">
+        <Card_fakta overskrift="Havnefogede" tekst1="Havnefoged Tommy Jørgensen kan kontaktes på tlf. 51 90 66 75 eller mail havnefoged@vsb.dk." />
+        <Card_fakta overskrift="Bestyrelsen" tekst1="Bestyrelsesformand Anders Vognsen kan kontaktes på tlf. 21 71 24 06." tekst2="Næstformand Anders Terkildsen kan kontaktes på tlf. 00 00 00 00. " />
+        <Card_fakta overskrift="Tilmelding" tekst1="Har du spørgsmål til tilmelding af VSB Sejlklub, så kontakt Niels-Erik Hansen på tlf. 42 32 69 65. " />
+      </div>
+      <div class="pt-sm lg:pt-null flex justify-end">
+        <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt</Link>
       </div>
     </section>
   </article>
