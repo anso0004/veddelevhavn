@@ -2,7 +2,7 @@
 import Link from "../components/Link.astro";
 ---
 
-<aside class="hidden lg:flex flex-col bg-green-700 w-[226px] h-screen sticky px-xl py-2xl top-0 p-4">
+<aside class="hidden lg:flex flex-col bg-green-700 w-[226px] 2xl:w-[266px] h-screen sticky px-xl 2xl:px-3xl py-2xl top-0 p-4">
   <div x-data="{ showmenu: false }" class="h-full">
     <nav id="desktopmenu" class="flex flex-col justify-between h-full">
       <ul class="flex flex-col gap-sm">
@@ -10,19 +10,19 @@ import Link from "../components/Link.astro";
         <!-- <li class=""><Link href="/havnen" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Havnen</Link></li> -->
         <!-- accordion -->
         <li x-data="{ open: false }" class="flex flex-col">
-          <button @click="open = !open" class="text-left text-neutral-50 lg:text-d_menupunkt text-m_menupunkt font-montserrat flex gap-xs items-center">
+          <button @click="open = !open" class="text-left text-neutral-50 lg:text-d_menupunkt text-m_menupunkt font-montserrat flex gap-xs items-center hover:underline">
             <span>Havnen</span>
             <svg :class="{ 'rotate-90': open }" class="w-m h-m transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
           <ul x-show="open" x-collapse class="mt-2 space-y-1 text-white text-sm">
-            <li><Link href="/havnen" variant="undermenupunkt" showIcon={false}>Om havnen</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false}>Andel</Link></li>
-            <li><Link href="/sejlklub" variant="undermenupunkt" showIcon={false}>Sejlklub</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false}>Klubhuset</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false}>Sejlerskolen</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false}>Kapsejladser</Link></li>
+            <li><Link href="/havnen" variant="undermenupunkt" hover="tertiary" showIcon={false}>Om havnen</Link></li>
+            <li><Link href="#" variant="undermenupunkt" hover="tertiary" showIcon={false}>Andel</Link></li>
+            <li><Link href="/sejlklub" variant="undermenupunkt" hover="tertiary" showIcon={false}>Sejlklub</Link></li>
+            <li><Link href="#" variant="undermenupunkt" hover="tertiary" showIcon={false}>Klubhuset</Link></li>
+            <li><Link href="#" variant="undermenupunkt" hover="tertiary" showIcon={false}>Sejlerskolen</Link></li>
+            <li><Link href="#" variant="undermenupunkt" hover="tertiary" showIcon={false}>Kapsejladser</Link></li>
           </ul>
         </li>
         <!-- accordion slut -->
