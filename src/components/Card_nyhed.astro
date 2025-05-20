@@ -8,8 +8,7 @@ const variantClasses = {
 };
 ---
 
-<!-- Hover i samarbejde med ChatGPT -->
-<article class="@container card w-[326px] lg:w-[265px]">
+<article class="@container card">
   <a href={url}>
     <div class:list={[variantClasses[variant], "group relative"]}>
       <!-- Dato badge -->
@@ -25,12 +24,14 @@ const variantClasses = {
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat text-center">{overskrift}</h6>
         </div>
         <!-- Overlay (kun synlig på hover) -->
-        <div class="absolute inset-0 bg-baggrund-primary flex flex-col items-center justify-between text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-10 lg:rounded-15 pt-7xl pb-ml px-ml w-[265px] h-[333px]">
-          <p class="text-[27px] font-montserrat font-semibold text-neutral-950 pb-sm">Nyhed!</p>
+        <div class="absolute inset-0 bg-baggrund-primary flex flex-col items-center justify-between text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-10 lg:rounded-15 pt-7xl pb-ml lg:px-0 xl:px-ml">
+          <p class="text-[27px] font-montserrat font-semibold text-neutral-950 pb-sm lg:pb-xs xl:pb-sm">Nyhed!</p>
           <h6 class="text-d_h7 font-montserrat text-neutral-950">{overskrift}</h6>
-          <Link class="" href="#" target="_blank" variant="secondary" size="large" hover="primary" press="secondary">Læs mere</Link>
+          <Link class="" href="#" target="_blank" variant="secondary" size="small" hover="primary" press="secondary">Læs mere</Link>
         </div>
       </div>
     </div>
   </a>
 </article>
+
+<!-- Hover udarbejdet i samarbejde med ChatGPT -->

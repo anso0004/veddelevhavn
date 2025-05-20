@@ -14,59 +14,63 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 ---
 
-<div class="pt-13xl lg:pt-null">Luft til mobil</div>
-<div class="lg:grid lg:grid-cols-2">
-  <div class="order-2">
-    <h3 class="text-m_h3 lg:text-d_h3 font-montserrat">Som medlem har du mulighed for at booke klubhuset</h3>
-    <p class="text-m_p lg:text-d_p font-opensans">Som medlem af VSB Sejlklub har du mulighed for at leje klubhuset til private arrangementer. Huset har plads til op til 50 personer og er udstyret med køkken og service.</p>
+<div class="lg:grid lg:grid-cols-5 gap-ml">
+  <div class="order-2 col-span-2 flex flex-col lg:justify-center">
+    <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m">Som medlem har du mulighed for at booke klubhuset</h3>
+    <p class="text-m_p lg:text-d_p font-opensans pb-sm lg:pb-ml">Som medlem af VSB Sejlklub har du mulighed for at leje klubhuset til private arrangementer. Huset har plads til op til 50 personer og er udstyret med køkken og service.</p>
     <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary">Login på din VSB-profil</Link>
   </div>
-  <div class="relative w-full overflow-hidden">
-    <div class="carousel flex transition-transform duration-300 ease-in-out" id="carousel">
-      <Image src={klubhus1} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset indefra, viser opdækket bord" />
-      <Image src={klubhus3} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset indefra, viser udsigt til havnen henover et opdækket bord" />
-      <Image src={klubhus4} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset indefra, viser udsigt til havnen" />
-      <Image src={klubhus2} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Opdækket bord" />
-      <Image src={klubhus5} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Borde og stole inde i klubhuset" />
-      <Image src={klubhus6} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Klubhuset når der ikke er arrangement" />
-      <Image src={klubhus7} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Køkkenet i klubhuset" />
-      <Image src={klubhus8} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Gardarobe i klubhuset" />
-      <Image src={klubhus9} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Udeareal af bordebænkesæt mod havnen" />
-      <Image src={klubhus10} class="lg:rounded-15 rounded-10 mx-auto my-auto col-span-2 md:p-0 carousel-item" alt="Udeareal af bordebænkesæt mod klubhuset" />
+  <div class="col-span-3 w-full overflow-hidden pt-ml lg:pt-0">
+    <div class="relative w-full">
+      <!-- Billed-karrusel -->
+      <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+        {[klubhus1, klubhus3, klubhus4, klubhus2, klubhus5, klubhus6, klubhus7, klubhus8, klubhus9, klubhus10].map((img, index) => <Image src={img} alt={`Slide ${index + 1}`} class="w-full aspect-[4/3] object-cover flex-shrink-0 rounded-10" />)}
+      </div>
+
+      <!-- Pile -->
+      <div class="absolute inset-0 flex justify-between items-center px-4 pointer-events-none">
+        <button id="prev" class="pointer-events-auto rounded-full p-xs text-6xl bg-yellow-300 hover:scale-110 transition-transform active:bg-yellow-400" aria-label="Forrige slide">
+          <!-- pil venstre -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="lg:size-6 size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
+          </svg>
+        </button>
+        <button id="next" class="pointer-events-auto rounded-full p-xs text-6xl bg-yellow-300 hover:scale-110 transition-transform active:bg-yellow-400" aria-label="Næste slide">
+          <!-- pil højre -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="lg:size-6 size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="absolute transform -translate-y-1/2 top-1/2 left-0 right-0 flex flex-row justify-between px-4">
-      <button class="rounded-full p-xs text-6xl bg-yellow-300 hover:scale-110 transition-transform active:bg-yellow-400" id="prev" aria-label="Previous slide">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="lg:size-6 size-4">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
-        </svg>
-      </button>
-      <button class="rounded-full p-xs text-6xl bg-yellow-300 hover:scale-110 transition-transform active:bg-yellow-400" id="next" aria-label="Next slide">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="lg:size-6 size-4">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-        </svg>
-      </button>
-    </div>
-
-    <script>
-      let currentIndex = 0;
-      const carousel = document.getElementById("carousel");
-      const slides = document.querySelectorAll(".carousel-item");
-      const totalSlides = slides.length;
-
-      const updateCarousel = () => {
-        const offset = -currentIndex * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-      };
-
-      document.getElementById("next").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateCarousel();
-      });
-
-      document.getElementById("prev").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-      });
-    </script>
   </div>
+
+  <script type="module">
+    const carousel = document.getElementById("carousel");
+    const nextBtn = document.getElementById("next");
+    const prevBtn = document.getElementById("prev");
+
+    const totalSlides = 10; // antal billeder
+    let currentSlide = 0;
+
+    const updateCarousel = () => {
+      const slideWidth = carousel.clientWidth;
+      carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    };
+
+    nextBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+
+    // Sikr at første visning er korrekt
+    window.addEventListener("resize", updateCarousel);
+  </script>
 </div>
+
+<!-- Udarbejdet i samarbejde med ChatGPT -->
