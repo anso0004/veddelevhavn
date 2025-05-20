@@ -1,15 +1,15 @@
 ---
 // Henter parametrene fra Astro.props
-const { href = "#", target = "_self", variant = "", size = "", hover = "", press = "", showIcon = true } = Astro.props;
+const { href = "#", target = "_self", variant = "", size = "", hover = "", press = "", textcolor = "primary", showIcon = true } = Astro.props;
 
 const linkClasses = "";
 
 const variantClasses = {
-  primary: "bg-yellow-300 text-neutral-950 rounded-full lg:py-xs py-2xs px-m text-m_button lg:text-d_button font-opensans",
-  secondary: "bg-green-700  text-neutral-50 rounded-full lg:py-xs py-2xs px-m text-m_button lg:text-d_button font-opensans ",
-  tertiary: "text-neutral-950 text-m_button lg:text-d_button font-opensans",
-  menupunkt: "text-neutral-50 lg:text-d_menupunkt text-m_menupunkt font-montserrat",
-  undermenupunkt: "text-neutral-50 lg:text-d_undermenupunkt text-m_undermenupunkt font-montserrat",
+  primary: "bg-yellow-300 rounded-full lg:py-xs py-2xs px-m text-m_button lg:text-d_button font-opensans",
+  secondary: "bg-green-700  rounded-full lg:py-xs py-2xs px-m text-m_button lg:text-d_button font-opensans ",
+  tertiary: "text-m_button lg:text-d_button font-opensans",
+  menupunkt: "lg:text-d_menupunkt text-m_menupunkt font-montserrat",
+  undermenupunkt: " lg:text-d_undermenupunkt text-m_undermenupunkt font-montserrat",
 };
 
 const sizeClasses = {
@@ -29,10 +29,15 @@ const pressClasses = {
   secondary: "active:bg-green-800 hover:scale-105 transition-transform",
   tertiary: "",
 };
+
+const textcolorClasses = {
+  primary: "text-neutral-950",
+  secondary: "text-neutral-50",
+};
 ---
 
 <a href={href} class="" target={target}>
-  <div class:list={[linkClasses, variantClasses[variant], sizeClasses[size], hoverClasses[hover], pressClasses[press]]}>
+  <div class:list={[linkClasses, variantClasses[variant], sizeClasses[size], hoverClasses[hover], pressClasses[press], textcolorClasses[textcolor]]}>
     <slot />
     {
       showIcon && (
