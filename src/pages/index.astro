@@ -2,16 +2,36 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import Card_nyhed from "../components/Card_nyhed.astro";
 import { Image } from "astro:assets";
+import hero from "../assets/images/hero_landingpage_dark.webp";
 ---
 
 <MainLayout title="Titel">
   <article class="">
-    <div class="bg-yellow-400 rounded-15 py-13xl">
-      <p>haliofofofo</p>
-    </div>
-    <h1 class="text-d_display font-montserrat">Index</h1>
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+    <!-- Landingpage -->
+    <section class="bg-[url(../assets/images/hero_landingpage_dark.webp)] bg-cover px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-ml pb-ml lg:pt-5xl lg:pb-7xl">
+      <div class="pb-m lg:pb-3xl">
+        <h4 class="text-m_h4 lg:text-d_h4 font-montserrat text-neutral-100">Velkommen til</h4>
+        <h1 class="text-m_display lg:text-d_display font-montserrat text-neutral-100">Veddelev Havn</h1>
+      </div>
+      <div class="lg:hidden">
+        <Card_nyhed variant="secondary" billede="/nyhed_1.webp" billede_alt="Billede af joller på havnen" overskrift="DM i finnjolle til sommer" dato="03" maaned="Maj" />
+      </div>
+      <div class="hidden lg:grid grid-cols-4 gap-xl">
+        <div class="col-start-2">
+          <Card_nyhed variant="secondary" billede="/nyhed_1.webp" billede_alt="Billede af joller på havnen" overskrift="DM i finnjolle til sommer" dato="03" maaned="Maj" />
+        </div>
+        <div class="col-start-3">
+          <Card_nyhed variant="secondary" billede="/nyhed_2.webp" billede_alt="Billede af bro med både" overskrift="Søsætning 2025" dato="20" maaned="Mar" />
+        </div>
+        <div class="col-start-4">
+          <Card_nyhed variant="secondary" billede="/nyhed_3.webp" billede_alt="Billede af klubhus" overskrift="Generalforsamling i næste uge" dato="01" maaned="Jun" />
+        </div>
+      </div>
+      <div class="flex justify-end pt-m">
+        <Link class="pt-m" href="#" target="_blank" variant="tertiary" size="small" hover="tertiary" textcolor="secondary">Se alle nyheder</Link>
+      </div>
+    </section>
   </article>
 </MainLayout>
