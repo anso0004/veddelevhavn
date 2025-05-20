@@ -14,6 +14,8 @@ import CardNyhedFull from "../components/Card_nyhed_full.astro";
 import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp";
 import kort from "../assets/images/kort.webp";
 import sikkerhavn from "../assets/images/sikkerhavn.webp";
+import video_mp4 from "../assets/videos/havnen_video.mp4";
+import ikon_video from "../assets/icons/";
 ---
 
 <MainLayout title="Titel">
@@ -29,17 +31,19 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
         </div>
       </div>
       <div class="col-span-3">
-        <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
+        <!-- <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
           <Image src={billede_hero_kontakt} alt="Billede af..." class="w-full h-full object-cover object-[0%_25%]" />
+        </div>
+      </div> -->
+        <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
+          <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+            <source src={video_mp4} type="" />
+            <!-- <source src="" type="video/webm" /> -->
+          </video>
         </div>
       </div>
     </section>
-    <!-- <section id="videoonhover" x-data>
-      <video x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-        <source src="../assets/images/" type="" />
-        <source src="" type="video/webm" />
-      </video>
-    </section> -->
+
     <!-- Én havn to foreninger -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:pb-ml lg:text-center">Én havn – to foreninger</h3>
