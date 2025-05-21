@@ -1,21 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import Formular_full from "../components/Formular_full.astro";
-import Card_hjaelp from "../components/Card_hjaelp.astro";
 import Card_fakta from "../components/Card_fakta.astro";
-import Karrusel_klubhus from "../components/Karrusel_klubhus.astro";
 import Card_nyhed_full from "../components/Card_nyhed_full.astro";
 import Card_faciliteter from "../components/Card_faciliteter.astro";
 import Hero from "../components/Hero.astro";
-import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp";
-import joller1 from "../assets/images/jollerpaahavnen_1.webp";
-import joller2 from "../assets/images/jollerpaahavnen_2.webp";
-import laeratsejle from "../assets/images/laeratsejle_2.webp";
-import vaerefrivillig from "../assets/images/vaerefrivillig.webp";
 import proviantere from "../assets/images/proviantere.webp";
-import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
 import video_roskilde_mp4 from "../assets/videos/roskilde_video_stor.mp4";
 import ikon_video from "../assets/icons/video.svg";
 import { Image } from "astro:assets";
@@ -25,12 +15,27 @@ import { Image } from "astro:assets";
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero gemt_video="hidden" overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." billede_foto="/hero_undersider_gaestesejler.webp" billede_foto_alt="både i havnen med udkig til klubhuset" knap_tekst1="Priser" knap_tekst2="Faciliteter" url1="#fakta" url2="#g_faciliteter" />
+      <Hero
+        gemt_video="hidden"
+        overskrift="Gæstesejler"
+        tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum."
+        billede_foto="/hero_undersider_gaestesejler.webp"
+        billede_foto_alt="både i havnen med udkig til klubhuset"
+        knap_tekst1="Priser"
+        knap_tekst2="Faciliteter"
+        url1="#fakta"
+        url2="#g_faciliteter"
+      />
     </section>
     <section id="fakta" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-3 items-start">
         <Card_fakta overskrift="Priser" underoverskrift="190 kr. per overnatning" tekst1="Prisen for en overnatning i Veddelev Havn er 190 kr. for alle både. Dette er inklusiv miljøafgift og strøm samt adgang til bad- og toiletfaciliteter." />
-        <Card_fakta overskrift="Betaling" underoverskrift="Betalingen foregår via MobilePay til 81527." tekst1="Betalingen for en overnatning foregår via MobilePay til 81527. Koden til klubhuset, toilet og bad samt sejlerstuen bliver efter betaling sendt til mobilnummeret." tekst2="Oplever du problemer eller har du spørgsmål så kontakt havnefogeden her." />
+        <Card_fakta
+          overskrift="Betaling"
+          underoverskrift="Betalingen foregår via MobilePay til 81527."
+          tekst1="Betalingen for en overnatning foregår via MobilePay til 81527. Koden til klubhuset, toilet og bad samt sejlerstuen bliver efter betaling sendt til mobilnummeret."
+          tekst2="Oplever du problemer eller har du spørgsmål så kontakt havnefogeden her."
+        />
         <Card_fakta overskrift="Bådstørrelse" underoverskrift="Max 14,5 m x 4,5 m" tekst1="Havnen kan tage imod både op til 14,5 meter i længden og 4,5 meter i bredden." tekst2="Ledige gæstepladser er markeret med grønne skilte." />
       </div>
     </section>
@@ -44,7 +49,16 @@ import { Image } from "astro:assets";
         </div>
         <div class="relative lg:col-start-1 lg:col-span-5 pt-m lg:pt-null">
           <div class="absolute z-50 bottom-m left-m">
-            <Link href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/4000+Roskilde/@55.6603783,12.0399263,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525fc995012f29:0xa00afcc1d507710!2m2!1d12.087845!2d55.64191!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
+            <Link
+              href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/4000+Roskilde/@55.6603783,12.0399263,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525fc995012f29:0xa00afcc1d507710!2m2!1d12.087845!2d55.64191!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              variant="primary"
+              size="large"
+              hover="primary"
+              press="primary"
+              textcolor="primary"
+              showIcon={false}>Google Maps</Link
+            >
           </div>
           <div class="relative w-full lg:h-full 2xl:h-[500px] overflow-hidden" id="videoonhover" x-data>
             <div class="absolute top-sm right-sm">
@@ -62,7 +76,6 @@ import { Image } from "astro:assets";
     <section class="">
       <Card_nyhed_full />
     </section>
-
     <!-- Faciliteter -->
     <section id="g_faciliteter" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter ved besøg</h2>
@@ -77,29 +90,31 @@ import { Image } from "astro:assets";
         <Card_faciliteter icon="/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
       </div>
     </section>
-
     <!-- Proviantere -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="lg:grid lg:grid-cols-8">
-        <div class="lg:col-start-3 lg:col-span-6 xl:col-start-3 2xl:col-span-5">
+        <div class="lg:col-start-2 lg:col-span-6 xl:col-start-3 xl:col-span-6 2xl:col-start-3 2xl:col-span-6">
           <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Har du brug for at proviantere?</h2>
           <p class="text-m_p lg:text-d_p font-opensans pb-ml lg:max-w-[471px]">Du kan proviantere i Himmelev kun 3 km fra havnen. Her finder du et supermarked. Du kan også tage en tur ind til Roskilde by, hvor der er mange indkøbsmuligheder.</p>
         </div>
         <div class="relative lg:col-start-4 lg:col-span-5">
           <div class="absolute z-50 bottom-m left-m">
-            <Link href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/Netto+Himmelev,+Himmelev+Bygade,+Roskilde/@55.6719325,12.0672563,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525e384fa8efd1:0xd799d59f4e8418c6!2m2!1d12.1061387!2d55.6646352!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
+            <Link
+              href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/Netto+Himmelev,+Himmelev+Bygade,+Roskilde/@55.6719325,12.0672563,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525e384fa8efd1:0xd799d59f4e8418c6!2m2!1d12.1061387!2d55.6646352!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              variant="primary"
+              size="large"
+              hover="primary"
+              press="primary"
+              textcolor="primary"
+              showIcon={false}>Google Maps</Link
+            >
           </div>
-          <Image src={proviantere} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[52%_25%]" />
+          <div class="relative w-full h-[350px] lg:h-[400px] 2xl:h-[450px] overflow-hidden">
+            <Image src={proviantere} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[52%_25%]" />
+          </div>
         </div>
       </div>
-
-      <!-- Kopi af sikker havn -->
-
-      <!-- Brug som eksempel til de andre sider -->
-      <!-- normalt billede -->
-      <!-- <Hero gemt_video="hidden" overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." url1="#" url2="#" billede_foto="/hero_undersider_gaestesejler.webp" billede_foto_alt="både i havnen med udkig til klubhuset" knap_tekst1="Priser" knap_tekst2="Faciliteter" /> -->
-      <!-- video -->
-      <!-- <Hero gemt_billede="hidden" overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." url1="#" url2="#" video="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Priser" knap_tekst2="Faciliteter" /> -->
     </section>
   </article>
 </MainLayout>
