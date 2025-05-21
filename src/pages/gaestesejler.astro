@@ -44,7 +44,7 @@ import { Image } from "astro:assets";
         </div>
         <div class="relative lg:col-start-1 lg:col-span-5 pt-m lg:pt-null">
           <div class="absolute z-50 bottom-m left-m">
-            <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
+            <Link href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/4000+Roskilde/@55.6603783,12.0399263,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525fc995012f29:0xa00afcc1d507710!2m2!1d12.087845!2d55.64191!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
           </div>
           <div class="relative w-full lg:h-full 2xl:h-[500px] overflow-hidden" id="videoonhover" x-data>
             <div class="absolute top-sm right-sm">
@@ -67,14 +67,14 @@ import { Image } from "astro:assets";
     <section id="g_faciliteter" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter ved besøg</h2>
       <div class="grid gap-m lg:gap-xl lg:grid-cols-2">
-        <Card_faciliteter icon="public/ikoner/sejlerstue.svg" iconalt="Ikon af sejlerstue" overskrift="Sejlerstue" tekst="Sejlerstuen har åbent når der er medlemmer på havnen. Her finder du en kaffemaskine, opvaskeudstyr, køleskab og service. " />
-        <Card_faciliteter icon="public/ikoner/havnekontor.svg" iconalt="Ikon af havnekontor" overskrift="Havnekontor" tekst="Havnekontoret ligger ved klubhuset og fungerer som base for havnefogeden, som står for den daglige drift og er kontaktperson ved spørgsmål." />
-        <Card_faciliteter icon="public/ikoner/bad.svg" iconalt="Ikon af bad" overskrift="Toilet og bad" tekst="Toilet- og badefaciliteterne findes i klubhuset. Gæstesejlere modtager en adgangskode til klubhuset, når betaling for havnepladsen er registreret." />
-        <Card_faciliteter icon="public/ikoner/kran.svg" iconalt="Ikon af kran" overskrift="Bedding, mastekran og slæbested" tekst="Som gæst er du velkommen til at benytte vores bedding og mastekran. Du skal dog være medlem af sejlklubben for at benytte slæbestedet." />
-        <Card_faciliteter icon="public/ikoner/vand.svg" iconalt="Ikon af vand" overskrift="Vand og strøm" tekst="Der er strømstandere og vandslanger på alle broer, så bådejere og gæstesejlere nemt kan tilkoble el eller fylde vandtanken." />
-        <Card_faciliteter icon="public/ikoner/udtoemning.svg" iconalt="Ikon af udtømning" overskrift="Udlagskumme for kemisk toilet" tekst="Du kan tømme dit kemiske toilet i vores udslagskumme. Den finder du ved skraldespandene på parkeingspladsen. " />
-        <Card_faciliteter icon="public/ikoner/grill.svg" iconalt="Ikon af grill" overskrift="Grill" tekst="Du må frit benytte klubhusets fælles grill. Du finder den til højre for klubhuset. Du må ikke benytte din egen grill på havnen." />
-        <Card_faciliteter icon="public/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
+        <Card_faciliteter icon="/ikoner/sejlerstue.svg" iconalt="Ikon af sejlerstue" overskrift="Sejlerstue" tekst="Sejlerstuen har åbent når der er medlemmer på havnen. Her finder du en kaffemaskine, opvaskeudstyr, køleskab og service. " />
+        <Card_faciliteter icon="/ikoner/havnekontor.svg" iconalt="Ikon af havnekontor" overskrift="Havnekontor" tekst="Havnekontoret ligger ved klubhuset og fungerer som base for havnefogeden, som står for den daglige drift og er kontaktperson ved spørgsmål." />
+        <Card_faciliteter icon="/ikoner/bad.svg" iconalt="Ikon af bad" overskrift="Toilet og bad" tekst="Toilet- og badefaciliteterne findes i klubhuset. Gæstesejlere modtager en adgangskode til klubhuset, når betaling for havnepladsen er registreret." />
+        <Card_faciliteter icon="/ikoner/kran.svg" iconalt="Ikon af kran" overskrift="Bedding, mastekran og slæbested" tekst="Som gæst er du velkommen til at benytte vores bedding og mastekran. Du skal dog være medlem af sejlklubben for at benytte slæbestedet." />
+        <Card_faciliteter icon="/ikoner/vand.svg" iconalt="Ikon af vand" overskrift="Vand og strøm" tekst="Der er strømstandere og vandslanger på alle broer, så bådejere og gæstesejlere nemt kan tilkoble el eller fylde vandtanken." />
+        <Card_faciliteter icon="/ikoner/udtoemning.svg" iconalt="Ikon af udtømning" overskrift="Udlagskumme for kemisk toilet" tekst="Du kan tømme dit kemiske toilet i vores udslagskumme. Den finder du ved skraldespandene på parkeingspladsen. " />
+        <Card_faciliteter icon="/ikoner/grill.svg" iconalt="Ikon af grill" overskrift="Grill" tekst="Du må frit benytte klubhusets fælles grill. Du finder den til højre for klubhuset. Du må ikke benytte din egen grill på havnen." />
+        <Card_faciliteter icon="/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
       </div>
     </section>
 
@@ -87,7 +87,7 @@ import { Image } from "astro:assets";
         </div>
         <div class="relative lg:col-start-4 lg:col-span-5">
           <div class="absolute z-50 bottom-m left-m">
-            <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
+            <Link href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/Netto+Himmelev,+Himmelev+Bygade,+Roskilde/@55.6719325,12.0672563,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525e384fa8efd1:0xd799d59f4e8418c6!2m2!1d12.1061387!2d55.6646352!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
           </div>
           <Image src={proviantere} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[52%_25%]" />
         </div>
