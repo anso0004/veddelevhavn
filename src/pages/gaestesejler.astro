@@ -1,0 +1,26 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import Formular_full from "../components/Formular_full.astro";
+import Card_hjaelp from "../components/Card_hjaelp.astro";
+import Card_fakta from "../components/Card_fakta.astro";
+import Karrusel_klubhus from "../components/Karrusel_klubhus.astro";
+import Card_nyhed_full from "../components/Card_nyhed_full.astro";
+import Hero from "../components/Hero.astro";
+import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp";
+import joller1 from "../assets/images/jollerpaahavnen_1.webp";
+import joller2 from "../assets/images/jollerpaahavnen_2.webp";
+import laeratsejle from "../assets/images/laeratsejle_2.webp";
+import vaerefrivillig from "../assets/images/vaerefrivillig.webp";
+import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
+import ikon_video from "../assets/icons/video.svg";
+import { Image } from "astro:assets";
+---
+
+<MainLayout title="Titel">
+  <article class="flex flex-col gap-4xl lg:gap-10xl">
+    <!-- Herosektion -->
+    <Hero overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." billede_foto="/hero_undersider_gaestesejler.webp" billede_foto_alt="både i havnen" knap_tekst1="Priser" knap_tekst2="Faciliteter" />
+  </article>
+</MainLayout>
