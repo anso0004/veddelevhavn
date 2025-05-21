@@ -8,9 +8,9 @@ import Card_hjaelp from "../components/Card_hjaelp.astro";
 import CardKontaktInfo from "../components/Card_kontakt_info.astro";
 import kort from "../assets/images/kort.webp";
 import video_laeratsejle_mp4 from "../assets/videos/laeratsejle_video_stor.mp4";
-import video_laeratsejle_webm from "../assets/videos/laeratsejle_video_stor.webm";
+// import video_laeratsejle_webm from "../assets/videos/laeratsejle_video_stor.webm";
 import video_kapsejlads_mp4 from "../assets/videos/kapsejlads_video_stor.mp4";
-import video_kapsejlads_webm from "../assets/videos/kapsejlads_video_stor.webm";
+// import video_kapsejlads_webm from "../assets/videos/kapsejlads_video_stor.webm";
 import ikon_video from "../assets/icons/video.svg";
 import havnefoged from "../assets/images/kontakthavnefogeden.webp";
 import laeratsejle from "../assets/images/laeratsejle_2.webp";
@@ -92,7 +92,10 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
           <div class="col-span-2 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
             <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-full object-cover object-[0%_25%]" />
           </div>
-          <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
+          <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
+            På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både
+            store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.
+          </p>
         </div>
       </section>
       <!-- Kontakt havnefogeden -->
@@ -126,7 +129,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
             </div>
             <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
               <source src={video_laeratsejle_mp4} type="video/mp4" />
-              <source src={video_laeratsejle_webm} type="video/webm" />
+              <!-- <source src={video_laeratsejle_webm} type="video/webm" /> -->
             </video>
           </div>
           <Image src={laeratsejle} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
@@ -149,7 +152,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
             </video>
             <video class="hidden lg:flex rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
               <source src={video_kapsejlads_mp4} type="video/mp4" />
-              <source src={video_kapsejlads_webm} type="video/webm" />
+              <!-- <source src={video_kapsejlads_webm} type="video/webm" /> -->
             </video>
           </div>
         </div>
