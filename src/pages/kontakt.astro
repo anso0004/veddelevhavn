@@ -1,0 +1,97 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import Hero from "../components/Hero.astro";
+import havnefoged from "../assets/images/kontakthavnefogeden.webp";
+import CardKontaktInfo from "../components/Card_kontakt_info.astro";
+import Card_kontakt from "../components/Card_kontakt.astro";
+---
+
+<MainLayout title="Titel">
+  <article class="flex flex-col gap-4xl lg:gap-10xl">
+    <!-- Herosektion -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <Hero
+        gemt_video="hidden"
+        overskrift="Kontakt"
+        tekst="Har du spørgsmål til havnefogeden, VSL, VSB eller en af vores frivillige på havnen er du velkommen til at kontakte dem telefonisk eller på mail."
+        url1="#"
+        url2="#"
+        billede_foto="/hero_undersider_kontakt.webp"
+        billede_foto_alt="KLubhuset med VSB-logo"
+        knap_tekst1="Havnefoged"
+        knap_tekst2="Udvalg"
+      />
+    </section>
+    <!-- Havnefogeden -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <div class="grid gap-ml lg:grid-cols-2">
+        <div class="lg:order-2 flex flex-col justify-center">
+          <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Havnefoged</h2>
+          <p class="text-m_p lg:text-d_p font-opensans pb-s lg:pb-ml max-w-[325px]">Tommy Jørgensen er Veddelev Havns havnefoged. Du kan spørge Tommy om alt, og hvis han ikke selv kender svaret, så kender han en der gør. Du er altid velkommen til at ringe eller skrive.</p>
+          <div class="">
+            <CardKontaktInfo navn="" telefonnummer="+45 51 90 66 75" email="havnefoged@vsb.dk" />
+          </div>
+        </div>
+        <div class="lg:order-1 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
+          <Image src={havnefoged} alt="Billede af havnefogeden" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" />
+        </div>
+      </div>
+    </section>
+    <!-- Kontakt-cards -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:text-center">Udvalg og bestyrrelser</h3>
+      <div class="space-y-ml">
+        <div class="grid gap-ml lg:grid-cols-2">
+          <Card_kontakt overskrift="VSB (Sejlklub)" showText={true} showSpace={false} navn1="" navn2="" navn3="Anders Vogensen" navn4="Anders Terkildsen" telefonnummer1="21 71 24 06" telefonnummer2="+45 40 33 46 36" email1="vognsen@icloud.com" email2="aterkild@vsb.dk" />
+          <Card_kontakt overskrift="VSL (Andel)" showText={true} showSpace={false} navn1="" navn2="" navn3="Henrik Vahlun" navn4="Thomas Hermann" telefonnummer1="20 37 53 65" telefonnummer2="52 21 34 45" email1="henrikval@vsl.dk" email2="thermann@gmail.com" />
+        </div>
+        <div class="grid lg:grid-cols-3 gap-ml">
+          <div class="space-y-ml">
+            <Card_kontakt overskrift="Klubhusudlejning" showText={false} showSpace={false} navn1="" navn2="" navn3="Søren Holmbom" navn4="" telefonnummer1="40 72 57 61" telefonnummer2="" email1="klubhus@vsb.dk" email2="" />
+            <Card_kontakt overskrift="Webmaster" showText={false} showSpace={false} navn1="" navn2="" navn3="Martin Nielsen" navn4="" telefonnummer1="40 82 39 19" telefonnummer2="" email1="webmaster@vsb.dk" email2="" />
+          </div>
+          <div>
+            <Card_kontakt overskrift="Skipperkonerne" showText={true} showSpace={true} navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+          </div>
+          <div class="space-y-ml">
+            <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+            <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Husk på vi er frivillige, så svartider kan varriere. Men vi gør vores bedste</h6>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-ml">
+          <div class="space-y-ml">
+            <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+            <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Kontakt os endelig, hvis du har spørgsmål. Vi hjælper dig gerne!</h6>
+          </div>
+          <div class="space-y-ml">
+            <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+            <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          </div>
+          <div>
+            <Card_kontakt overskrift="Medium" showText={true} showSpace={true} navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-ml">
+          <div>
+            <Card_kontakt overskrift="Medium" showText={true} showSpace={true} navn1="Sara Larsen" navn2="Anika Borup" navn3="Sara Larsen" navn4="Anika Borup" telefonnummer1="1234" telefonnummer2="4567" email1="saralarsen" email2="anikaborup" />
+          </div>
+          <div class="space-y-ml">
+            <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+            <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          </div>
+          <div class="space-y-ml">
+            <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+            <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Er du i tvivl, om hvem der er den rigtige at kontakte, så skriv til havnefogeden. Han vil gerne vejlede dig</h6>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-ml">
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+          <Card_kontakt overskrift="Small" showText={false} showSpace={false} navn1="" navn2="" navn3="Sara Larsen" navn4="" telefonnummer1="1234" telefonnummer2="" email1="saralarsen" email2="" />
+        </div>
+      </div>
+    </section>
+  </article>
+</MainLayout>
