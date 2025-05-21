@@ -15,7 +15,7 @@ import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp"
 import kort from "../assets/images/kort.webp";
 import sikkerhavn from "../assets/images/sikkerhavn.webp";
 import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
-import video_webm from "../assets/videos/havnen_video_stor.webm";
+// import video_webm from "../assets/videos/havnen_video_stor.webm";
 import ikon_video from "../assets/icons/video.svg";
 ---
 
@@ -38,7 +38,7 @@ import ikon_video from "../assets/icons/video.svg";
           </div>
           <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
             <source src={video_mp4} type="video/mp4" />
-            <source src={video_webm} type="video/webm" />
+            <!-- <source src={video_webm} type="video/webm" /> -->
           </video>
         </div>
       </div>
