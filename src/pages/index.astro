@@ -124,9 +124,11 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
             <div class="absolute top-sm right-sm">
               <Image src={ikon_video} alt="" class="" />
             </div>
-            <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+            <video class="lg:hidden rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" controls autoplay muted loop>
               <source src={video_laeratsejle_mp4} type="video/mp4" />
-              <!-- <source src={video_laeratsejle_webm} type="video/webm" /> -->
+            </video>
+            <video class="hidden lg:flex rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+              <source src={video_laeratsejle_mp4} type="video/mp4" />
             </video>
           </div>
           <Image src={laeratsejle} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
@@ -149,7 +151,6 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
             </video>
             <video class="hidden lg:flex rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
               <source src={video_kapsejlads_mp4} type="video/mp4" />
-              <!-- <source src={video_kapsejlads_webm} type="video/webm" /> -->
             </video>
           </div>
         </div>

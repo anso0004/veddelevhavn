@@ -14,6 +14,8 @@ import laeratsejle from "../assets/images/laeratsejle_2.webp";
 import vaerefrivillig from "../assets/images/vaerefrivillig.webp";
 import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
 import ikon_video from "../assets/icons/video.svg";
+import video_laeratsejle_mp4 from "../assets/videos/laeratsejle_video_stor.mp4";
+import video_kapsejlads_mp4 from "../assets/videos/kapsejlads_video_stor.mp4";
 import { Image } from "astro:assets";
 ---
 
@@ -128,26 +130,24 @@ import { Image } from "astro:assets";
     <!-- Lær at sejle -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
-      <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:gap-5xl">
+      <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
         <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
         <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
       </div>
-      <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[550px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-        <div class="relative w-full h-[393px] overflow-hidden rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-2 xl:col-start-2 lg:col-span-6 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 object-cover object-[52%_25%]" id="videoonhover" x-data>
+      <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
+        <div class="relative w-full overflow-hidden rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-2 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 object-cover object-[52%_50%]" id="videoonhover" x-data>
           <div class="absolute top-sm right-sm">
             <Image src={ikon_video} alt="" class="" />
           </div>
-          <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-            <source src={video_mp4} type="" />
-            <!-- <source src="" type="video/webm" /> -->
+          <video class="lg:hidden rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" controls autoplay muted loop>
+            <source src={video_laeratsejle_mp4} type="video/mp4" />
+          </video>
+          <video class="hidden lg:flex rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+            <source src={video_laeratsejle_mp4} type="video/mp4" />
           </video>
         </div>
-        <Image src={laeratsejle} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-4 lg:row-span-7 xl:row-start-4 xl:row-span-7 w-full h-full object-cover object-[52%_25%]" />
+        <Image src={laeratsejle} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
       </div>
-      <!-- <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[550px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-        <Image src={billede_hero_kontakt} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-2 xl:col-start-2 lg:col-span-6 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_25%]" />
-        <Image src={laeratsejle} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-4 lg:row-span-7 xl:row-start-4 xl:row-span-7 w-full h-full object-cover object-[52%_25%]" />
-      </div> -->
     </section>
     <!-- Frivillig -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
@@ -179,35 +179,34 @@ import { Image } from "astro:assets";
     <!-- Joller på havnen -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
-      <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:gap-5xl">
+      <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
         <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
         <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
       </div>
-      <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[550px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-        <Image src={joller1} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-7 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_25%]" />
-        <Image src={joller2} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
+      <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
+        <Image src={joller1} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_100%]" />
+        <Image src={joller2} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-7 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_75%]" />
       </div>
     </section>
     <!-- Kapsejladser -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m text-center">Vil du være med til kapsejladser?</h2>
-      <div class="grid lg:grid-cols-10 pb-ml lg:gap-xl xl:gap-5xl">
+      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
+      <div class="grid lg:grid-cols-10 pb-ml lg:gap-ml xl:gap-ml">
         <div class="lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
-          <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-ml">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
+          <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-2xl">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
           <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om kapsejladser</Link>
         </div>
-        <div class="relative w-full h-[393px] overflow-hidden lg:col-start-6 lg:col-span-5 xl:col-start-5 xl:col-span-6" id="videoonhover" x-data>
+        <div class="relative w-full h-[347px] overflow-hidden lg:col-start-6 lg:col-span-6 xl:col-start-5 2xl:col-span-5" id="videoonhover" x-data>
           <div class="absolute top-sm right-sm">
             <Image src={ikon_video} alt="" class="" />
           </div>
-          <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-            <source src={video_mp4} type="" />
-            <!-- <source src="" type="video/webm" /> -->
+          <video class="lg:hidden rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" controls autoplay muted loop>
+            <source src={video_kapsejlads_mp4} type="video/mp4" />
+          </video>
+          <video class="hidden lg:flex rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+            <source src={video_kapsejlads_mp4} type="video/mp4" />
           </video>
         </div>
-        <!-- <div class="lg:col-start-6 lg:col-span-5 xl:col-start-5 xl:col-span-6">
-          <Image src={joller1} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-7 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_25%]" />
-        </div> -->
       </div>
     </section>
 
