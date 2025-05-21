@@ -5,6 +5,7 @@ import Link from "../components/Link.astro";
 import Formular_full from "../components/Formular_full.astro";
 import Card_hjaelp from "../components/Card_hjaelp.astro";
 import Card_fakta from "../components/Card_fakta.astro";
+import Hero from "../components/Hero.astro";
 import Karrusel_klubhus from "../components/Karrusel_klubhus.astro";
 import Card_nyhed_full from "../components/Card_nyhed_full.astro";
 import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp";
@@ -22,29 +23,8 @@ import { Image } from "astro:assets";
 <MainLayout title="Titel">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid lg:items-center lg:grid-cols-5 pt-ml lg:pt-8xl lg:gap-2xl xl:gap-3xl 2xl:gap-10xl">
-      <div class="col-span-2 pb-ml">
-        <h1 class="text-m_h1 lg:text-d_h1 font-montserrat pb-s">Sejlklub</h1>
-        <p class="text-m_p lg:text-d_p font-opensans pb-sm lg:pb-ml">VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt.</p>
-        <div class="flex flex-col gap-s lg:gap-m">
-          <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Medlemsskab</Link>
-          <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary" textcolor="secondary">Kontakt</Link>
-        </div>
-      </div>
-      <div class="col-span-3">
-        <!-- <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
-          <Image src={billede_hero_kontakt} alt="Billede af..." class="w-full h-full object-cover object-[0%_25%]" />
-        </div> -->
-        <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
-          <div class="absolute top-sm right-sm">
-            <Image src={ikon_video} alt="" class="" />
-          </div>
-          <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-            <source src={video_mp4} type="" />
-            <!-- <source src="" type="video/webm" /> -->
-          </video>
-        </div>
-      </div>
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." url1="#" url2="#" video="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" />
     </section>
     <!-- formular til sejlklub -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
