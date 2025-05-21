@@ -8,13 +8,13 @@ const { navn = "", telefonnummer = "", email = "" } = Astro.props;
 <article class="space-y-3xs">
   <p class="text-m_p lg:text-d_p font-opensans break-all">{navn}</p>
   <div class="flex gap-m">
-    <Image src={icon_telefon} alt="Ikon telefon" />
+    <Image src={icon_telefon} alt="Ikon af telefon" />
     <a href={`tel:${telefonnummer}`}>
       <p class="text-m_p lg:text-d_p font-opensans break-all hover:underline">{telefonnummer}</p>
     </a>
   </div>
   <div class="flex gap-m">
-    <Image src={icon_email} alt="Ikon email" />
+    <Image src={icon_email} alt="Ikon af email" />
     <a href={`mailto:${email}`}>
       <p class="text-m_p lg:text-d_p font-opensans break-all hover:underline">{email}</p>
     </a>
