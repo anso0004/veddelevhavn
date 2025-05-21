@@ -16,8 +16,8 @@ const sizeClasses = {
 };
 ---
 
-<article class="@container card bg-brown-100 rounded-10 lg:rounded-15 px-l py-ml space-y-sm">
-  <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">{overskrift}</h6>
+<article class="@container card bg-brown-100 rounded-10 lg:rounded-15 px-l py-ml lg:px-ml lg:py-m xl:px-l xl:py-ml space-y-sm h-full">
+  <h6 class="text-m_h7 lg:text-d_h7 font-montserrat break-all">{overskrift}</h6>
   <div>
     <p class="text-m_p lg:text-d_p font-opensans">{navn1}</p>
     <p class="text-m_p lg:text-d_p font-opensans">{navn2}</p>
@@ -29,22 +29,3 @@ const sizeClasses = {
     {showText && <CardKontaktInfo navn={navn4} telefonnummer={telefonnummer2} email={email2} />}
   </div>
 </article>
-
-<!-- <a href={href} class="" target={target}>
-  <div class:list={[variantClasses[variant], sizeClasses[size], hoverClasses[hover], pressClasses[press]]}>
-    <slot />
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
-    </svg>
-  </div>
-</a> -->
-
-<!-- <article class="@container card">
-  <section class="flex gap-sm">
-    <img src={icon} alt={iconalt} class="rounded-5 lg:rounded-7" />
-    <div class="flex flex-col gap-2xs">
-      <h6 class="text-m_h6 lg:text-d_h6 font-opensans">{overskrift}</h6>
-      <p class="text-m_p lg:text-d_p font-opensans">{tekst}</p>
-    </div>
-  </section>
-</article> -->
