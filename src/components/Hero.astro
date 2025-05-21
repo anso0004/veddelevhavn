@@ -14,16 +14,16 @@ const { overskrift = "", tekst = "", billede_foto = "", billede_foto_alt = "", b
     </div>
   </div>
   <div class="col-span-3">
-    <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
-      <Image src={billede_foto} alt={billede_foto_alt} class="w-full h-full object-cover object-[0%_25%]" />
-    </div>
-    <!-- <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
+    <!-- <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
+      <img src={billede_foto} alt={billede_foto_alt} class="w-full h-full object-cover object-[0%_25%]" />
+    </div> -->
+    <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
       <div class="absolute top-sm right-sm">
-        <Image src={billede_video} alt={billede_video_alt} class="" />
+        <img src={billede_video} alt={billede_video_alt} class="" />
       </div>
       <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
         <source src={video} type={video_type} />
       </video>
-    </div> -->
+    </div>
   </div>
 </section>
