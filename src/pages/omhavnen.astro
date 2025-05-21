@@ -16,17 +16,18 @@ import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp"
 import kort from "../assets/images/kort.webp";
 import sikkerhavn from "../assets/images/sikkerhavn.webp";
 import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
+// import "animate.css";
 // import video_webm from "../assets/videos/havnen_video_stor.webm";
 import ikon_video from "../assets/icons/video.svg";
 ---
 
 <MainLayout title="Titel">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="mitelement4 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Hero gemt_billede="hidden" overskrift="Om havnen" tekst="Veddelev Havn er en mindre lystbådehavn beliggende nord for Roskilde med en smuk udsigt over Roskilde Fjord." video="/havnen_video_stor.mp4" video_type="video/mp4" knap_tekst1="Kort over havnen" knap_tekst2="Faciliteter" url1="#overblik" url2="#faciliteter" />
     </section>
     <!-- Én havn to foreninger -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="mitelement7 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:pb-ml lg:text-center">Én havn – to foreninger</h3>
       <div class="grid lg:grid-cols-2 gap-m lg:gap-2xl items-start">
         <Card_vsbvsl url="/sejlklub" knap_url="/sejlklub" overskrift="VSB" tekst1="Veddelev Strand Bådelaug er en" bold1="sejlklub" tekst2="beliggende på Veddelev Havn. Klubben har omkring" bold2="300 medlemmer" tekst3="og tilbyder både sejlerskole, kapsejladser og sociale aktiviteter året rundt. Med faciliteter som klubhus, masteskur og gode havneforhold danner sejlklubben rammen om et aktivt og inkluderende" bold3="sejlerfællesskab" tekst4="på havnen." knap_tekst="Læs mere om sejlklubben" />
@@ -34,7 +35,7 @@ import ikon_video from "../assets/icons/video.svg";
       </div>
     </section>
     <!-- Få overblikket -->
-    <section id="overblik" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="overblik" class="mitelement6 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="lg:grid lg:grid-cols-6">
         <h2 class="lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
       </div>
@@ -67,7 +68,7 @@ import ikon_video from "../assets/icons/video.svg";
       </div>
     </section>
     <!-- Faciliteter på havnen -->
-    <section id="faciliteter" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="faciliteter" class="mitelement5 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter på havnen</h2>
       <div class="grid gap-m lg:gap-xl lg:grid-cols-2">
         <Card_faciliteter icon="/ikoner/klubhus.svg" iconalt="Ikon af klubhus" overskrift="Klubhus" tekst="Klubhuset han lejes af medlemmer af sejlklubben og har plads til op til 50 personer. Det er udstyret med køkken og egner sig både til faglige oplæg og private arrangementer." />
@@ -83,15 +84,15 @@ import ikon_video from "../assets/icons/video.svg";
       </div>
     </section>
     <!-- Karrusel -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="mitelement3 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Karrusel />
     </section>
     <!-- Nyheder -->
-    <section>
+    <section class="">
       <Card_nyhed_full />
     </section>
     <!-- Sikker Havn -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="mitelement mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vi er certificeret som sikker havn</h2>
       <p class="text-m_p lg:text-d_p font-opensans pb-ml lg:pb-l lg:max-w-[471px]">Veddelev Havn er certificeret af Foreningen af Lystbådehavne I Danmark (FLID) som Sikker Havn. Det betyder, at vi lever op til en række krav om sikkerhed og beredskab. I hele havneområdet finder du redningsstiger, redningskranse og tydelig skiltning, der sikrer hurtig hjælp i nødssituationer – for både sejlere, gæster og besøgende på land.</p>
       <div class="relative w-full h-[393px] lg:h-[450px] overflow-hidden grid lg:grid-cols-10 rounded-10 lg:rounded-15">
@@ -99,10 +100,63 @@ import ikon_video from "../assets/icons/video.svg";
       </div>
     </section>
     <!-- Faktabokse -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-ml lg:grid-cols-3">
+    <section class="mitelement2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-ml lg:grid-cols-3">
       <Card_fakta underoverskrift="Andelshavere" number="110" />
       <Card_fakta underoverskrift="Gæstesejlere" number="450" />
       <Card_fakta underoverskrift="Jolleindehavere" number="30" />
     </section>
   </article>
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+
+  // 1
+  const inviewelement = document.querySelector(".mitelement");
+
+  inView(inviewelement, () => {
+    inviewelement.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // 2
+  const inviewelement2 = document.querySelector(".mitelement2");
+
+  inView(inviewelement2, () => {
+    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // 3
+  const inviewelement3 = document.querySelector(".mitelement3");
+
+  inView(inviewelement3, () => {
+    inviewelement3.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // 4
+  const inviewelement4 = document.querySelector(".mitelement4");
+
+  inView(inviewelement4, () => {
+    inviewelement4.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // 1
+  const inviewelement5 = document.querySelector(".mitelement5");
+
+  inView(inviewelement5, () => {
+    inviewelement5.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // 1
+  const inviewelement6 = document.querySelector(".mitelement6");
+
+  inView(inviewelement6, () => {
+    inviewelement6.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // 1
+  const inviewelement7 = document.querySelector(".mitelement7");
+
+  inView(inviewelement7, () => {
+    inviewelement7.classList.add("animate__animated", "animate__fadeInUp");
+  });
+</script>
