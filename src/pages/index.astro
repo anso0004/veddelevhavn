@@ -92,10 +92,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
           <div class="col-span-2 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
             <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-full object-cover object-[0%_25%]" />
           </div>
-          <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
-            På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både
-            store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.
-          </p>
+          <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
         </div>
       </section>
       <!-- Kontakt havnefogeden -->
@@ -118,7 +115,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
       <!-- Lær at sejle -->
       <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
         <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
-        <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:pb-xl lg:gap-5xl max-w-[1050px]">
+        <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
           <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
         </div>
@@ -147,7 +144,10 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
             <div class="absolute top-sm right-sm">
               <Image src={ikon_video} alt="" class="" />
             </div>
-            <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+            <video class="lg:hidden rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" autoplay muted loop>
+              <source src={video_kapsejlads_mp4} type="video/mp4" />
+            </video>
+            <video class="hidden lg:flex rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
               <source src={video_kapsejlads_mp4} type="video/mp4" />
               <source src={video_kapsejlads_webm} type="video/webm" />
             </video>
