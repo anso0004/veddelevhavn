@@ -1,14 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import Card_nyhed from "../components/Card_nyhed.astro";
-import Card_hjaelp from "../components/Card_hjaelp.astro";
 import { Image } from "astro:assets";
-import kort from "../assets/images/kort.webp";
-import CardKontaktInfo from "../components/Card_kontakt_info.astro";
-import havnefoged from "../assets/images/kontakthavnefogeden.webp";
+import Card_nyhed from "../components/Card_nyhed.astro";
 import Card_nyhed_full from "../components/Card_nyhed_full.astro";
+import Card_hjaelp from "../components/Card_hjaelp.astro";
+import CardKontaktInfo from "../components/Card_kontakt_info.astro";
+import kort from "../assets/images/kort.webp";
+import video_laeratsejle_mp4 from "../assets/videos/laeratsejle_video_stor.mp4";
+import video_laeratsejle_webm from "../assets/videos/laeratsejle_video_stor.webm";
+import video_kapsejlads_mp4 from "../assets/videos/kapsejlads_video_stor.mp4";
+import video_kapsejlads_webm from "../assets/videos/kapsejlads_video_stor.webm";
+import ikon_video from "../assets/icons/video.svg";
+import havnefoged from "../assets/images/kontakthavnefogeden.webp";
+import laeratsejle from "../assets/images/laeratsejle_2.webp";
+import joller1 from "../assets/images/jollerpaahavnen_1.webp";
+import joller2 from "../assets/images/jollerpaahavnen_2.webp";
 import sam_1 from "../assets/images/samarbejdspartner_1.webp";
 import sam_2 from "../assets/images/samarbejdspartner_2.webp";
 import sam_3 from "../assets/images/samarbejdspartner_3.webp";
@@ -21,12 +28,6 @@ import sam_9 from "../assets/images/samarbejdspartner_9.webp";
 import sam_10 from "../assets/images/samarbejdspartner_10.webp";
 import sam_11 from "../assets/images/samarbejdspartner_11.webp";
 import sam_12 from "../assets/images/samarbejdspartner_12.webp";
-import video_laeratsejle_mp4 from "../assets/videos/laeratsejle_video_stor.mp4";
-import video_kapsejlads_mp4 from "../assets/videos/kapsejlads_video_stor.mp4";
-import ikon_video from "../assets/icons/video.svg";
-import laeratsejle from "../assets/images/laeratsejle_2.webp";
-import joller1 from "../assets/images/jollerpaahavnen_1.webp";
-import joller2 from "../assets/images/jollerpaahavnen_2.webp";
 ---
 
 <MainLayout title="Titel">
@@ -127,8 +128,8 @@ import joller2 from "../assets/images/jollerpaahavnen_2.webp";
               <Image src={ikon_video} alt="" class="" />
             </div>
             <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-              <source src={video_laeratsejle_mp4} type="" />
-              <!-- <source src="" type="video/webm" /> -->
+              <source src={video_laeratsejle_mp4} type="video/mp4" />
+              <source src={video_laeratsejle_webm} type="video/webm" />
             </video>
           </div>
           <Image src={laeratsejle} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
@@ -147,8 +148,8 @@ import joller2 from "../assets/images/jollerpaahavnen_2.webp";
               <Image src={ikon_video} alt="" class="" />
             </div>
             <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-              <source src={video_kapsejlads_mp4} type="" />
-              <!-- <source src="" type="video/webm" /> -->
+              <source src={video_kapsejlads_mp4} type="video/mp4" />
+              <source src={video_kapsejlads_webm} type="video/webm" />
             </video>
           </div>
         </div>
