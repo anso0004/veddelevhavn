@@ -17,19 +17,19 @@ import Link from "../components/Link.astro";
             </svg>
           </button>
           <ul x-show="open" x-collapse class="mt-2 space-y-1 text-white text-sm">
-            <li><Link href="/omhavnen" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Om havnen</Link></li>
-            <li><Link href="#" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Andel</Link></li>
-            <li><Link href="/sejlklub" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Sejlklub</Link></li>
-            <li><Link href="#" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Klubhuset</Link></li>
-            <li><Link href="#" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Sejlerskolen</Link></li>
-            <li><Link href="#" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Kapsejladser</Link></li>
+            <li><Link href="/omhavnen" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Om havnen</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Andel</Link></li>
+            <li><Link href="/sejlklub" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Sejlklub</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Klubhuset</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Sejlerskolen</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Kapsejladser</Link></li>
           </ul>
         </li>
         <!-- accordion slut -->
-        <li class=""><Link href="/gaestesejler" target="_blank" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>Gæstesejler</Link></li>
-        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>Nyheder</Link></li>
-        <li class=""><Link href="/Kontakt" target="_blank" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>Kontakt</Link></li>
-        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>FAQ</Link></li>
+        <li class=""><Link href="/gaestesejler" target="_self" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>Gæstesejler</Link></li>
+        <li class=""><Link href="#" target="_self" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>Nyheder</Link></li>
+        <li class=""><Link href="/kontakt" target="_self" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>Kontakt</Link></li>
+        <li class=""><Link href="#" target="_self" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>FAQ</Link></li>
       </ul>
       <ul class="lg:flex gap-xs">
         <a href="/"><img src="/login.svg" alt="Logo" class="hidden lg:block" /> </a>
@@ -60,20 +60,20 @@ import Link from "../components/Link.astro";
             </svg>
           </button>
           <ul x-show="open" x-collapse class="mt-2 space-y-1 text-white text-sm">
-            <li><Link href="/omhavnen" variant="undermenupunkt" showIcon={false} textcolor="secondary">Om havnen</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false} textcolor="secondary">Andel</Link></li>
-            <li><Link href="/sejlklub" variant="undermenupunkt" showIcon={false} textcolor="secondary">Sejlklub</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false} textcolor="secondary">Klubhuset</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false} textcolor="secondary">Sejlerskolen</Link></li>
-            <li><Link href="#" variant="undermenupunkt" showIcon={false} textcolor="secondary">Kapsejladser</Link></li>
+            <li><Link href="/omhavnen" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Om havnen</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Andel</Link></li>
+            <li><Link href="/sejlklub" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Sejlklub</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Klubhuset</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Sejlerskolen</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Kapsejladser</Link></li>
           </ul>
         </li>
         <!-- accordion slut -->
-        <li class=""><Link href="/gaestesejler" target="_blank" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Gæstesejler</Link></li>
-        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Nyheder</Link></li>
-        <li class=""><Link href="/kontakt" target="_blank" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Kontakt</Link></li>
-        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" showIcon={false} textcolor="secondary">FAQ</Link></li>
-        <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Login</Link></li>
+        <li class=""><Link href="/gaestesejler" target="_self" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Gæstesejler</Link></li>
+        <li class=""><Link href="#" target="_self" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Nyheder</Link></li>
+        <li class=""><Link href="/kontakt" target="_self" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Kontakt</Link></li>
+        <li class=""><Link href="#" target="_self" variant="menupunkt" size="" showIcon={false} textcolor="secondary">FAQ</Link></li>
+        <li class=""><Link href="#" target="_self" variant="menupunkt" size="" showIcon={false} textcolor="secondary">Login</Link></li>
       </ul>
     </nav>
   </div>

@@ -10,8 +10,8 @@ const { overskrift = "", tekst = "", url1 = "", url2 = "", gemt_billede = "", ge
     <h1 class="text-m_h1 lg:text-d_h1 font-montserrat pb-s">{overskrift}</h1>
     <p class="text-m_p lg:text-d_p font-opensans pb-sm lg:pb-ml">{tekst}</p>
     <div class="flex flex-col gap-s lg:gap-m">
-      <Link href={url1} target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">{knap_tekst1}</Link>
-      <Link href={url2} target="_blank" variant="secondary" size="small" hover="secondary" press="secondary" textcolor="secondary">{knap_tekst2}</Link>
+      <Link href={url1} target="_self" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">{knap_tekst1}</Link>
+      <Link href={url2} target="_self" variant="secondary" size="small" hover="secondary" press="secondary" textcolor="secondary">{knap_tekst2}</Link>
     </div>
   </div>
   <div class="col-span-3">

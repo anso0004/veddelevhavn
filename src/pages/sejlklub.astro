@@ -24,10 +24,10 @@ import { Image } from "astro:assets";
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." url1="#" url2="#" video="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" />
+      <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." video="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" url1="#tilmeld" url2="/kontakt" />
     </section>
     <!-- formular til sejlklub -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="tilmeld" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Formular_full />
     </section>
 
@@ -135,7 +135,7 @@ import { Image } from "astro:assets";
       <div class="grid lg:grid-cols-5 lg:items-end pb-ml lg:gap-ml">
         <div class="lg:order-2 lg:col-start-3 lg:col-span-2 pb-ml lg:pb-null">
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Som frivillig kan du bidrage til alt fra praktiske opgaver i havnen til afvikling af arrangementer og aktiviteter. Det er en god måde at lære andre at kende og være en aktiv del af fællesskabet i VSB Sejlklub.</p>
-          <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt os</Link>
+          <Link href="/kontakt" target="_self" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt os</Link>
         </div>
         <Image src={vaerefrivillig} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
       </div>
@@ -198,7 +198,7 @@ import { Image } from "astro:assets";
         <Card_fakta overskrift="Tilmelding" tekst1="Har du spørgsmål til tilmelding af VSB Sejlklub, så kontakt Niels-Erik Hansen på tlf. 42 32 69 65. " />
       </div>
       <div class="pt-sm lg:pt-null flex justify-end">
-        <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt</Link>
+        <Link href="/kontakt" target="_self" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt</Link>
       </div>
     </section>
   </article>

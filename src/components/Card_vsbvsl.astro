@@ -1,6 +1,6 @@
 ---
 import Link from "../components/Link.astro";
-const { url = "#", overskrift = "", tekst1 = "", tekst2 = "", tekst3 = "", tekst4 = "", bold1 = "", bold2 = "", bold3 = "", knap_tekst = "" } = Astro.props;
+const { url = "#", knap_url = "", overskrift = "", tekst1 = "", tekst2 = "", tekst3 = "", tekst4 = "", bold1 = "", bold2 = "", bold3 = "", knap_tekst = "" } = Astro.props;
 ---
 
 <article class="@container card bg-brown-100 px-l py-ml rounded-10 lg:rounded-15 hover:scale-105 transition-transform active:bg-brown-300">
@@ -11,7 +11,7 @@ const { url = "#", overskrift = "", tekst1 = "", tekst2 = "", tekst3 = "", tekst
         <p class="text-m_p lg:text-d_p font-opensans">{tekst1}<span class="font-bold"> {bold1}</span> {tekst2}<span class="font-bold"> {bold2}</span> {tekst3}<span class="font-bold"> {bold3}</span> {tekst4}</p>
       </div>
       <div class="flex justify-end">
-        <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">{knap_tekst}</Link>
+        <Link href={knap_url} target="_self" variant="tertiary" size="small" hover="tertiary">{knap_tekst}</Link>
       </div>
     </section>
   </a>

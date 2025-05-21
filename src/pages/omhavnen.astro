@@ -23,19 +23,18 @@ import ikon_video from "../assets/icons/video.svg";
 <MainLayout title="Titel">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero gemt_billede="hidden" overskrift="Om havnen" tekst="Veddelev Havn er en mindre lystbådehavn beliggende nord for Roskilde med en smuk udsigt over Roskilde Fjord." url1="#" url2="#" video="/havnen_video_stor.mp4" video_type="video/mp4" knap_tekst1="Kort over havnen" knap_tekst2="Faciliteter" />
+      <Hero gemt_billede="hidden" overskrift="Om havnen" tekst="Veddelev Havn er en mindre lystbådehavn beliggende nord for Roskilde med en smuk udsigt over Roskilde Fjord." video="/havnen_video_stor.mp4" video_type="video/mp4" knap_tekst1="Kort over havnen" knap_tekst2="Faciliteter" url1="#overblik" url2="#faciliteter" />
     </section>
-
     <!-- Én havn to foreninger -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:pb-ml lg:text-center">Én havn – to foreninger</h3>
       <div class="grid lg:grid-cols-2 gap-m lg:gap-2xl items-start">
-        <Card_vsbvsl url="" overskrift="VSB" tekst1="Veddelev Strand Bådelaug er en" bold1="sejlklub" tekst2="beliggende på Veddelev Havn. Klubben har omkring" bold2="300 medlemmer" tekst3="og tilbyder både sejlerskole, kapsejladser og sociale aktiviteter året rundt. Med faciliteter som klubhus, masteskur og gode havneforhold danner sejlklubben rammen om et aktivt og inkluderende" bold3="sejlerfællesskab" tekst4="på havnen." knap_tekst="Læs mere om sejlklubben" />
-        <Card_vsbvsl url="" overskrift="VSL" tekst1="Veddelev Strands Lystbådehavn AmbA er et andelsselskab med" bold1="110 andelshavere" tekst2=", der i fællesskab ejer og driver lystbådehavnen. Havnen har" bold2="117 bådpladser" tekst3="af forskellig størrelse, som bestyrelsen fordeler mellem andelshaverne en gang årligt." bold3="" tekst4="" knap_tekst="Læs mere om andel" />
+        <Card_vsbvsl url="/sejlklub" knap_url="/sejlklub" overskrift="VSB" tekst1="Veddelev Strand Bådelaug er en" bold1="sejlklub" tekst2="beliggende på Veddelev Havn. Klubben har omkring" bold2="300 medlemmer" tekst3="og tilbyder både sejlerskole, kapsejladser og sociale aktiviteter året rundt. Med faciliteter som klubhus, masteskur og gode havneforhold danner sejlklubben rammen om et aktivt og inkluderende" bold3="sejlerfællesskab" tekst4="på havnen." knap_tekst="Læs mere om sejlklubben" />
+        <Card_vsbvsl url="" knap_url="" overskrift="VSL" tekst1="Veddelev Strands Lystbådehavn AmbA er et andelsselskab med" bold1="110 andelshavere" tekst2=", der i fællesskab ejer og driver lystbådehavnen. Havnen har" bold2="117 bådpladser" tekst3="af forskellig størrelse, som bestyrelsen fordeler mellem andelshaverne en gang årligt." bold3="" tekst4="" knap_tekst="Læs mere om andel" />
       </div>
     </section>
     <!-- Få overblikket -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="overblik" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="lg:grid lg:grid-cols-6">
         <h2 class="lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
       </div>
@@ -68,7 +67,7 @@ import ikon_video from "../assets/icons/video.svg";
       </div>
     </section>
     <!-- Faciliteter på havnen -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="faciliteter" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter på havnen</h2>
       <div class="grid gap-m lg:gap-xl lg:grid-cols-2">
         <Card_faciliteter icon="public/ikoner/klubhus.svg" iconalt="Ikon af klubhus" overskrift="Klubhus" tekst="Klubhuset han lejes af medlemmer af sejlklubben og har plads til op til 50 personer. Det er udstyret med køkken og egner sig både til faglige oplæg og private arrangementer." />
