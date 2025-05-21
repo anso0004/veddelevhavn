@@ -14,6 +14,7 @@ import joller2 from "../assets/images/jollerpaahavnen_2.webp";
 import laeratsejle from "../assets/images/laeratsejle_2.webp";
 import vaerefrivillig from "../assets/images/vaerefrivillig.webp";
 import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
+import video_roskilde_mp4 from "../assets/videos/roskilde_video_stor.mp4";
 import ikon_video from "../assets/icons/video.svg";
 import { Image } from "astro:assets";
 ---
@@ -21,7 +22,70 @@ import { Image } from "astro:assets";
 <MainLayout title="Titel">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
-    <!-- <Hero overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." billede_foto="/hero_undersider_gaestesejler.webp" billede_foto_alt="både i havnen med udkig til klubhuset" knap_tekst1="Priser" knap_tekst2="Faciliteter" /> -->
-    <Hero overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." video="/video.svg" video_type="ikon af en videooptager" knap_tekst1="Priser" knap_tekst2="Faciliteter" />
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <Hero gemt_video="hidden" overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." url1="#" url2="#" billede_foto="/hero_undersider_gaestesejler.webp" billede_foto_alt="både i havnen med udkig til klubhuset" knap_tekst1="Priser" knap_tekst2="Faciliteter" />
+    </section>
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <div class="grid gap-ml lg:grid-cols-3 items-start">
+        <Card_fakta overskrift="Priser" underoverskrift="190 kr. per overnatning" tekst1="Prisen for en overnatning i Veddelev Havn er 190 kr. for alle både. Dette er inklusiv miljøafgift og strøm samt adgang til bad- og toiletfaciliteter." />
+        <Card_fakta overskrift="Betaling" underoverskrift="Betalingen foregår via MobilePay til 81527." tekst1="Betalingen for en overnatning foregår via MobilePay til 81527. Koden til klubhuset, toilet og bad samt sejlerstuen bliver efter betaling sendt til mobilnummeret." tekst2="Oplever du problemer eller har du spørgsmål så kontakt havnefogeden her." />
+        <Card_fakta overskrift="Bådstørrelse" underoverskrift="Max 14,5 m x 4,5 m" tekst1="Havnen kan tage imod både op til 14,5 meter i længden og 4,5 meter i bredden." tekst2="Ledige gæstepladser er markeret med grønne skilte." />
+      </div>
+    </section>
+    <!-- Besøg roskilde -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <div class="lg:grid lg:grid-cols-8 gap-m lg:gap-ml">
+        <div class="lg:order-2 lg:col-start-6 lg:col-span-3">
+          <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m">Besøg Roskilde By, når du overnatter i Veddelev</h3>
+          <p class="text-m_p lg:text-d_p font-opensans pb-m">Roskilde by er en af Danmarks ældste byer. Her kan du tage på Vikingemuseeum, besøge Roskilde Domkirke eller du kan tage en slentretur gennem gågaden der er fyldt med liv og butikker for enhver smag.</p>
+          <p class="text-m_p lg:text-d_p font-opensans">Tag bus 203 eller 204 fra Fiskervejen, kun 200 m fra Veddelev Havn og du vil ankomme i Roskilde by.</p>
+        </div>
+        <div class="relative lg:col-start-1 lg:col-span-5 pt-m lg:pt-null">
+          <div class="absolute z-50 bottom-m left-m">
+            <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
+          </div>
+          <div class="relative w-full lg:h-full 2xl:h-[500px] overflow-hidden" id="videoonhover" x-data>
+            <div class="absolute top-sm right-sm">
+              <Image src={ikon_video} alt="" class="" />
+            </div>
+            <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+              <source src={video_roskilde_mp4} type="" />
+              <!-- <source src="" type="video/webm" /> -->
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kopi af frivillig -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vil du være frivillig på havnen?</h2>
+      <div class="grid lg:grid-cols-5 lg:items-end pb-ml lg:gap-ml">
+        <div class="lg:order-2 lg:col-start-3 lg:col-span-2 pb-ml lg:pb-null">
+          <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Som frivillig kan du bidrage til alt fra praktiske opgaver i havnen til afvikling af arrangementer og aktiviteter. Det er en god måde at lære andre at kende og være en aktiv del af fællesskabet i VSB Sejlklub.</p>
+          <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt os</Link>
+        </div>
+        <Image src={vaerefrivillig} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
+      </div>
+    </section>
+
+    <!-- kopi af overblik -->
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <div class="lg:grid lg:grid-cols-6">
+        <h2 class="lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-m lg:gap-ml">
+        <div class="col-span-2 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
+          <!-- <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-full object-cover object-[0%_25%]" /> -->
+        </div>
+        <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
+      </div>
+    </section>
+
+    <!-- Brug som eksempel til de andre sider -->
+    <!-- normalt billede -->
+    <!-- <Hero gemt_video="hidden" overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." url1="#" url2="#" billede_foto="/hero_undersider_gaestesejler.webp" billede_foto_alt="både i havnen med udkig til klubhuset" knap_tekst1="Priser" knap_tekst2="Faciliteter" /> -->
+    <!-- video -->
+    <!-- <Hero gemt_billede="hidden" overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." url1="#" url2="#" video="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Priser" knap_tekst2="Faciliteter" /> -->
   </article>
 </MainLayout>

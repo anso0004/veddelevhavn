@@ -1,29 +1,34 @@
 ---
 import { Image } from "astro:assets";
 import Link from "../components/Link.astro";
-const { overskrift = "", tekst = "", billede_foto = "", billede_foto_alt = "", billede_video = "", billede_video_alt = "", video = "", video_type = "", knap_tekst1 = "", knap_tekst2 = "" } = Astro.props;
+import ikon_video from "../assets/icons/video.svg";
+const { overskrift = "", tekst = "", url1 = "", url2 = "", gemt_billede = "", gemt_video = "", billede_foto = "", billede_foto_alt = "", billede_video = "", billede_video_alt = "", video = "", video_type = "", knap_tekst1 = "", knap_tekst2 = "" } = Astro.props;
 ---
 
-<section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid lg:items-center lg:grid-cols-5 pt-ml lg:pt-8xl lg:gap-2xl xl:gap-3xl 2xl:gap-10xl">
+<section class="grid lg:items-center lg:grid-cols-5 pt-ml lg:pt-8xl lg:gap-2xl xl:gap-3xl 2xl:gap-10xl">
   <div class="col-span-2 pb-ml">
     <h1 class="text-m_h1 lg:text-d_h1 font-montserrat pb-s">{overskrift}</h1>
     <p class="text-m_p lg:text-d_p font-opensans pb-sm lg:pb-ml">{tekst}</p>
     <div class="flex flex-col gap-s lg:gap-m">
-      <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">{knap_tekst1}</Link>
-      <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary" textcolor="secondary">{knap_tekst2}</Link>
+      <Link href={url1} target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">{knap_tekst1}</Link>
+      <Link href={url2} target="_blank" variant="secondary" size="small" hover="secondary" press="secondary" textcolor="secondary">{knap_tekst2}</Link>
     </div>
   </div>
   <div class="col-span-3">
-    <!-- <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
-      <img src={billede_foto} alt={billede_foto_alt} class="w-full h-full object-cover object-[0%_25%]" />
-    </div> -->
-    <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
-      <div class="absolute top-sm right-sm">
-        <img src={billede_video} alt={billede_video_alt} class="" />
+    <div class={gemt_billede}>
+      <div class="relative w-full h-[393px] rounded-10 lg:rounded-15 overflow-hidden">
+        <img src={billede_foto} alt={billede_foto_alt} class="w-full h-full object-cover object-[0%_25%]" />
       </div>
-      <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-        <source src={video} type={video_type} />
-      </video>
+    </div>
+    <div class={gemt_video}>
+      <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
+        <div class="absolute top-sm right-sm">
+          <Image src={ikon_video} alt="" class="" />
+        </div>
+        <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
+          <source src={video} type={video_type} />
+        </video>
+      </div>
     </div>
   </div>
 </section>
