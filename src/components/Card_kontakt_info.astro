@@ -9,7 +9,7 @@ const { navn = "", telefonnummer = "", email = "" } = Astro.props;
   <p class="text-m_p lg:text-d_p font-opensans break-all">{navn}</p>
   <div class="flex gap-m">
     <Image src={icon_telefon} alt="Ikon telefon" />
-    <a href={`tel:${email}`}>
+    <a href={`tel:${telefonnummer}`}>
       <p class="text-m_p lg:text-d_p font-opensans break-all hover:underline">{telefonnummer}</p>
     </a>
   </div>
