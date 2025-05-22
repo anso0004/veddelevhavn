@@ -101,7 +101,7 @@ import { Image } from "astro:assets";
       <Karrusel_klubhus />
     </section>
     <!-- Nyhedssektion -->
-    <section class="card_nyhedstagger">
+    <section class="nyhed_stagger">
       <Card_nyhed_full />
     </section>
     <!-- Lær at sejle -->
@@ -142,15 +142,15 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Link til pdf'er -->
-    <section class="px-ml lg:px-5xl xl:px-12xl 2xl:px-15xl bg-brown-100 py-2xl lg:py-6xl grid gap-4xl lg:grid-cols-2 lg:gap-11xl">
+    <section class="regler_stagger px-ml lg:px-5xl xl:px-12xl 2xl:px-15xl bg-brown-100 py-2xl lg:py-6xl grid gap-4xl lg:grid-cols-2 lg:gap-11xl">
       <div class="flex flex-col lg:items-center">
-        <div>
+        <div class="regler_animation">
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Referater for generalforsamlinger</h6>
           <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary" textcolor="primary">Læs pdf</Link>
         </div>
       </div>
       <div class="flex flex-col lg:items-center">
-        <div>
+        <div class="regler_animation">
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Referater for bestyrelsesmøder</h6>
           <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary" textcolor="primary">Læs pdf</Link>
         </div>
@@ -277,6 +277,18 @@ import { Image } from "astro:assets";
       {
         duration: 0.5,
         delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".regler_stagger", () => {
+    animate(
+      ".regler_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
         easing: "ease-out",
       }
     );
