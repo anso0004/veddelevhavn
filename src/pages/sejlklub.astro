@@ -98,7 +98,7 @@ import { Image } from "astro:assets";
       <Karrusel_klubhus />
     </section>
     <!-- Nyhedssektion -->
-    <section class="">
+    <section>
       <Card_nyhed_full />
     </section>
     <!-- Lær at sejle -->
@@ -111,7 +111,7 @@ import { Image } from "astro:assets";
       <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
         <div class="relative w-full overflow-hidden rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-2 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 object-cover object-[52%_50%]" id="videoonhover" x-data>
           <div class="absolute top-sm right-sm">
-            <Image src={ikon_video} alt="" class="" />
+            <Image src={ikon_video} alt="Ikon af videooptager" />
           </div>
           <video class="lg:hidden rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" controls autoplay muted loop>
             <source src={video_laeratsejle_mp4} type="video/mp4" />
@@ -120,7 +120,7 @@ import { Image } from "astro:assets";
             <source src={video_laeratsejle_mp4} type="video/mp4" />
           </video>
         </div>
-        <Image src={laeratsejle} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
+        <Image src={laeratsejle} alt="Fender på båd i havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
       </div>
     </section>
     <!-- Frivillig -->
@@ -131,7 +131,7 @@ import { Image } from "astro:assets";
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Som frivillig kan du bidrage til alt fra praktiske opgaver i havnen til afvikling af arrangementer og aktiviteter. Det er en god måde at lære andre at kende og være en aktiv del af fællesskabet i VSB Sejlklub.</p>
           <Link href="/kontakt" target="_self" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt os</Link>
         </div>
-        <Image src={vaerefrivillig} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
+        <Image src={vaerefrivillig} alt="Billede af to mænd på havnen foran deres båd" class="rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
       </div>
     </section>
     <!-- Link til pdf'er -->
@@ -157,8 +157,8 @@ import { Image } from "astro:assets";
         <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
       </div>
       <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-        <Image src={joller1} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_100%]" />
-        <Image src={joller2} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-7 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_75%]" />
+        <Image src={joller1} alt="Billede af finnjoller på land" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_100%]" />
+        <Image src={joller2} alt="Billede af reb på finnjolle" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-7 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_75%]" />
       </div>
     </section>
     <!-- Kapsejladser -->
@@ -171,7 +171,7 @@ import { Image } from "astro:assets";
         </div>
         <div class="relative w-full h-[347px] overflow-hidden lg:col-start-6 lg:col-span-6 xl:col-start-5 2xl:col-span-5" id="videoonhover" x-data>
           <div class="absolute top-sm right-sm">
-            <Image src={ikon_video} alt="" class="" />
+            <Image src={ikon_video} alt="Ikon af videooptager" />
           </div>
           <video class="lg:hidden rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" controls autoplay muted loop>
             <source src={video_kapsejlads_mp4} type="video/mp4" />

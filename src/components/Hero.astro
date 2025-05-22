@@ -23,7 +23,7 @@ const { overskrift = "", tekst = "", url1 = "", url2 = "", gemt_billede = "", ge
     <div class={gemt_video}>
       <div class="relative w-full h-[393px] overflow-hidden" id="videoonhover" x-data>
         <div class="absolute top-sm right-sm">
-          <Image src={ikon_video} alt="" class="" />
+          <Image src={ikon_video} alt="Ikon af videooptager" />
         </div>
         <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
           <source src={video} type={video_type} />
