@@ -20,7 +20,7 @@ import { Image } from "astro:assets";
         overskrift="Gæstesejler"
         tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum."
         billede_foto="/hero_undersider_gaestesejler.webp"
-        billede_foto_alt="både i havnen med udkig til klubhuset"
+        billede_foto_alt="Både i havnen med udkig til klubhuset"
         knap_tekst1="Priser"
         knap_tekst2="Faciliteter"
         url1="#fakta"
@@ -62,17 +62,17 @@ import { Image } from "astro:assets";
           </div>
           <div class="relative w-full lg:h-full 2xl:h-[500px] overflow-hidden" id="videoonhover" x-data>
             <div class="absolute top-sm right-sm">
-              <Image src={ikon_video} alt="" class="" />
+              <Image src={ikon_video} alt="Ikon af videooptager" />
             </div>
             <video class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" x-ref="hovervideo" @mouseenter="$refs.hovervideo.play()" @mouseleave="$refs.hovervideo.pause()">
-              <source src={video_roskilde_mp4} type="" />
+              <source src={video_roskilde_mp4} type="video/mp4" />
             </video>
           </div>
         </div>
       </div>
     </section>
     <!-- Nyheder -->
-    <section class="">
+    <section>
       <Card_nyhed_full />
     </section>
     <!-- Faciliteter -->
@@ -110,7 +110,7 @@ import { Image } from "astro:assets";
             >
           </div>
           <div class="relative w-full h-[350px] lg:h-[400px] 2xl:h-[450px] overflow-hidden">
-            <Image src={proviantere} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[52%_25%]" />
+            <Image src={proviantere} alt="Græsareal syd for Veddelev Havn" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[52%_25%]" />
           </div>
         </div>
       </div>
