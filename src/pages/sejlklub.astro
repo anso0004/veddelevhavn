@@ -1,19 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import Formular_full from "../components/Formular_full.astro";
-import Card_hjaelp from "../components/Card_hjaelp.astro";
 import Card_fakta from "../components/Card_fakta.astro";
 import Hero from "../components/Hero.astro";
 import Karrusel_klubhus from "../components/Karrusel_klubhus.astro";
 import Card_nyhed_full from "../components/Card_nyhed_full.astro";
-import billede_hero_kontakt from "../assets/images/hero_undersider_kontakt.webp";
 import joller1 from "../assets/images/jollerpaahavnen_1.webp";
 import joller2 from "../assets/images/jollerpaahavnen_2.webp";
 import laeratsejle from "../assets/images/laeratsejle_2.webp";
 import vaerefrivillig from "../assets/images/vaerefrivillig.webp";
-import video_mp4 from "../assets/videos/havnen_video_stor.mp4";
 import ikon_video from "../assets/icons/video.svg";
 import video_laeratsejle_mp4 from "../assets/videos/laeratsejle_video_stor.mp4";
 import video_kapsejlads_mp4 from "../assets/videos/kapsejlads_video_stor.mp4";
@@ -30,7 +26,6 @@ import { Image } from "astro:assets";
     <section id="tilmeld" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Formular_full />
     </section>
-
     <!-- Pris på medlemsskab -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-s">
       <h4 class="text-m_h4 lg:text-d_h4 font-montserrat">Pris på medlemskontigenter</h4>
@@ -61,7 +56,6 @@ import { Image } from "astro:assets";
           <p class="text-m_p font-opensans">Indmeldelsesgebyr 150 kr.</p>
         </div>
       </div>
-
       <!-- desktop -->
       <div class="hidden lg:block">
         <div class="grid grid-cols-4 gap-sm py-sm border-b-1 border-neutral-950">
@@ -103,7 +97,7 @@ import { Image } from "astro:assets";
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Karrusel_klubhus />
     </section>
-    <!-- nyhedssektion -->
+    <!-- Nyhedssektion -->
     <section class="">
       <Card_nyhed_full />
     </section>
@@ -140,7 +134,6 @@ import { Image } from "astro:assets";
         <Image src={vaerefrivillig} alt="Billede af skilt på havnen" class="rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
       </div>
     </section>
-
     <!-- Link til pdf'er -->
     <section class="px-ml lg:px-5xl xl:px-12xl 2xl:px-15xl bg-brown-100 py-2xl lg:py-6xl grid gap-4xl lg:grid-cols-2 lg:gap-11xl">
       <div class="flex flex-col lg:items-center">
@@ -189,7 +182,6 @@ import { Image } from "astro:assets";
         </div>
       </div>
     </section>
-
     <!-- Card_fakta -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-3 items-start">
@@ -202,44 +194,4 @@ import { Image } from "astro:assets";
       </div>
     </section>
   </article>
-
-  <!-- <article class="">
-    <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary">primary small</Link>
-    <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary">primary large</Link>
-    <Link href="#" target="_blank" variant="primary" size="large" hover="primary" press="primary" showIcon={false}>primary large</Link>
-    <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary">secondary small</Link>
-    <Link href="#" target="_blank" variant="secondary" size="small" hover="secondary" press="secondary">secondary large</Link>
-    <Link href="#" target="_blank" variant="secondary" size="large" hover="secondary" press="secondary">Link der skal være secondary</Link>
-    <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Link der skal være secondary</Link>
-    <Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" showIcon={false}>Menupunkt</Link>
-  </article> -->
-
-  <!-- <article class="my-10xl mx-5xl">
-    <div class="grid gap-ml lg:grid-cols-3">
-      <Card_hjaelp url="" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
-      <Card_hjaelp url="" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
-      <Card_hjaelp url="" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
-      <Card_hjaelp url="" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
-      <Card_hjaelp url="" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
-      <Card_hjaelp url="" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
-      <Card_hjaelp url="" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
-      <Card_hjaelp url="" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
-      <Card_hjaelp url="" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
-    </div>
-  </article> -->
-  <!-- <article class="my-10xl mx-5xl">
-    <div class="grid gap-ml lg:grid-cols-3 items-start">
-      <Card_fakta overskrift="Priser" underoverskrift="190 kr. per overnatning" tekst="Prisen for en overnatning i Veddelev Havn er 190 kr. for alle både. Dette er inklusiv miljøafgift og strøm samt adgang til bad- og toiletfaciliteter." />
-      <Card_fakta overskrift="Betaling" underoverskrift="Betalingen foregår via MobilePay til 81527." tekst="Betalingen for en overnatning foregår via MobilePay til 81527. Koden til klubhuset, toilet og bad samt sejlerstuen bliver efter betaling sendt til mobilnummeret. Oplever du problemer eller har du spørgsmål så kontakt havnefogeden her. " />
-      <Card_fakta overskrift="Bådstørrelse" underoverskrift=" Max 14,5 m x 4,5 m" tekst="Havnen kan tage imod både op til 14,5 meter i længden og 4,5 meter i bredden. Ledige gæstepladser er markeret med grønne skilte." />
-    </div>
-  </article> -->
-
-  <!-- <article class="my-10xl mx-5xl">
-    <div class="grid gap-ml lg:grid-cols-3">
-      <Card_fakta underoverskrift="Andelshavere" number="110" />
-      <Card_fakta underoverskrift="Gæstesejlere" number="450" />
-      <Card_fakta underoverskrift="Jolleindehavere" number="30" />
-    </div>
-  </article> -->
 </MainLayout>
