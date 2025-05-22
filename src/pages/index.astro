@@ -70,18 +70,18 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
     </section>
     <!-- Card-hjælp -->
     <section class="flex flex-col gap-4xl lg:gap-10xl">
-      <section class="card_hjaelpstagger px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-2xl">
-        <h3 class="card-hjaelpanimation text-m_h3 lg:text-d_h3 font-montserrat text-center pb-m lg:pb-xl">Hvordan kan vi hjælpe?</h3>
+      <section class="card_hjaelp_stagger px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-2xl">
+        <h3 class="card_hjaelp_animation text-m_h3 lg:text-d_h3 font-montserrat text-center pb-m lg:pb-xl">Hvordan kan vi hjælpe?</h3>
         <div class="grid gap-m lg:gap-l lg:grid-cols-3">
-          <Card_hjaelp class="card-hjaelpanimation" url="/gaestesejler" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
-          <Card_hjaelp class="card-hjaelpanimation" url="/omhavnen#faciliteter" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
-          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
-          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
-          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
-          <Card_hjaelp class="card-hjaelpanimation" url="/sejlklub#tilmeld" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
-          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
-          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
-          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
+          <Card_hjaelp url="/gaestesejler" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
+          <Card_hjaelp url="/omhavnen#faciliteter" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
+          <Card_hjaelp url="#" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
+          <Card_hjaelp url="#" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
+          <Card_hjaelp url="#" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
+          <Card_hjaelp url="/sejlklub#tilmeld" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
+          <Card_hjaelp url="#" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
+          <Card_hjaelp url="#" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
+          <Card_hjaelp url="#" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
         </div>
       </section>
       <!-- Få overblikket -->
@@ -206,9 +206,9 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
     );
   });
 
-  inView(".card_hjaelpstagger", () => {
+  inView(".card_hjaelp_stagger", () => {
     animate(
-      ".card-hjaelpanimation",
+      ".card_hjaelp_animation",
       { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
       {
         duration: 0.5,

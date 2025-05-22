@@ -20,55 +20,19 @@ import { Image } from "astro:assets";
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero
-        gemt_billede="hidden"
-        overskrift="Sejlklub"
-        tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt."
-        video="/sejlklub_video_stor.mp4"
-        video_mobil="/sejlklub_video_stor.mp4"
-        video_type="video/mp4"
-        knap_tekst1="Medlemsskab"
-        knap_tekst2="Kontakt"
-        url1="#tilmeld"
-        url2="/kontakt"
-      />
+      <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." video="/sejlklub_video_stor.mp4" video_mobil="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" url1="#tilmeld" url2="/kontakt" />
     </section>
     <!-- formular til sejlklub -->
-    <section id="tilmeld" class="animation1 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Formular_full />
+    <section id="tilmeld" class="formular_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <div class="formular_animation">
+        <Formular_full />
+      </div>
     </section>
     <!-- Pris på medlemsskab -->
-    <section class="animation2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-s">
-      <h4 class="text-m_h4 lg:text-d_h4 font-montserrat">Pris på medlemskontigenter</h4>
-      <!-- mobile -->
-      <div>
-        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
-          <h8 class="text-m_h8 font-opensans">Junior medlemsskab </h8>
-          <p class="text-m_p font-opensans">Alder: 8-18 år</p>
-          <p class="text-m_p font-opensans">Pris 2025: 200 kr. årligt</p>
-          <p class="text-m_p font-opensans">Indmeldelsesgebyr 0 kr.</p>
-        </div>
-        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
-          <h8 class="text-m_h8 font-opensans">Ung medlemsskab </h8>
-          <p class="text-m_p font-opensans">Alder: 19-25 år</p>
-          <p class="text-m_p font-opensans">Pris 2025: 300 kr. årligt</p>
-          <p class="text-m_p font-opensans">Indmeldelsesgebyr 150 kr.</p>
-        </div>
-        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
-          <h8 class="text-m_h8 font-opensans">Senior samlevende medlemsskab </h8>
-          <p class="text-m_p font-opensans">Alder: &gt;25 år</p>
-          <p class="text-m_p font-opensans">Pris 2025: 400 kr. årligt per person</p>
-          <p class="text-m_p font-opensans">Indmeldelsesgebyr 150 per person kr.</p>
-        </div>
-        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
-          <h8 class="text-m_h8 font-opensans">Senior medlemsskab </h8>
-          <p class="text-m_p font-opensans">Alder: &gt;25 år</p>
-          <p class="text-m_p font-opensans">Pris 2025: 700 kr. årligt</p>
-          <p class="text-m_p font-opensans">Indmeldelsesgebyr 150 kr.</p>
-        </div>
-      </div>
+    <section class="medlemsskab_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-s">
+      <h4 class="medlemsskab_animation text-m_h4 lg:text-d_h4 font-montserrat">Pris på medlemskontigenter</h4>
       <!-- desktop -->
-      <div class="hidden lg:block animation3">
+      <div class="medlemsskab_animation hidden lg:block">
         <div class="grid grid-cols-4 gap-sm py-sm border-b-1 border-neutral-950">
           <h8 class="text-d_h8 font-opensans">Medlemsskab </h8>
           <h8 class="text-d_h8 font-opensans">Alder</h8>
@@ -100,27 +64,57 @@ import { Image } from "astro:assets";
           <p class="text-d_p font-opensans">150 kr.</p>
         </div>
       </div>
-      <div class="pt-s lg:pt-sm">
+      <!-- mobile -->
+      <div class="medlemsskab_animation">
+        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
+          <h8 class="text-m_h8 font-opensans">Junior medlemsskab </h8>
+          <p class="text-m_p font-opensans">Alder: 8-18 år</p>
+          <p class="text-m_p font-opensans">Pris 2025: 200 kr. årligt</p>
+          <p class="text-m_p font-opensans">Indmeldelsesgebyr 0 kr.</p>
+        </div>
+        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
+          <h8 class="text-m_h8 font-opensans">Ung medlemsskab </h8>
+          <p class="text-m_p font-opensans">Alder: 19-25 år</p>
+          <p class="text-m_p font-opensans">Pris 2025: 300 kr. årligt</p>
+          <p class="text-m_p font-opensans">Indmeldelsesgebyr 150 kr.</p>
+        </div>
+        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
+          <h8 class="text-m_h8 font-opensans">Senior samlevende medlemsskab </h8>
+          <p class="text-m_p font-opensans">Alder: &gt;25 år</p>
+          <p class="text-m_p font-opensans">Pris 2025: 400 kr. årligt per person</p>
+          <p class="text-m_p font-opensans">Indmeldelsesgebyr 150 per person kr.</p>
+        </div>
+        <div class="border-b-1 border-neutral-950 grid gap-s pb-s lg:hidden">
+          <h8 class="text-m_h8 font-opensans">Senior medlemsskab </h8>
+          <p class="text-m_p font-opensans">Alder: &gt;25 år</p>
+          <p class="text-m_p font-opensans">Pris 2025: 700 kr. årligt</p>
+          <p class="text-m_p font-opensans">Indmeldelsesgebyr 150 kr.</p>
+        </div>
+      </div>
+
+      <div class="medlemsskab_animation pt-s lg:pt-sm">
         <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary" textcolor="primary">Se alle priser for VSL Sejlklub</Link>
       </div>
     </section>
     <!-- Karrusel klubhus -->
-    <section class="animation4 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Karrusel_klubhus />
     </section>
     <!-- Nyhedssektion -->
-    <section>
+    <section class="card_nyhedstagger">
       <Card_nyhed_full />
     </section>
     <!-- Lær at sejle -->
-    <section class="animation5 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
+    <section class="sejle_stagger2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="sejle_animation2 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
-        <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
-        <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
+        <p class="sejle_animation2 text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
+        <div class="sejle_animation2">
+          <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
+        </div>
       </div>
       <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-        <div class="relative w-full overflow-hidden rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-2 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 object-cover object-[52%_50%]" id="videoonhover" x-data>
+        <div class="sejle_animation2 relative w-full overflow-hidden rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-2 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 object-cover object-[52%_50%]" id="videoonhover" x-data>
           <div class="absolute top-sm right-sm">
             <Image src={ikon_video} alt="Ikon af videooptager" />
           </div>
@@ -131,18 +125,20 @@ import { Image } from "astro:assets";
             <source src={video_laeratsejle_mp4} type="video/mp4" />
           </video>
         </div>
-        <Image src={laeratsejle} alt="Fender på båd i havnen" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
+        <Image src={laeratsejle} alt="Fender på båd i havnen" class="sejle_animation2 rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
       </div>
     </section>
     <!-- Frivillig -->
-    <section class="animation6 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vil du være frivillig på havnen?</h2>
+    <section class="frivillig_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="frivillig_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vil du være frivillig på havnen?</h2>
       <div class="grid lg:grid-cols-5 lg:items-end pb-ml lg:gap-ml">
         <div class="lg:order-2 lg:col-start-3 lg:col-span-2 pb-ml lg:pb-null">
-          <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Som frivillig kan du bidrage til alt fra praktiske opgaver i havnen til afvikling af arrangementer og aktiviteter. Det er en god måde at lære andre at kende og være en aktiv del af fællesskabet i VSB Sejlklub.</p>
-          <Link href="/kontakt" target="_self" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt os</Link>
+          <p class="frivillig_animation text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Som frivillig kan du bidrage til alt fra praktiske opgaver i havnen til afvikling af arrangementer og aktiviteter. Det er en god måde at lære andre at kende og være en aktiv del af fællesskabet i VSB Sejlklub.</p>
+          <div class="frivillig_animation">
+            <Link href="/kontakt" target="_self" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt os</Link>
+          </div>
         </div>
-        <Image src={vaerefrivillig} alt="Billede af to mænd på havnen foran deres båd" class="rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
+        <Image src={vaerefrivillig} alt="Billede af to mænd på havnen foran deres båd" class="frivillig_animation rounded-10 lg:rounded-15 lg:col-start-1 lg:col-span-2 w-full h-full object-cover object-[52%_25%]" />
       </div>
     </section>
     <!-- Link til pdf'er -->
@@ -161,26 +157,30 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Joller på havnen -->
-    <section class="animation7 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
+    <section class="joller_stagger2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="joller_animation2 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
-        <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
-        <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
+        <p class="joller_animation2 text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
+        <div class="joller_animation2">
+          <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
+        </div>
       </div>
       <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-        <Image src={joller1} alt="Billede af finnjoller på land" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_100%]" />
-        <Image src={joller2} alt="Billede af reb på finnjolle" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-7 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_75%]" />
+        <Image src={joller1} alt="Billede af finnjoller på land" class="joller_animation2 rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_100%]" />
+        <Image src={joller2} alt="Billede af reb på finnjolle" class="joller_animation2 rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-7 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_75%]" />
       </div>
     </section>
     <!-- Kapsejladser -->
-    <section class="animation8 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
+    <section class="kapsejladser_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="kapsejladser_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
       <div class="grid lg:grid-cols-10 pb-ml lg:gap-ml xl:gap-ml">
         <div class="lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
-          <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-2xl">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
-          <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om kapsejladser</Link>
+          <p class="kapsejladser_animation text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-2xl">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
+          <div class="kapsejladser_animation">
+            <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om kapsejladser</Link>
+          </div>
         </div>
-        <div class="relative w-full h-[347px] overflow-hidden lg:col-start-6 lg:col-span-6 xl:col-start-5 2xl:col-span-5" id="videoonhover" x-data>
+        <div class="kapsejladser_animation relative w-full h-[347px] overflow-hidden lg:col-start-6 lg:col-span-6 xl:col-start-5 2xl:col-span-5" id="videoonhover" x-data>
           <div class="absolute top-sm right-sm">
             <Image src={ikon_video} alt="Ikon af videooptager" />
           </div>
@@ -194,13 +194,13 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Card_fakta -->
-    <section class="animation9 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="fakta_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-3 items-start">
         <Card_fakta overskrift="Havnefogede" tekst1="Havnefoged Tommy Jørgensen kan kontaktes på tlf. 51 90 66 75 eller mail havnefoged@vsb.dk." />
         <Card_fakta overskrift="Bestyrelsen" tekst1="Bestyrelsesformand Anders Vognsen kan kontaktes på tlf. 21 71 24 06." tekst2="Næstformand Anders Terkildsen kan kontaktes på tlf. 00 00 00 00. " />
         <Card_fakta overskrift="Tilmelding" tekst1="Har du spørgsmål til tilmelding af VSB Sejlklub, så kontakt Niels-Erik Hansen på tlf. 42 32 69 65. " />
       </div>
-      <div class="pt-sm lg:pt-null flex justify-end">
+      <div class="fakta_animation pt-sm lg:pt-null flex justify-end">
         <Link href="/kontakt" target="_self" variant="primary" size="large" hover="primary" press="primary" textcolor="primary">Kontakt</Link>
       </div>
     </section>
@@ -209,67 +209,88 @@ import { Image } from "astro:assets";
 
 <script type="module">
   import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
-  // fade_up animation fra animation.css
-  // animation1
-  const inviewelement = document.querySelector(".animation1");
 
-  inView(inviewelement, () => {
-    inviewelement.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".formular_stagger", () => {
+    animate(
+      ".formular_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 
-  // animation2
-  const inviewelement2 = document.querySelector(".animation2");
-
-  inView(inviewelement2, () => {
-    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".medlemsskab_stagger", () => {
+    animate(
+      ".medlemsskab_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 
-  // animation3
-  const inviewelement3 = document.querySelector(".animation3");
-
-  inView(inviewelement3, () => {
-    inviewelement3.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".sejle_stagger2", () => {
+    animate(
+      ".sejle_animation2",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 
-  // animation4
-  const inviewelement4 = document.querySelector(".animation4");
-
-  inView(inviewelement4, () => {
-    inviewelement4.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".frivillig_stagger", () => {
+    animate(
+      ".frivillig_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 
-  // animation5
-  const inviewelement5 = document.querySelector(".animation5");
-
-  inView(inviewelement5, () => {
-    inviewelement5.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".joller_stagger2", () => {
+    animate(
+      ".joller_animation2",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 
-  // animation6
-  const inviewelement6 = document.querySelector(".animation6");
-
-  inView(inviewelement6, () => {
-    inviewelement6.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".kapsejladser_stagger", () => {
+    animate(
+      ".kapsejladser_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 
-  // animation7
-  const inviewelement7 = document.querySelector(".animation7");
-
-  inView(inviewelement7, () => {
-    inviewelement7.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation8
-  const inviewelement8 = document.querySelector(".animation8");
-
-  inView(inviewelement8, () => {
-    inviewelement8.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation9
-  const inviewelement9 = document.querySelector(".animation9");
-
-  inView(inviewelement9, () => {
-    inviewelement9.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".kapsejladser_stagger", () => {
+    animate(
+      ".kapsejladser_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 </script>
