@@ -97,7 +97,7 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Karrusel klubhus -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="klubhus_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Karrusel_klubhus />
     </section>
     <!-- Nyhedssektion -->
@@ -229,6 +229,18 @@ import { Image } from "astro:assets";
       {
         duration: 0.5,
         delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".klubhus_stagger", () => {
+    animate(
+      ".klubhus_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
         easing: "ease-out",
       }
     );
