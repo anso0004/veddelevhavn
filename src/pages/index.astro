@@ -67,41 +67,41 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
     </section>
     <section class="flex flex-col gap-4xl lg:gap-10xl">
       <!-- Card-hjælp -->
-      <section class="stagger px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-2xl">
-        <h3 class="animation1 text-m_h3 lg:text-d_h3 font-montserrat text-center pb-m lg:pb-xl">Hvordan kan vi hjælpe?</h3>
-        <div class="staggeranimation grid gap-m lg:gap-l lg:grid-cols-3">
-          <Card_hjaelp class="card-hjaelp" url="/gaestesejler" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
-          <Card_hjaelp class="card-hjaelp" url="/omhavnen#faciliteter" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
-          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
-          <Card_hjaelp class="card-hjaelp" url="#" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
-          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
-          <Card_hjaelp class="card-hjaelp" url="/sejlklub#tilmeld" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
-          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
-          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
-          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
+      <section class="card_hjaelpstagger px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-2xl">
+        <h3 class="card-hjaelpanimation text-m_h3 lg:text-d_h3 font-montserrat text-center pb-m lg:pb-xl">Hvordan kan vi hjælpe?</h3>
+        <div class="grid gap-m lg:gap-l lg:grid-cols-3">
+          <Card_hjaelp class="card-hjaelpanimation" url="/gaestesejler" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
+          <Card_hjaelp class="card-hjaelpanimation" url="/omhavnen#faciliteter" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
+          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
+          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
+          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
+          <Card_hjaelp class="card-hjaelpanimation" url="/sejlklub#tilmeld" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
+          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
+          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
+          <Card_hjaelp class="card-hjaelpanimation" url="#" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
         </div>
       </section>
       <!-- Få overblikket -->
-      <section class="animation2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-        <div class="lg:grid lg:grid-cols-6">
+      <section class="overblikstagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+        <div class="overblikanimation lg:grid lg:grid-cols-6">
           <h2 class="lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
         </div>
-        <div class="grid lg:grid-cols-3 gap-m lg:gap-ml">
+        <div class="overblikanimation grid lg:grid-cols-3 gap-m lg:gap-ml">
           <div class="col-span-2">
             <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-auto rounded-10 lg:rounded-15" />
           </div>
-          <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
+          <p class="overblikanimation col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
         </div>
       </section>
       <!-- Kontakt havnefogeden -->
-      <section class="animation3 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-        <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Kontakt havnefogeden</h2>
-        <p class="text-m_p lg:text-d_p font-opensans max-w-[379px] pb-s lg:pb-ml">Tommy Jørgensen er Veddelev Havns havnefoged. Du kan spørge Tommy om alt, og hvis han ikke selv kender svaret, så kender han en der gør. Du er altid velkommen til at ringe eller skrive.</p>
+      <section class="havnefogedstagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+        <h2 class="havnefogedanimation text-m_h2 lg:text-d_h2 font-montserrat pb-m">Kontakt havnefogeden</h2>
+        <p class="havnefogedanimation text-m_p lg:text-d_p font-opensans max-w-[379px] pb-s lg:pb-ml">Tommy Jørgensen er Veddelev Havns havnefoged. Du kan spørge Tommy om alt, og hvis han ikke selv kender svaret, så kender han en der gør. Du er altid velkommen til at ringe eller skrive.</p>
         <div class="grid gap-ml lg:gap-5xl lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-10">
-          <div class="lg:col-span-2 xl:col-span-2 2xl:col-span-2 text-nowrap">
+          <div class="havnefogedanimation lg:col-span-2 xl:col-span-2 2xl:col-span-2 text-nowrap">
             <CardKontaktInfo navn="" telefonnummer="+45 51 90 66 75" email="havnefoged@vsb.dk" />
           </div>
-          <div class="lg:col-start-3 lg:col-span-5 xl:col-start-3 xl:col-span-5 2xl:col-start-3 2xl:col-span-6 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
+          <div class="havnefogedanimation lg:col-start-3 lg:col-span-5 xl:col-start-3 xl:col-span-5 2xl:col-start-3 2xl:col-span-6 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
             <Image src={havnefoged} alt="Billede af havnefogeden" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" />
           </div>
         </div>
@@ -111,14 +111,14 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
         <Card_nyhed_full />
       </section>
       <!-- Lær at sejle -->
-      <section class="animation4 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-        <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
-        <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
+      <section class="sejlestagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+        <h2 class="sejleanimation text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
+        <div class="sejleanimation grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
           <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
         </div>
         <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-          <div class="relative w-full overflow-hidden rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-2 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 object-cover object-[52%_50%]" id="videoonhover" x-data>
+          <div class="sejleanimation relative w-full overflow-hidden rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-2 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 object-cover object-[52%_50%]" id="videoonhover" x-data>
             <div class="absolute top-sm right-sm">
               <Image src={ikon_video} alt="Ikon af videooptager" />
             </div>
@@ -129,18 +129,18 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
               <source src={video_laeratsejle_mp4} type="video/mp4" />
             </video>
           </div>
-          <Image src={laeratsejle} alt="Billede af fender på en båd" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
+          <Image src={laeratsejle} alt="Billede af fender på en båd" class="sejleanimation rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-8 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_25%]" />
         </div>
       </section>
       <!-- Kapsejladser -->
-      <section class="animation5 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-        <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
+      <section class="kapsejladsstagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+        <h2 class="kapsejladsanimation text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
         <div class="grid lg:grid-cols-10 pb-ml lg:gap-ml xl:gap-ml">
-          <div class="lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
+          <div class="kapsejladsanimation lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
             <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-2xl">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
             <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om kapsejladser</Link>
           </div>
-          <div class="relative w-full h-[347px] overflow-hidden lg:col-start-6 lg:col-span-6 xl:col-start-5 2xl:col-span-5" id="videoonhover" x-data>
+          <div class="kapsejladsanimation relative w-full h-[347px] overflow-hidden lg:col-start-6 lg:col-span-6 xl:col-start-5 2xl:col-span-5" id="videoonhover" x-data>
             <div class="absolute top-sm right-sm">
               <Image src={ikon_video} alt="Ikon af videooptager" />
             </div>
@@ -154,33 +154,33 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
         </div>
       </section>
       <!-- Joller på havnen -->
-      <section class="animation6 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-        <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
-        <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
+      <section class="jollerstagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+        <h2 class="jolleranimation text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
+        <div class="jolleranimation grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
           <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
         </div>
         <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
-          <Image src={joller1} alt="Billede af finnjoller på land" class="rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_100%]" />
-          <Image src={joller2} alt="Billede af reb på finnjolle" class="rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-7 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_75%]" />
+          <Image src={joller1} alt="Billede af finnjoller på land" class="jolleranimation rounded-10 lg:rounded-15 col-start-1 col-span-6 row-start-1 row-span-4 lg:col-start-1 xl:col-start-1 lg:col-span-7 xl:col-span-6 lg:row-start-1 lg:row-span-9 xl:row-start-1 xl:row-span-9 w-full h-full object-cover object-[52%_100%]" />
+          <Image src={joller2} alt="Billede af reb på finnjolle" class="jolleranimation rounded-10 lg:rounded-15 col-start-7 col-span-4 row-start-2 row-span-4 lg:col-start-8 xl:col-start-7 lg:col-span-2 xl:col-span-2 lg:row-start-5 lg:row-span-6 xl:row-start-5 xl:row-span-6 w-full h-full object-cover object-[52%_75%]" />
         </div>
       </section>
       <!-- Samarbejdspartnere -->
-      <section class="animation7 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-        <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml">Samarbejdsparntere</h2>
+      <section class="samarbejdsstagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+        <h2 class="samarbejdsanimation text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml">Samarbejdsparntere</h2>
         <div class="grid gap-m lg:gap-sm lg:grid-cols-4">
-          <Image src={sam_1} alt=" Billede af Plus Bogerholderi's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_2} alt=" Billede af BM Marine Service's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_3} alt=" Billede af Ole Holm's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_4} alt=" Billede af Roskilde Låseservice's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_5} alt=" Billede af SvejseService's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_6} alt=" Billede af PR Tag og Facaderens logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_7} alt=" Billede af Yacht Broker's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_8} alt=" Billede af Klimak's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_9} alt=" Billede af RIFF's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_10} alt=" Billede af M/F Sagafjord's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_11} alt=" Billede af Vognmand Henning Petersen's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
-          <Image src={sam_12} alt=" Billede af Bauhaus Nautic's" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_1} alt=" Billede af Plus Bogerholderi's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_2} alt=" Billede af BM Marine Service's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_3} alt=" Billede af Ole Holm's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_4} alt=" Billede af Roskilde Låseservice's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_5} alt=" Billede af SvejseService's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_6} alt=" Billede af PR Tag og Facaderens logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_7} alt=" Billede af Yacht Broker's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_8} alt=" Billede af Klimak's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_9} alt=" Billede af RIFF's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_10} alt=" Billede af M/F Sagafjord's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_11} alt=" Billede af Vognmand Henning Petersen's logo" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
+          <Image src={sam_12} alt=" Billede af Bauhaus Nautic's" class="samarbejdsanimation border-1 border-neutral-950 rounded-10 lg:rounded-15" />
         </div>
       </section>
     </section>
@@ -240,9 +240,81 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
   });
 
   // stagger animation på card faciliteter - udarbejdet i samarbejde med ChatGPT.
-  inView(".stagger", () => {
+  inView(".card_hjaelpstagger", () => {
     animate(
-      ".card-hjaelp",
+      ".card-hjaelpanimation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".overblikstagger", () => {
+    animate(
+      ".overblikanimation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".havnefogedstagger", () => {
+    animate(
+      ".havnefogedanimation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".sejlestagger", () => {
+    animate(
+      ".sejleanimation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".kapsejladsstagger", () => {
+    animate(
+      ".kapsejladsanimation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".jollerstagger", () => {
+    animate(
+      ".jolleranimation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".samarbejdsstagger", () => {
+    animate(
+      ".samarbejdsanimation",
       { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
       {
         duration: 0.5,
