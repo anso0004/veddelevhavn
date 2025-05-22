@@ -23,11 +23,11 @@ import { Image } from "astro:assets";
       <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." video="/sejlklub_video_stor.mp4" video_mobil="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" url1="#tilmeld" url2="/kontakt" />
     </section>
     <!-- formular til sejlklub -->
-    <section id="tilmeld" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="tilmeld" class="animation1 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Formular_full />
     </section>
     <!-- Pris på medlemsskab -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-s">
+    <section class="animation2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-s">
       <h4 class="text-m_h4 lg:text-d_h4 font-montserrat">Pris på medlemskontigenter</h4>
       <!-- mobile -->
       <div>
@@ -57,7 +57,7 @@ import { Image } from "astro:assets";
         </div>
       </div>
       <!-- desktop -->
-      <div class="hidden lg:block">
+      <div class="hidden lg:block animation3">
         <div class="grid grid-cols-4 gap-sm py-sm border-b-1 border-neutral-950">
           <h8 class="text-d_h8 font-opensans">Medlemsskab </h8>
           <h8 class="text-d_h8 font-opensans">Alder</h8>
@@ -94,7 +94,7 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Karrusel klubhus -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="animation4 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Karrusel_klubhus />
     </section>
     <!-- Nyhedssektion -->
@@ -102,7 +102,7 @@ import { Image } from "astro:assets";
       <Card_nyhed_full />
     </section>
     <!-- Lær at sejle -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="animation5 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
         <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
@@ -124,7 +124,7 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Frivillig -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="animation6 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vil du være frivillig på havnen?</h2>
       <div class="grid lg:grid-cols-5 lg:items-end pb-ml lg:gap-ml">
         <div class="lg:order-2 lg:col-start-3 lg:col-span-2 pb-ml lg:pb-null">
@@ -150,7 +150,7 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Joller på havnen -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="animation7 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
         <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
@@ -162,7 +162,7 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Kapsejladser -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="animation8 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
       <div class="grid lg:grid-cols-10 pb-ml lg:gap-ml xl:gap-ml">
         <div class="lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
@@ -183,7 +183,7 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Card_fakta -->
-    <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="animation9 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-3 items-start">
         <Card_fakta overskrift="Havnefogede" tekst1="Havnefoged Tommy Jørgensen kan kontaktes på tlf. 51 90 66 75 eller mail havnefoged@vsb.dk." />
         <Card_fakta overskrift="Bestyrelsen" tekst1="Bestyrelsesformand Anders Vognsen kan kontaktes på tlf. 21 71 24 06." tekst2="Næstformand Anders Terkildsen kan kontaktes på tlf. 00 00 00 00. " />
@@ -195,3 +195,70 @@ import { Image } from "astro:assets";
     </section>
   </article>
 </MainLayout>
+
+<script type="module">
+  import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
+  // fade_up animation fra animation.css
+  // animation1
+  const inviewelement = document.querySelector(".animation1");
+
+  inView(inviewelement, () => {
+    inviewelement.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation2
+  const inviewelement2 = document.querySelector(".animation2");
+
+  inView(inviewelement2, () => {
+    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation3
+  const inviewelement3 = document.querySelector(".animation3");
+
+  inView(inviewelement3, () => {
+    inviewelement3.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation4
+  const inviewelement4 = document.querySelector(".animation4");
+
+  inView(inviewelement4, () => {
+    inviewelement4.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation5
+  const inviewelement5 = document.querySelector(".animation5");
+
+  inView(inviewelement5, () => {
+    inviewelement5.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation6
+  const inviewelement6 = document.querySelector(".animation6");
+
+  inView(inviewelement6, () => {
+    inviewelement6.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation7
+  const inviewelement7 = document.querySelector(".animation7");
+
+  inView(inviewelement7, () => {
+    inviewelement7.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation8
+  const inviewelement8 = document.querySelector(".animation8");
+
+  inView(inviewelement8, () => {
+    inviewelement8.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation9
+  const inviewelement9 = document.querySelector(".animation9");
+
+  inView(inviewelement9, () => {
+    inviewelement9.classList.add("animate__animated", "animate__fadeInUp");
+  });
+</script>
