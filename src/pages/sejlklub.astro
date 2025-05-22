@@ -20,7 +20,18 @@ import { Image } from "astro:assets";
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." video="/sejlklub_video_stor.mp4" video_mobil="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" url1="#tilmeld" url2="/kontakt" />
+      <Hero
+        gemt_billede="hidden"
+        overskrift="Sejlklub"
+        tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt."
+        video="/sejlklub_video_stor.mp4"
+        video_mobil="/sejlklub_video_stor.mp4"
+        video_type="video/mp4"
+        knap_tekst1="Medlemsskab"
+        knap_tekst2="Kontakt"
+        url1="#tilmeld"
+        url2="/kontakt"
+      />
     </section>
     <!-- formular til sejlklub -->
     <section id="tilmeld" class="formular_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
@@ -172,7 +183,7 @@ import { Image } from "astro:assets";
     </section>
     <!-- Kapsejladser -->
     <section class="kapsejladser_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="kapsejladser_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
+      <h2 class="kapsejladser_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-left lg:text-center">Vil du være med til kapsejladser?</h2>
       <div class="grid lg:grid-cols-10 pb-ml lg:gap-ml xl:gap-ml">
         <div class="lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
           <p class="kapsejladser_animation text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-2xl">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
