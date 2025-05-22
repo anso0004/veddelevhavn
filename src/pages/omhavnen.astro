@@ -117,7 +117,7 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
       <Karrusel />
     </section>
     <!-- Nyheder -->
-    <section>
+    <section class="nyhed_stagger">
       <Card_nyhed_full />
     </section>
     <!-- Sikker Havn -->
@@ -239,6 +239,18 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
       {
         duration: 0.5,
         delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".nyhed_stagger", () => {
+    animate(
+      ".nyhed_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0.6 }),
         easing: "ease-out",
       }
     );

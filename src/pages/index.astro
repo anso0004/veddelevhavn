@@ -31,20 +31,20 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
 <MainLayout title="Titel">
   <article class="">
     <!-- Landingpage -->
-    <section class="card_nyhedstagger bg-[url(../assets/images/hero_landingpage_dark.webp)] bg-cover px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-ml pb-ml lg:pt-5xl lg:pb-7xl">
+    <section class="landingpage_nyhed_stagger bg-[url(../assets/images/hero_landingpage_dark.webp)] bg-cover px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-ml pb-ml lg:pt-5xl lg:pb-7xl">
       <div class="pb-m lg:pb-3xl">
         <h4 class="text-m_h4 lg:text-d_h4 font-montserrat text-neutral-100">Velkommen til</h4>
         <h1 class="text-m_display lg:text-d_display font-montserrat text-neutral-100">Veddelev Havn</h1>
       </div>
       <!-- Cards på lg -->
       <div class="hidden lg:grid lg:grid-cols-3 xl:grid-cols-7 lg:gap-m xl:gap-m 2xl:gap-xl">
-        <div class="nyhedanimation xl:col-start-2 xl:col-span-2">
+        <div class="landingpage_nyhed_animation xl:col-start-2 xl:col-span-2">
           <Card_nyhed variant="secondary" billede="/nyhed_1.webp" billede_alt="Billede af joller på havnen" overskrift="DM i finnjolle til sommer" dato="03" maaned="Maj" />
         </div>
-        <div class="nyhedanimation xl:col-start-4 xl:col-span-2">
+        <div class="landingpage_nyhed_animation xl:col-start-4 xl:col-span-2">
           <Card_nyhed variant="secondary" billede="/nyhed_2.webp" billede_alt="Billede af bro med både" overskrift="Søsætning 2025" dato="20" maaned="Mar" />
         </div>
-        <div class="nyhedanimation xl:col-start-6 xl:col-span-2">
+        <div class="landingpage_nyhed_animation xl:col-start-6 xl:col-span-2">
           <Card_nyhed variant="secondary" billede="/nyhed_3.webp" billede_alt="Billede af klubhus" overskrift="Generalforsamling i næste uge" dato="01" maaned="Jun" />
         </div>
       </div>
@@ -52,15 +52,15 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
         <Link class="pt-m" href="#" target="_self" variant="tertiary" size="small" hover="tertiary" textcolor="secondary">Se alle nyheder</Link>
       </div>
       <!-- Cards på mobil -->
-      <div class="sm:hidden nyhedanimation">
+      <div class="sm:hidden landingpage_nyhed_animation">
         <Card_nyhed variant="secondary" billede="/nyhed_1.webp" billede_alt="Billede af joller på havnen" overskrift="DM i finnjolle til sommer" dato="03" maaned="Maj" />
       </div>
       <!-- Cards på sm -->
       <div class="hidden lg:hidden sm:grid sm:grid-cols-2 gap-l">
-        <div class="nyhedanimation">
+        <div class="landingpage_nyhed_animation">
           <Card_nyhed variant="secondary" billede="/nyhed_1.webp" billede_alt="Billede af joller på havnen" overskrift="DM i finnjolle til sommer" dato="03" maaned="Maj" />
         </div>
-        <div class="nyhedanimation">
+        <div class="landingpage_nyhed_animation">
           <Card_nyhed variant="secondary" billede="/nyhed_2.webp" billede_alt="Billede af bro med både" overskrift="Søsætning 2025" dato="20" maaned="Mar" />
         </div>
       </div>
@@ -93,7 +93,10 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
           <div class="overblik_animation col-span-2">
             <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-auto rounded-10 lg:rounded-15" />
           </div>
-          <p class="overblik_animation col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
+          <p class="overblik_animation col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
+            På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både
+            store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.
+          </p>
         </div>
       </section>
       <!-- Kontakt havnefogeden -->
@@ -194,9 +197,9 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
   import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
 
   // stagger animation på card faciliteter - udarbejdet i samarbejde med ChatGPT.
-  inView(".card_nyhedstagger", () => {
+  inView(".landingpage_nyhed_stagger", () => {
     animate(
-      ".nyhedanimation",
+      ".landingpage_nyhed_animation",
       { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
       {
         duration: 0.5,
