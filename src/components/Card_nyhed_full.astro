@@ -3,17 +3,17 @@ import Link from "../components/Link.astro";
 import Card_nyhed from "../components/Card_nyhed.astro";
 ---
 
-<article class="card_nyhed_fullstagger bg-brown-100 py-ml lg:py-5xl px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl">
+<article class="bg-brown-100 py-ml lg:py-5xl px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl">
   <div class="">
     <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl text-center lg:text-left">Nyheder</h2>
     <div class="max-w-[326px] lg:max-w-full grid lg:grid-cols-3 xl:grid-cols-7 gap-l lg:gap-s 2xl:gap-xl mx-auto">
-      <div class="nyhedfullanimation xl:col-start-2 xl:col-span-2">
+      <div class="nyhed_animation xl:col-start-2 xl:col-span-2">
         <Card_nyhed variant="secondary" billede="/nyhed_1.webp" billede_alt="Billede af joller på havnen" overskrift="DM i finnjolle til sommer" dato="03" maaned="Maj" />
       </div>
-      <div class="nyhedfullanimation xl:col-start-4 xl:col-span-2">
+      <div class="nyhed_animation xl:col-start-4 xl:col-span-2">
         <Card_nyhed class="col-start-3 col-span-1" variant="secondary" billede="/nyhed_2.webp" billede_alt="Billede af bro med både" overskrift="Søsætning 2025" dato="20" maaned="Mar" />
       </div>
-      <div class="nyhedfullanimation xl:col-start-6 xl:col-span-2">
+      <div class="nyhed_animation xl:col-start-6 xl:col-span-2">
         <Card_nyhed class="col-start-4 col-span-1" variant="secondary" billede="/nyhed_3.webp" billede_alt="Billede af klubhus" overskrift="Generalforsamling i næste uge" dato="01" maaned="Jun" />
       </div>
     </div>
@@ -22,18 +22,3 @@ import Card_nyhed from "../components/Card_nyhed.astro";
     </div>
   </div>
 </article>
-
-<script type="module">
-  import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
-  inView(".card_nyhed_fullstagger", () => {
-    animate(
-      ".nyhedfullanimation",
-      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
-      {
-        duration: 0.5,
-        delay: stagger(0.3, { start: 0.6 }),
-        easing: "ease-out",
-      }
-    );
-  });
-</script>

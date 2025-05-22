@@ -14,80 +14,80 @@ import Card_kontakt from "../components/Card_kontakt.astro";
       <Hero gemt_video="hidden" overskrift="Kontakt" tekst="Har du spørgsmål til havnefogeden, VSL, VSB eller en af vores frivillige på havnen er du velkommen til at kontakte dem telefonisk eller på mail." billede_foto="/hero_undersider_kontakt.webp" billede_foto_alt="Klubhuset med VSB-logo" knap_tekst1="Havnefoged" knap_tekst2="Udvalg" url1="#havnefoged" url2="#udvalg" />
     </section>
     <!-- Havnefogeden -->
-    <section id="havnefoged" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="havnefoged" class="havnefoged_stagger2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-2">
         <div class="lg:order-2 flex flex-col justify-center">
-          <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Havnefoged</h2>
-          <p class="text-m_p lg:text-d_p font-opensans pb-s lg:pb-ml max-w-[325px]">Tommy Jørgensen er Veddelev Havns havnefoged. Du kan spørge Tommy om alt, og hvis han ikke selv kender svaret, så kender han en der gør. Du er altid velkommen til at ringe eller skrive.</p>
-          <div class="">
+          <h2 class="havnefoged_animation2 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Havnefoged</h2>
+          <p class="havnefoged_animation2 text-m_p lg:text-d_p font-opensans pb-s lg:pb-ml max-w-[325px]">Tommy Jørgensen er Veddelev Havns havnefoged. Du kan spørge Tommy om alt, og hvis han ikke selv kender svaret, så kender han en der gør. Du er altid velkommen til at ringe eller skrive.</p>
+          <div class="havnefoged_animation2">
             <CardKontaktInfo navn="" telefonnummer="+45 51 90 66 75" email="havnefoged@vsb.dk" />
           </div>
         </div>
-        <div class="lg:order-1 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
+        <div class="havnefoged_animation2 lg:order-1 relative w-full h-auto rounded-10 lg:rounded-15 overflow-hidden">
           <Image src={havnefoged} alt="Billede af havnefogeden" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[0%_25%]" />
         </div>
       </div>
     </section>
     <!-- Kontakt-cards -->
-    <section id="udvalg" class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="udvalg" class="kontakt_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:text-center">Udvalg og bestyrrelser</h3>
       <div class="space-y-ml">
-        <div class="grid gap-ml lg:grid-cols-2">
+        <div class="kontakt_animation grid gap-ml lg:grid-cols-2">
           <Card_kontakt overskrift="VSB (Sejlklub)" showText={true} showSpace={false} navn1="" navn2="" navn3="Anders Vogensen" navn4="Anders Terkildsen" telefonnummer1="21 71 24 06" telefonnummer2="+45 40 33 46 36" email1="vognsen@icloud.com" email2="aterkild@vsb.dk" />
           <Card_kontakt overskrift="VSL (Andel)" showText={true} showSpace={false} navn1="" navn2="" navn3="Henrik Vahlun" navn4="Thomas Hermann" telefonnummer1="20 37 53 65" telefonnummer2="52 21 34 45" email1="henrikval@vsl.dk" email2="thermann@gmail.com" />
         </div>
         <div class="grid lg:grid-cols-3 lg:grid-rows-2 gap-ml">
-          <div class="lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-1">
             <Card_kontakt overskrift="Klubhusudlejning" showText={false} showSpace={false} navn1="" navn2="" navn3="Søren Holmbom" navn4="" telefonnummer1="40 72 57 61" telefonnummer2="" email1="klubhus@vsb.dk" email2="" />
           </div>
-          <div class="lg:col-start-1 lg:col-span-1 lg:row-start-2 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-1 lg:col-span-1 lg:row-start-2 lg:row-span-1">
             <Card_kontakt overskrift="Webmaster" showText={false} showSpace={false} navn1="" navn2="" navn3="Martin Nielsen" navn4="" telefonnummer1="40 82 39 19" telefonnummer2="" email1="webmaster@vsb.dk" email2="" />
           </div>
-          <div class="lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-2">
+          <div class="kontakt_animation lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-2">
             <Card_kontakt overskrift="Skipperkonerne" showText={true} showSpace={true} navn1="Kirsten Knudsen" navn2="Gitte Ørneborg" navn3="Kirsten Knudsen" navn4="Gitte Ørneborg" telefonnummer1="29 85 78 85" telefonnummer2="24 65 67 78" email1="kirsten.knudsen@gmail.com" email2="g.oerneborg@gmail.com" />
           </div>
-          <div class="lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-1">
             <Card_kontakt overskrift="Arrangementsudvalg" showText={false} showSpace={false} navn1="" navn2="" navn3="Per Juel Hansen" navn4="" telefonnummer1="40 72 57 61" telefonnummer2="" email1="perjuelhansen@gmail.com" email2="" />
           </div>
-          <div class="lg:col-start-3 lg:col-span-1 lg:row-start-2 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-3 lg:col-span-1 lg:row-start-2 lg:row-span-1">
             <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Husk på vi er frivillige, så svartider kan varriere. Men vi gør vores bedste</h6>
           </div>
         </div>
         <div class="grid lg:grid-cols-3 lg:grid-rows-2 gap-ml">
-          <div class="lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-1">
             <Card_kontakt overskrift="Fiskeri/havjagtudvalg" showText={false} showSpace={false} navn1="" navn2="" navn3="Per Hammel" navn4="" telefonnummer1="40 53 33 71" telefonnummer2="" email1="hammelhus@mail.dk" email2="" />
           </div>
-          <div class="lg:col-start-1 lg:col-span-1 lg:row-start-2 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-1 lg:col-span-1 lg:row-start-2 lg:row-span-1">
             <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Kontakt os endelig, hvis du har spørgsmål. Vi hjælper dig gerne!</h6>
           </div>
-          <div class="lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-1">
             <Card_kontakt overskrift="Annoncer & sponsorer" showText={false} showSpace={false} navn1="" navn2="" navn3="Martin Nielsen" navn4="" telefonnummer1="40 82 39 19" telefonnummer2="" email1="singablog@gmail.com" email2="" />
           </div>
-          <div class="lg:col-start-2 lg:col-span-1 lg:row-start-2 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-2 lg:col-span-1 lg:row-start-2 lg:row-span-1">
             <Card_kontakt overskrift="Jolleudvalg" showText={false} showSpace={false} navn1="" navn2="" navn3="Martin Nielsen" navn4="" telefonnummer1="40 82 39 19" telefonnummer2="" email1="singablog@gmail.com" email2="" />
           </div>
-          <div class="lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-2">
+          <div class="kontakt_animation lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-2">
             <Card_kontakt overskrift="Sejlerskoleudvalg" showText={true} showSpace={true} navn1="Piet Jansen" navn2="Anders Vognsen" navn3="Piet Jansen" navn4="Anders Vognsen" telefonnummer1="40 57 73 31" telefonnummer2="21 71 24 06" email1="sejlerskolen@vsb.dk" email2="sejlerskolen@vsb.dk" />
           </div>
         </div>
         <div class="grid lg:grid-cols-3 lg:grid-rows-2 gap-ml">
-          <div class="lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-2">
+          <div class="kontakt_animation lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-2">
             <Card_kontakt overskrift="Klubhusudvalg" showText={true} showSpace={true} navn1="Per Juel Hansen" navn2="Claus Olsen" navn3="Per Juel Hansen" navn4="Claus Olsen" telefonnummer1="40 72 57 61" telefonnummer2="28 45 44 35" email1="perjuelhansen@gmail.com" email2="claus123@gmail.com" />
           </div>
-          <div class="lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-1">
             <Card_kontakt overskrift="Aktive Maritime Seniorer" showText={false} showSpace={false} navn1="" navn2="" navn3="Stig Sandvang" navn4="" telefonnummer1="46 35 75 53" telefonnummer2="" email1="stig.sandvang@gmail.com" email2="" />
           </div>
-          <div class="lg:col-start-2 lg:col-span-1 lg:row-start-2 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-2 lg:col-span-1 lg:row-start-2 lg:row-span-1">
             <Card_kontakt overskrift="Bæredygtighed og miljø" showText={false} showSpace={false} navn1="" navn2="" navn3="Susanne Andreasen" navn4="" telefonnummer1="22 91 13 75" telefonnummer2="" email1="sanne2309@yahoo.dk" email2="" />
           </div>
-          <div class="lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-1">
             <Card_kontakt overskrift="Havneudvalg" showText={false} showSpace={false} navn1="" navn2="" navn3="Knud Erik Strøyberg Klint" navn4="" telefonnummer1="31 74 02 82" telefonnummer2="" email1="havneudvalget@vsb.dk" email2="" />
           </div>
-          <div class="lg:col-start-3 lg:col-span-1 lg:row-start-2 lg:row-span-1">
+          <div class="kontakt_animation lg:col-start-3 lg:col-span-1 lg:row-start-2 lg:row-span-1">
             <h6 class="text-m_h8 lg:text-d_h8 font-montserrat h-[182px] flex items-center lg:px-m">Er du i tvivl, om hvem der er den rigtige at kontakte, så skriv til havnefogeden. Han vil gerne vejlede dig</h6>
           </div>
         </div>
-        <div class="grid lg:grid-cols-3 gap-ml">
+        <div class="kontakt_animation grid lg:grid-cols-3 gap-ml">
           <Card_kontakt overskrift="Kapsejladsudvalg" showText={false} showSpace={false} navn1="" navn2="" navn3="Anders Terkildsen" navn4="" telefonnummer1="40 33 46 36" telefonnummer2="" email1="kapsejlads@vsb.dk" email2="" />
           <Card_kontakt overskrift="Køkkenudvalg" showText={false} showSpace={false} navn1="" navn2="" navn3="Leif Knudsen" navn4="" telefonnummer1="29 89 78 85" telefonnummer2="" email1="leif.knudsen@gmail.com" email2="" />
           <Card_kontakt overskrift="Facebook" showText={false} showSpace={false} navn1="" navn2="" navn3="Anders Vognsen" navn4="" telefonnummer1="21 71 24 06" telefonnummer2="" email1="vognsen@icloud.com" email2="" />
@@ -99,67 +99,28 @@ import Card_kontakt from "../components/Card_kontakt.astro";
 
 <script type="module">
   import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
-  // fade_up animation fra animation.css
-  // animation1
-  const inviewelement = document.querySelector(".animation1");
 
-  inView(inviewelement, () => {
-    inviewelement.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".havnefoged_stagger2", () => {
+    animate(
+      ".havnefoged_animation2",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 
-  // animation2
-  const inviewelement2 = document.querySelector(".animation2");
-
-  inView(inviewelement2, () => {
-    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation3
-  const inviewelement3 = document.querySelector(".animation3");
-
-  inView(inviewelement3, () => {
-    inviewelement3.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation4
-  const inviewelement4 = document.querySelector(".animation4");
-
-  inView(inviewelement4, () => {
-    inviewelement4.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation5
-  const inviewelement5 = document.querySelector(".animation5");
-
-  inView(inviewelement5, () => {
-    inviewelement5.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation6
-  const inviewelement6 = document.querySelector(".animation6");
-
-  inView(inviewelement6, () => {
-    inviewelement6.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation7
-  const inviewelement7 = document.querySelector(".animation7");
-
-  inView(inviewelement7, () => {
-    inviewelement7.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation8
-  const inviewelement8 = document.querySelector(".animation8");
-
-  inView(inviewelement8, () => {
-    inviewelement8.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation9
-  const inviewelement9 = document.querySelector(".animation9");
-
-  inView(inviewelement9, () => {
-    inviewelement9.classList.add("animate__animated", "animate__fadeInUp");
+  inView(".kontakt_stagger", () => {
+    animate(
+      ".kontakt_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
   });
 </script>

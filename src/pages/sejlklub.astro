@@ -234,6 +234,18 @@ import { Image } from "astro:assets";
     );
   });
 
+  inView(".nyhed_stagger", () => {
+    animate(
+      ".nyhed_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
   inView(".sejle_stagger2", () => {
     animate(
       ".sejle_animation2",
@@ -285,6 +297,18 @@ import { Image } from "astro:assets";
   inView(".kapsejladser_stagger", () => {
     animate(
       ".kapsejladser_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".fakta_stagger", () => {
+    animate(
+      ".fakta_animation",
       { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
       {
         duration: 0.5,

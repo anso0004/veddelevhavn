@@ -31,17 +31,3 @@ const { overskrift = "", underoverskrift = "", tekst1 = "", tekst2 = "", number 
     z-index: -1;
   }
 </style>
-<script type="module">
-  import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
-  inView(".fakta_stagger", () => {
-    animate(
-      ".fakta_animation",
-      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
-      {
-        duration: 0.5,
-        delay: stagger(0.3, { start: 0 }),
-        easing: "ease-out",
-      }
-    );
-  });
-</script>
