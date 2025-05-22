@@ -1,7 +1,14 @@
 ---
-
+const { showIcon = true } = Astro.props;
 ---
 
-<div>
-  <button class="border-2 border-black bg-amber-500 rounded-15 p-2xs"><slot /></button>
-</div>
+<button class="bg-yellow-300 rounded-full lg:py-xs py-2xs px-m text-m_button lg:text-d_button font-opensans w-fit flex items-center gap-m hover:scale-105 transition-transform active:bg-yellow-400 text-neutral-950">
+  <slot />
+  {
+    showIcon && (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="lg:size-6 size-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+      </svg>
+    )
+  }
+</button>

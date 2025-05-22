@@ -1,5 +1,6 @@
 ---
 import Link from "../components/Link.astro";
+import Button from "../components/Button.astro";
 ---
 
 <div class="bg-brown-100 p-ml lg:px-2xl lg:py-ml rounded-15">
@@ -41,9 +42,7 @@ import Link from "../components/Link.astro";
         <div>
           <Link href="#" target="_blank" variant="tertiary" size="" hover="tertiary" showIcon={false}>Har du spørgsmål?</Link>
         </div>
-        <!-- Button skal ind her og ligne link -->
-        <!-- <button type="button" class="">Tilmeld</button> -->
-        <Link href="#" target="_blank" variant="primary" size="small" hover="primary">Tilmeld</Link>
+        <Button type="submit">Tilmeld</Button>
       </div>
     </div>
   </form>
