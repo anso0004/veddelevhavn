@@ -29,8 +29,8 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
       />
     </section>
     <!-- Én havn to foreninger -->
-    <section class="animation1 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:pb-ml lg:text-center">Én havn – to foreninger</h3>
+    <section class="enhavntoforeninger_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h3 class="enhavntoforeninger_animation text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:pb-ml lg:text-center">Én havn – to foreninger</h3>
       <div class="grid lg:grid-cols-2 gap-m lg:gap-2xl items-start">
         <Card_vsbvsl
           url="/sejlklub"
@@ -61,59 +61,59 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
       </div>
     </section>
     <!-- Få overblikket -->
-    <section id="overblik" class="animation2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="overblik" class="overblik_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="lg:grid lg:grid-cols-6">
-        <h2 class="lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
+        <h2 class="overblik_animation lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
       </div>
       <div class="grid lg:grid-cols-3 gap-m lg:gap-ml">
-        <div class="col-span-2 w-full h-auto">
+        <div class="overblik_animation col-span-2 w-full h-auto">
           <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-auto rounded-10 lg:rounded-15" />
         </div>
-        <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
+        <p class="overblik_animation col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
           På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både
           store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.
         </p>
       </div>
     </section>
     <!-- Link til pdf'er -->
-    <section class="px-ml lg:px-5xl xl:px-12xl 2xl:px-15xl bg-brown-100 py-2xl lg:py-6xl grid gap-4xl lg:grid-cols-3 lg:gap-13xl">
+    <section class="regler_stagger px-ml lg:px-5xl xl:px-12xl 2xl:px-15xl bg-brown-100 py-2xl lg:py-6xl grid gap-4xl lg:grid-cols-3 lg:gap-13xl">
       <div class="flex flex-col lg:items-center">
-        <div>
+        <div class="regler_animation">
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Regler for både og joller</h6>
           <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
         </div>
       </div>
       <div class="flex flex-col items-end lg:items-center">
-        <div>
+        <div class="regler_animation">
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Havnereglement</h6>
           <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
         </div>
       </div>
       <div class="flex flex-col lg:items-center">
-        <div>
+        <div class="regler_animation">
           <h6 class="text-m_h7 lg:text-d_h7 font-montserrat">Havnens love</h6>
           <Link href="#" target="_blank" variant="tertiary" size="small" hover="tertiary">Læs pdf</Link>
         </div>
       </div>
     </section>
     <!-- Faciliteter på havnen -->
-    <section id="faciliteter" class="stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="animation3 text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter på havnen</h2>
-      <div class="staggeranimation grid gap-m lg:gap-xl lg:grid-cols-2">
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/klubhus.svg" iconalt="Ikon af klubhus" overskrift="Klubhus" tekst="Klubhuset han lejes af medlemmer af sejlklubben og har plads til op til 50 personer. Det er udstyret med køkken og egner sig både til faglige oplæg og private arrangementer." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/bad.svg" iconalt="Ikon af bad" overskrift="Toilet og bad" tekst="Toilet- og badefaciliteterne findes i klubhuset. Gæstesejlere modtager en adgangskode til klubhuset, når betaling for havnepladsen er registreret." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/vand.svg" iconalt="Ikon af vand" overskrift="Vand og strøm" tekst="Der er strømstandere og vandslanger på alle broer, så bådejere og gæstesejlere nemt kan tilkoble el eller fylde vandtanken." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/grill.svg" iconalt="Ikon af grill" overskrift="Grill" tekst="Du må frit benytte klubhusets fælles grill. Du finder den til højre for klubhuset. Du må ikke benytte din egen grill på havnen." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/udtoemning.svg" iconalt="Ikon af udtømning" overskrift="Udlagskumme for kemisk toilet" tekst="Du kan tømme dit kemiske toilet i vores udslagskumme. Den finder du ved skraldespandene på parkeingspladsen. " />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/havnekontor.svg" iconalt="Ikon af havnekontor" overskrift="Havnekontor" tekst="Havnekontoret ligger ved klubhuset og fungerer som base for havnefogeden, som står for den daglige drift og er kontaktperson ved spørgsmål." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/kran.svg" iconalt="Ikon af kran" overskrift="Masteskur" tekst="Ved klubhuset ligger masteskuret, hvor bådejere kan opbevare deres master i vinterhalvåret. Desuden er havnen også udstyret med mastekran." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/slaebested.svg" iconalt="Ikon af slæbested" overskrift="Slæbested" tekst="Som medlem af sejlklubben har du adgang til slæbestedet og kan frit benytte det til søsætning og optagning af din båd." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/sejlerstue.svg" iconalt="Ikon af sejlerstue" overskrift="Sejlerstue" tekst="Sejlerstuen har åbent når der er medlemmer på havnen. Her finder du en kaffemaskine, opvaskeudstyr, køleskab og service. " />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
+    <section id="faciliteter" class="faciliteter_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="faciliteter_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter på havnen</h2>
+      <div class="grid gap-m lg:gap-xl lg:grid-cols-2">
+        <Card_faciliteter icon="/ikoner/klubhus.svg" iconalt="Ikon af klubhus" overskrift="Klubhus" tekst="Klubhuset han lejes af medlemmer af sejlklubben og har plads til op til 50 personer. Det er udstyret med køkken og egner sig både til faglige oplæg og private arrangementer." />
+        <Card_faciliteter icon="/ikoner/bad.svg" iconalt="Ikon af bad" overskrift="Toilet og bad" tekst="Toilet- og badefaciliteterne findes i klubhuset. Gæstesejlere modtager en adgangskode til klubhuset, når betaling for havnepladsen er registreret." />
+        <Card_faciliteter icon="/ikoner/vand.svg" iconalt="Ikon af vand" overskrift="Vand og strøm" tekst="Der er strømstandere og vandslanger på alle broer, så bådejere og gæstesejlere nemt kan tilkoble el eller fylde vandtanken." />
+        <Card_faciliteter icon="/ikoner/grill.svg" iconalt="Ikon af grill" overskrift="Grill" tekst="Du må frit benytte klubhusets fælles grill. Du finder den til højre for klubhuset. Du må ikke benytte din egen grill på havnen." />
+        <Card_faciliteter icon="/ikoner/udtoemning.svg" iconalt="Ikon af udtømning" overskrift="Udlagskumme for kemisk toilet" tekst="Du kan tømme dit kemiske toilet i vores udslagskumme. Den finder du ved skraldespandene på parkeingspladsen. " />
+        <Card_faciliteter icon="/ikoner/havnekontor.svg" iconalt="Ikon af havnekontor" overskrift="Havnekontor" tekst="Havnekontoret ligger ved klubhuset og fungerer som base for havnefogeden, som står for den daglige drift og er kontaktperson ved spørgsmål." />
+        <Card_faciliteter icon="/ikoner/kran.svg" iconalt="Ikon af kran" overskrift="Masteskur" tekst="Ved klubhuset ligger masteskuret, hvor bådejere kan opbevare deres master i vinterhalvåret. Desuden er havnen også udstyret med mastekran." />
+        <Card_faciliteter icon="/ikoner/slaebested.svg" iconalt="Ikon af slæbested" overskrift="Slæbested" tekst="Som medlem af sejlklubben har du adgang til slæbestedet og kan frit benytte det til søsætning og optagning af din båd." />
+        <Card_faciliteter icon="/ikoner/sejlerstue.svg" iconalt="Ikon af sejlerstue" overskrift="Sejlerstue" tekst="Sejlerstuen har åbent når der er medlemmer på havnen. Her finder du en kaffemaskine, opvaskeudstyr, køleskab og service. " />
+        <Card_faciliteter icon="/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
       </div>
     </section>
     <!-- Karrusel -->
-    <section class="animation4 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="klubhus_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <Karrusel />
     </section>
     <!-- Nyheder -->
@@ -121,17 +121,17 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
       <Card_nyhed_full />
     </section>
     <!-- Sikker Havn -->
-    <section class="animation5 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vi er certificeret som sikker havn</h2>
-      <p class="text-m_p lg:text-d_p font-opensans pb-ml lg:pb-l lg:max-w-[471px]">
+    <section class="sikkerhavn_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="sikkerhavn_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vi er certificeret som sikker havn</h2>
+      <p class="sikkerhavn_animation text-m_p lg:text-d_p font-opensans pb-ml lg:pb-l lg:max-w-[471px]">
         Veddelev Havn er certificeret af Foreningen af Lystbådehavne I Danmark (FLID) som Sikker Havn. Det betyder, at vi lever op til en række krav om sikkerhed og beredskab. I hele havneområdet finder du redningsstiger, redningskranse og tydelig skiltning, der sikrer hurtig hjælp i nødssituationer – for både sejlere, gæster og besøgende på land.
       </p>
-      <div class="relative w-full h-[393px] lg:h-[450px] overflow-hidden grid lg:grid-cols-10 rounded-10 lg:rounded-15">
+      <div class="sikkerhavn_animation relative w-full h-[393px] lg:h-[450px] overflow-hidden grid lg:grid-cols-10 rounded-10 lg:rounded-15">
         <Image src={sikkerhavn} alt="Billede af skilt på havnen om sikkerhed" class="rounded-10 lg:rounded-15 lg:col-start-2 xl:col-start-2 lg:col-span-7 xl:col-span-6 w-full h-full object-cover object-[52%_25%]" />
       </div>
     </section>
     <!-- Faktabokse -->
-    <section class="animation6 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-ml lg:grid-cols-3">
+    <section class="fakta_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl grid gap-ml lg:grid-cols-3">
       <Card_fakta id="counter-1" underoverskrift="Andelshavere" number="110" />
       <Card_fakta id="counter-2" underoverskrift="Gæstesejlere" number="450" />
       <Card_fakta id="counter-3" underoverskrift="Jolleindehavere" number="30" />
@@ -139,10 +139,10 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
   </article>
 </MainLayout>
 
-<!-- animation af tællerfunktion udført i samarbejde med ChatGPT  -->
 <script type="module">
   import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
 
+  // animation af tællerfunktion udført i samarbejde med ChatGPT
   const counters = document.querySelectorAll(".counter");
 
   counters.forEach((counter) => {
@@ -171,53 +171,82 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
     });
   });
 
-  // fade_up animation fra animation.css
-  // animation1
-  const inviewelement = document.querySelector(".animation1");
-
-  inView(inviewelement, () => {
-    inviewelement.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation2
-  const inviewelement2 = document.querySelector(".animation2");
-
-  inView(inviewelement2, () => {
-    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation3
-  const inviewelement3 = document.querySelector(".animation3");
-
-  inView(inviewelement3, () => {
-    inviewelement3.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation4
-  const inviewelement4 = document.querySelector(".animation4");
-
-  inView(inviewelement4, () => {
-    inviewelement4.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation5
-  const inviewelement5 = document.querySelector(".animation5");
-
-  inView(inviewelement5, () => {
-    inviewelement5.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation6
-  const inviewelement6 = document.querySelector(".animation6");
-
-  inView(inviewelement6, () => {
-    inviewelement6.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // stagger animation på card faciliteter - udarbejdet i samarbejde med ChatGPT.
-  inView(".stagger", () => {
+  // Staggeranimation på sektioner
+  inView(".enhavntoforeninger_stagger", () => {
     animate(
-      ".card-facilitet",
+      ".enhavntoforeninger_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".overblik_stagger", () => {
+    animate(
+      ".overblik_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".regler_stagger", () => {
+    animate(
+      ".regler_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".faciliteter_stagger", () => {
+    animate(
+      ".faciliteter_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".sikkerhavn_stagger", () => {
+    animate(
+      ".sikkerhavn_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".klubhus_stagger", () => {
+    animate(
+      ".klubhus_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".fakta_stagger", () => {
+    animate(
+      ".fakta_animation",
       { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
       {
         duration: 0.5,
@@ -227,3 +256,5 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
     );
   });
 </script>
+
+<!-- Staggeranimation på komponenter er udarbejdet i samarbejde med ChatGPT -->

@@ -28,7 +28,7 @@ import { Image } from "astro:assets";
       />
     </section>
     <!-- Card fakta om priser, betaling og bådstørrelser -->
-    <section id="fakta" class="animation1 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section id="fakta" class="fakta_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-3 items-start">
         <Card_fakta overskrift="Priser" underoverskrift="190 kr. per overnatning" tekst1="Prisen for en overnatning i Veddelev Havn er 190 kr. for alle både. Dette er inklusiv miljøafgift og strøm samt adgang til bad- og toiletfaciliteter." />
         <Card_fakta
@@ -41,14 +41,14 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Besøg roskilde -->
-    <section class="animation2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="roskilde_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="lg:grid lg:grid-cols-8 gap-m lg:gap-ml">
         <div class="lg:order-2 lg:col-start-6 lg:col-span-3">
-          <h3 class="text-m_h3 lg:text-d_h3 font-montserrat pb-m">Besøg Roskilde By, når du overnatter i Veddelev</h3>
-          <p class="text-m_p lg:text-d_p font-opensans pb-m">Roskilde by er en af Danmarks ældste byer. Her kan du tage på Vikingemuseeum, besøge Roskilde Domkirke eller du kan tage en slentretur gennem gågaden der er fyldt med liv og butikker for enhver smag.</p>
-          <p class="text-m_p lg:text-d_p font-opensans">Tag bus 203 eller 204 fra Fiskervejen, kun 200 m fra Veddelev Havn og du vil ankomme i Roskilde by.</p>
+          <h3 class="roskilde_animation text-m_h3 lg:text-d_h3 font-montserrat pb-m">Besøg Roskilde By, når du overnatter i Veddelev</h3>
+          <p class="roskilde_animation text-m_p lg:text-d_p font-opensans pb-m">Roskilde by er en af Danmarks ældste byer. Her kan du tage på Vikingemuseeum, besøge Roskilde Domkirke eller du kan tage en slentretur gennem gågaden der er fyldt med liv og butikker for enhver smag.</p>
+          <p class="roskilde_animation text-m_p lg:text-d_p font-opensans">Tag bus 203 eller 204 fra Fiskervejen, kun 200 m fra Veddelev Havn og du vil ankomme i Roskilde by.</p>
         </div>
-        <div class="relative lg:col-start-1 lg:col-span-5 pt-m lg:pt-null">
+        <div class="roskilde_animation relative lg:col-start-1 lg:col-span-5 pt-m lg:pt-null">
           <div class="absolute z-50 bottom-m left-m">
             <Link
               href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/4000+Roskilde/@55.6603783,12.0399263,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525fc995012f29:0xa00afcc1d507710!2m2!1d12.087845!2d55.64191!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
@@ -76,31 +76,31 @@ import { Image } from "astro:assets";
       </div>
     </section>
     <!-- Nyheder -->
-    <section>
+    <section class="nyhed_stagger">
       <Card_nyhed_full />
     </section>
     <!-- Faciliteter -->
-    <section id="g_faciliteter" class="stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <h2 class="animation3 text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter ved besøg</h2>
+    <section id="g_faciliteter" class="faciliteter_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <h2 class="faciliteter_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-xl">Faciliteter ved besøg</h2>
       <div class="grid gap-m lg:gap-xl lg:grid-cols-2">
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/sejlerstue.svg" iconalt="Ikon af sejlerstue" overskrift="Sejlerstue" tekst="Sejlerstuen har åbent når der er medlemmer på havnen. Her finder du en kaffemaskine, opvaskeudstyr, køleskab og service. " />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/havnekontor.svg" iconalt="Ikon af havnekontor" overskrift="Havnekontor" tekst="Havnekontoret ligger ved klubhuset og fungerer som base for havnefogeden, som står for den daglige drift og er kontaktperson ved spørgsmål." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/bad.svg" iconalt="Ikon af bad" overskrift="Toilet og bad" tekst="Toilet- og badefaciliteterne findes i klubhuset. Gæstesejlere modtager en adgangskode til klubhuset, når betaling for havnepladsen er registreret." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/kran.svg" iconalt="Ikon af kran" overskrift="Bedding, mastekran og slæbested" tekst="Som gæst er du velkommen til at benytte vores bedding og mastekran. Du skal dog være medlem af sejlklubben for at benytte slæbestedet." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/vand.svg" iconalt="Ikon af vand" overskrift="Vand og strøm" tekst="Der er strømstandere og vandslanger på alle broer, så bådejere og gæstesejlere nemt kan tilkoble el eller fylde vandtanken." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/udtoemning.svg" iconalt="Ikon af udtømning" overskrift="Udlagskumme for kemisk toilet" tekst="Du kan tømme dit kemiske toilet i vores udslagskumme. Den finder du ved skraldespandene på parkeingspladsen. " />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/grill.svg" iconalt="Ikon af grill" overskrift="Grill" tekst="Du må frit benytte klubhusets fælles grill. Du finder den til højre for klubhuset. Du må ikke benytte din egen grill på havnen." />
-        <Card_faciliteter class="card-facilitet" icon="/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
+        <Card_faciliteter icon="/ikoner/sejlerstue.svg" iconalt="Ikon af sejlerstue" overskrift="Sejlerstue" tekst="Sejlerstuen har åbent når der er medlemmer på havnen. Her finder du en kaffemaskine, opvaskeudstyr, køleskab og service. " />
+        <Card_faciliteter icon="/ikoner/havnekontor.svg" iconalt="Ikon af havnekontor" overskrift="Havnekontor" tekst="Havnekontoret ligger ved klubhuset og fungerer som base for havnefogeden, som står for den daglige drift og er kontaktperson ved spørgsmål." />
+        <Card_faciliteter icon="/ikoner/bad.svg" iconalt="Ikon af bad" overskrift="Toilet og bad" tekst="Toilet- og badefaciliteterne findes i klubhuset. Gæstesejlere modtager en adgangskode til klubhuset, når betaling for havnepladsen er registreret." />
+        <Card_faciliteter icon="/ikoner/kran.svg" iconalt="Ikon af kran" overskrift="Bedding, mastekran og slæbested" tekst="Som gæst er du velkommen til at benytte vores bedding og mastekran. Du skal dog være medlem af sejlklubben for at benytte slæbestedet." />
+        <Card_faciliteter icon="/ikoner/vand.svg" iconalt="Ikon af vand" overskrift="Vand og strøm" tekst="Der er strømstandere og vandslanger på alle broer, så bådejere og gæstesejlere nemt kan tilkoble el eller fylde vandtanken." />
+        <Card_faciliteter icon="/ikoner/udtoemning.svg" iconalt="Ikon af udtømning" overskrift="Udlagskumme for kemisk toilet" tekst="Du kan tømme dit kemiske toilet i vores udslagskumme. Den finder du ved skraldespandene på parkeingspladsen. " />
+        <Card_faciliteter icon="/ikoner/grill.svg" iconalt="Ikon af grill" overskrift="Grill" tekst="Du må frit benytte klubhusets fælles grill. Du finder den til højre for klubhuset. Du må ikke benytte din egen grill på havnen." />
+        <Card_faciliteter icon="/ikoner/redning.svg" iconalt="Ikon af redning" overskrift="Redning og sikkerhed" tekst="Havnen er certificeret som Sikker Havn, hvilket betyder, at der er redningstiger og redningskranse strategiske placeret overalt på havneområdet for maksimal sikkerhed." />
       </div>
     </section>
     <!-- Proviantere -->
-    <section class="animation4 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+    <section class="proviantere_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="lg:grid lg:grid-cols-8">
         <div class="lg:col-start-2 lg:col-span-6 xl:col-start-3 xl:col-span-6 2xl:col-start-3 2xl:col-span-6">
-          <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Har du brug for at proviantere?</h2>
-          <p class="text-m_p lg:text-d_p font-opensans pb-ml lg:max-w-[471px]">Du kan proviantere i Himmelev kun 3 km fra havnen. Her finder du et supermarked. Du kan også tage en tur ind til Roskilde by, hvor der er mange indkøbsmuligheder.</p>
+          <h2 class="proviantere_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m">Har du brug for at proviantere?</h2>
+          <p class="proviantere_animation text-m_p lg:text-d_p font-opensans pb-ml lg:max-w-[471px]">Du kan proviantere i Himmelev kun 3 km fra havnen. Her finder du et supermarked. Du kan også tage en tur ind til Roskilde by, hvor der er mange indkøbsmuligheder.</p>
         </div>
-        <div class="relative lg:col-start-4 lg:col-span-5">
+        <div class="proviantere_animation relative lg:col-start-4 lg:col-span-5">
           <div class="absolute z-50 bottom-m left-m">
             <Link
               href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/Netto+Himmelev,+Himmelev+Bygade,+Roskilde/@55.6719325,12.0672563,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525e384fa8efd1:0xd799d59f4e8418c6!2m2!1d12.1061387!2d55.6646352!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
@@ -124,53 +124,59 @@ import { Image } from "astro:assets";
 
 <script type="module">
   import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
-  // fade_up animation fra animation.css
-  // animation1
-  const inviewelement = document.querySelector(".animation1");
 
-  inView(inviewelement, () => {
-    inviewelement.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation2
-  const inviewelement2 = document.querySelector(".animation2");
-
-  inView(inviewelement2, () => {
-    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation3
-  const inviewelement3 = document.querySelector(".animation3");
-
-  inView(inviewelement3, () => {
-    inviewelement3.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation4
-  const inviewelement4 = document.querySelector(".animation4");
-
-  inView(inviewelement4, () => {
-    inviewelement4.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation5
-  const inviewelement5 = document.querySelector(".animation5");
-
-  inView(inviewelement5, () => {
-    inviewelement5.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // animation6
-  const inviewelement6 = document.querySelector(".animation6");
-
-  inView(inviewelement6, () => {
-    inviewelement6.classList.add("animate__animated", "animate__fadeInUp");
-  });
-
-  // stagger animation på card faciliteter - udarbejdet i samarbejde med ChatGPT.
-  inView(".stagger", () => {
+  // stagger animation på sektioner
+  inView(".fakta_stagger", () => {
     animate(
-      ".card-facilitet",
+      ".fakta_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".roskilde_stagger", () => {
+    animate(
+      ".roskilde_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".nyhed_stagger", () => {
+    animate(
+      ".nyhed_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.3, { start: 0 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".faciliteter_stagger", () => {
+    animate(
+      ".faciliteter_animation",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+
+  inView(".proviantere_stagger", () => {
+    animate(
+      ".proviantere_animation",
       { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
       {
         duration: 0.5,
