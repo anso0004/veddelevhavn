@@ -1,8 +1,8 @@
 ---
-const { icon = "", iconalt = "", overskrift = "", tekst = "" } = Astro.props;
+const { class: customClass = "", icon = "", iconalt = "", overskrift = "", tekst = "" } = Astro.props;
 ---
 
-<article class="@container card">
+<article class="@container card card-facilitet ${customClass}">
   <section class="flex gap-sm items-start">
     <img src={icon} alt={iconalt} class="rounded-5 lg:rounded-7 w-[50px] lg:w-4xl h-auto" />
     <div class="flex flex-col gap-2xs">
@@ -11,3 +11,5 @@ const { icon = "", iconalt = "", overskrift = "", tekst = "" } = Astro.props;
     </div>
   </section>
 </article>
+
+<!-- stagger animation på card faciliteter - udarbejdet i samarbejde med ChatGPT. -->
