@@ -67,22 +67,22 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
     </section>
     <section class="flex flex-col gap-4xl lg:gap-10xl">
       <!-- Card-hjælp -->
-      <section class="px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-2xl">
-        <h3 class="text-m_h3 lg:text-d_h3 font-montserrat text-center pb-m lg:pb-xl">Hvordan kan vi hjælpe?</h3>
-        <div class="grid gap-m lg:gap-l lg:grid-cols-3">
-          <Card_hjaelp url="/gaestesejler" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
-          <Card_hjaelp url="/omhavnen#faciliteter" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
-          <Card_hjaelp url="#" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
-          <Card_hjaelp url="#" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
-          <Card_hjaelp url="#" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
-          <Card_hjaelp url="/sejlklub#tilmeld" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
-          <Card_hjaelp url="#" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
-          <Card_hjaelp url="#" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
-          <Card_hjaelp url="#" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
+      <section class="stagger px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-2xl">
+        <h3 class="animation1 text-m_h3 lg:text-d_h3 font-montserrat text-center pb-m lg:pb-xl">Hvordan kan vi hjælpe?</h3>
+        <div class="staggeranimation grid gap-m lg:gap-l lg:grid-cols-3">
+          <Card_hjaelp class="card-hjaelp" url="/gaestesejler" overskrift="Prisen for en overnatning" tekst="Her kan du se prisen for en overnatning." />
+          <Card_hjaelp class="card-hjaelp" url="/omhavnen#faciliteter" overskrift="Faciliteter på havnen" tekst="Her kan du finde en liste over havnens faciliteter." />
+          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Venteliste til andel" tekst="Her kan du skrive dig på en venteliste til en andel." />
+          <Card_hjaelp class="card-hjaelp" url="#" overskrift="VSB og VSL" tekst="Her kan du læse forskellen på VSB og VSL." />
+          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Regler og love" tekst="Se alle regler og love for Veddelev Havn." />
+          <Card_hjaelp class="card-hjaelp" url="/sejlklub#tilmeld" overskrift="Tilmeld VSB Sejlklub" tekst="Tilmeld dig VSB Sejlklub via. formularen." />
+          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Joller" tekst="Her kan du læse om jollepladser, slæbested mm." />
+          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Kapsejladser" tekst="Her kan du læse mere om kapsejladser på havnen." />
+          <Card_hjaelp class="card-hjaelp" url="#" overskrift="Sejlerskole" tekst="Her kan du læse om sæsonens sejlerskole." />
         </div>
       </section>
       <!-- Få overblikket -->
-      <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <section class="animation2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
         <div class="lg:grid lg:grid-cols-6">
           <h2 class="lg:col-start-4 lg:col-span-3 text-m_h2 lg:text-d_h2 font-montserrat pb-m">Få overblikket</h2>
         </div>
@@ -90,14 +90,11 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
           <div class="col-span-2">
             <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-auto rounded-10 lg:rounded-15" />
           </div>
-          <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
-            På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både
-            store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.
-          </p>
+          <p class="col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
         </div>
       </section>
       <!-- Kontakt havnefogeden -->
-      <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <section class="animation3 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
         <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Kontakt havnefogeden</h2>
         <p class="text-m_p lg:text-d_p font-opensans max-w-[379px] pb-s lg:pb-ml">Tommy Jørgensen er Veddelev Havns havnefoged. Du kan spørge Tommy om alt, og hvis han ikke selv kender svaret, så kender han en der gør. Du er altid velkommen til at ringe eller skrive.</p>
         <div class="grid gap-ml lg:gap-5xl lg:grid-cols-7 xl:grid-cols-8 2xl:grid-cols-10">
@@ -114,7 +111,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
         <Card_nyhed_full />
       </section>
       <!-- Lær at sejle -->
-      <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <section class="animation4 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
         <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Lær at sejle på VSB’s sejlerskole</h2>
         <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
@@ -136,7 +133,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
         </div>
       </section>
       <!-- Kapsejladser -->
-      <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <section class="animation5 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
         <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml text-center">Vil du være med til kapsejladser?</h2>
         <div class="grid lg:grid-cols-10 pb-ml lg:gap-ml xl:gap-ml">
           <div class="lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
@@ -157,7 +154,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
         </div>
       </section>
       <!-- Joller på havnen -->
-      <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <section class="animation6 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
         <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m">Joller på havnen</h2>
         <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
           <p class="text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
@@ -169,7 +166,7 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
         </div>
       </section>
       <!-- Samarbejdspartnere -->
-      <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
+      <section class="animation7 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
         <h2 class="text-m_h2 lg:text-d_h2 font-montserrat pb-m lg:pb-ml">Samarbejdsparntere</h2>
         <div class="grid gap-m lg:gap-sm lg:grid-cols-4">
           <Image src={sam_1} alt=" Billede af Plus Bogerholderi's logo" class="border-1 border-neutral-950 rounded-10 lg:rounded-15" />
@@ -189,3 +186,69 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
     </section>
   </article>
 </MainLayout>
+
+<script type="module">
+  import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
+  // fade_up animation fra animation.css
+  // animation1
+  const inviewelement = document.querySelector(".animation1");
+
+  inView(inviewelement, () => {
+    inviewelement.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation2
+  const inviewelement2 = document.querySelector(".animation2");
+
+  inView(inviewelement2, () => {
+    inviewelement2.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation3
+  const inviewelement3 = document.querySelector(".animation3");
+
+  inView(inviewelement3, () => {
+    inviewelement3.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation4
+  const inviewelement4 = document.querySelector(".animation4");
+
+  inView(inviewelement4, () => {
+    inviewelement4.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation5
+  const inviewelement5 = document.querySelector(".animation5");
+
+  inView(inviewelement5, () => {
+    inviewelement5.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation6
+  const inviewelement6 = document.querySelector(".animation6");
+
+  inView(inviewelement6, () => {
+    inviewelement6.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // animation7
+  const inviewelement7 = document.querySelector(".animation7");
+
+  inView(inviewelement7, () => {
+    inviewelement7.classList.add("animate__animated", "animate__fadeInUp");
+  });
+
+  // stagger animation på card faciliteter - udarbejdet i samarbejde med ChatGPT.
+  inView(".stagger", () => {
+    animate(
+      ".card-hjaelp",
+      { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] },
+      {
+        duration: 0.5,
+        delay: stagger(0.2, { start: 0.6 }),
+        easing: "ease-out",
+      }
+    );
+  });
+</script>
