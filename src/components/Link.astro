@@ -1,5 +1,5 @@
 ---
-const { href = "#", target = "_self", variant = "", size = "", hover = "", press = "", textcolor = "primary", showIcon = true } = Astro.props;
+const { href = "#", target = "_self", aria_label = "", variant = "", size = "", hover = "", press = "", textcolor = "primary", showIcon = true } = Astro.props;
 
 const linkClasses = "";
 
@@ -36,7 +36,7 @@ const textcolorClasses = {
 };
 ---
 
-<a href={href} class="" target={target}>
+<a href={href} class="" target={target} aria-label={aria_label}>
   <div class:list={[linkClasses, variantClasses[variant], sizeClasses[size], hoverClasses[hover], pressClasses[press], textcolorClasses[textcolor]]}>
     <slot />
     {
