@@ -6,7 +6,7 @@ import Link from "../components/Link.astro";
   <div x-data="{ showmenu: false }" class="h-full">
     <nav id="desktopmenu" class="flex flex-col justify-between h-full">
       <ul class="flex flex-col gap-sm">
-        <li class="flex justify-center"><a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-3xl" /> </a></li>
+        <li class="flex justify-center"><a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-l 2xl:pb-3xl" /> </a></li>
         <!-- accordion -->
         <li x-data="{ open: false }" class="flex flex-col">
           <button @click="open = !open" class="text-left text-neutral-50 lg:text-d_menupunkt text-m_menupunkt font-montserrat flex gap-xs items-center hover:underline">
@@ -15,13 +15,13 @@ import Link from "../components/Link.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
-          <ul x-show="open" x-collapse class="mt-2 space-y-1 text-white text-sm">
+          <ul x-show="open" x-collapse class="mt-3xs space-y-4xs text-white text-sm">
             <li><Link href="/omhavnen" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Om Havnen</Link></li>
             <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Andel</Link></li>
             <li><Link href="/sejlklub" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Sejlklub</Link></li>
-            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Klubhuset</Link></li>
-            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Sejlerskolen</Link></li>
-            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Kapsejladser</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Klubhus</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Sejlerskole</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Kapsejlads</Link></li>
             <li><Link href="#" target="_self" variant="undermenupunkt" hover="tertiary" textcolor="secondary" showIcon={false}>Regler og love</Link></li>
           </ul>
         </li>
@@ -63,9 +63,9 @@ import Link from "../components/Link.astro";
             <li><Link href="/omhavnen" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Om Havnen</Link></li>
             <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Andel</Link></li>
             <li><Link href="/sejlklub" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Sejlklub</Link></li>
-            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Klubhuset</Link></li>
-            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Sejlerskolen</Link></li>
-            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Kapsejladser</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Klubhus</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Sejlerskole</Link></li>
+            <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Kapsejlads</Link></li>
             <li><Link href="#" target="_self" variant="undermenupunkt" showIcon={false} textcolor="secondary">Regler og love</Link></li>
           </ul>
         </li>
