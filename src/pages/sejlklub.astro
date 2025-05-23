@@ -16,27 +16,11 @@ import video_kapsejlads_mp4 from "../assets/videos/kapsejlads_video_stor.mp4";
 import { Image } from "astro:assets";
 ---
 
-<MainLayout
-  title="Sejlklub"
-  description="Bliv medlem af Veddelev Havns sejlklub og deltag i sejlads, sejlerskole og fællesskab. Læs om medlemskab, kapsejlads, frivillighed og arrangementer."
-  ogtitle="Sejlklub på Veddelev Havn – Medlemskab, Sejlerskole og Aktiviteter"
-  ogdescription="Oplev fællesskabet i Veddelev Havns sejlklub – medlemskab, sejlerskole, kapsejladser og spændende aktiviteter for alle klubbens sejlere."
->
+<MainLayout title="Sejlklub" description="Bliv medlem af Veddelev Havns sejlklub og deltag i sejlads, sejlerskole og fællesskab. Læs om medlemskab, kapsejlads, frivillighed og arrangementer." ogtitle="Sejlklub på Veddelev Havn – Medlemskab, Sejlerskole og Aktiviteter" ogdescription="Oplev fællesskabet i Veddelev Havns sejlklub – medlemskab, sejlerskole, kapsejladser og spændende aktiviteter for alle klubbens sejlere.">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero
-        gemt_billede="hidden"
-        overskrift="Sejlklub"
-        tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt."
-        video="/sejlklub_video_stor.mp4"
-        video_mobil="/sejlklub_video_stor.mp4"
-        video_type="video/mp4"
-        knap_tekst1="Medlemsskab"
-        knap_tekst2="Kontakt"
-        url1="#tilmeld"
-        url2="/kontakt"
-      />
+      <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." video="/sejlklub_video_stor.mp4" video_mobil="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" url1="#tilmeld" url2="/kontakt" />
     </section>
     <!-- formular til sejlklub -->
     <section id="tilmeld" class="formular_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
@@ -126,7 +110,7 @@ import { Image } from "astro:assets";
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
         <p class="sejle_animation2 text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm">Sejlerskolen i VSB Sejlklub er for alle, der ønsker at lære at sejle på Roskilde Fjord og lære at håndtere en sejlbåd. I VSB Sejlerskole får du lært at sejle under forskellige vind og vejrforhold samt at navigere sikkert på fjorden.</p>
         <div class="sejle_animation2">
-          <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
+          <Link href="#" target="_self" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om sejlerskolen</Link>
         </div>
       </div>
       <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
@@ -178,7 +162,7 @@ import { Image } from "astro:assets";
       <div class="grid lg:grid-cols-2 lg:items-end pb-ml lg:pb-xl lg:gap-5xl max-w-[1050px]">
         <p class="joller_animation2 text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-null">Veddelev Havn har gode faciliteter for jolleejere – både til fritid, fiskeri og sejlads. Her finder du nem adgang til vandet og et aktivt jolleliv året rundt.</p>
         <div class="joller_animation2">
-          <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
+          <Link href="#" target="_self" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om joller</Link>
         </div>
       </div>
       <div class="relative w-full h-[350px] lg:h-[450px] 2xl:h-[450px] overflow-hidden grid grid-cols-10 grid-rows-5 lg:grid-cols-10 lg:grid-rows-10 gap-s lg:gap-l rounded-10 lg:rounded-15">
@@ -193,7 +177,7 @@ import { Image } from "astro:assets";
         <div class="lg:col-start-1 lg:col-span-5 xl:col-start-1 xl:col-span-4 pb-ml lg:pb-null">
           <p class="kapsejladser_animation text-m_p lg:text-d_p font-opensans lg:max-w-[471px] pb-sm lg:pb-2xl">Fra Veddelev Havn sejles der kapsejladser i på fjorden mellem Roskilde og Veddelev. Her mødes sejlere til hyggelige og konkurrencedygtige aftener i en afslappet stemning – uanset niveau.</p>
           <div class="kapsejladser_animation">
-            <Link href="#" target="_blank" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om kapsejladser</Link>
+            <Link href="#" target="_self" variant="primary" size="small" hover="primary" press="primary" textcolor="primary">Læs mere om kapsejladser</Link>
           </div>
         </div>
         <div class="kapsejladser_animation relative w-full h-[347px] overflow-hidden lg:col-start-6 lg:col-span-6 xl:col-start-5 2xl:col-span-5" id="videoonhover" x-data>
