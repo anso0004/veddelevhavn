@@ -11,37 +11,17 @@ import ikon_video from "../assets/icons/video.svg";
 import { Image } from "astro:assets";
 ---
 
-<MainLayout
-  title="Gæstesejler"
-  description="Gæstesejler i Veddelev Havn? Læs om priser, faciliteter, adgang til Roskilde og hvor du kan proviantere. En hyggelig havn tæt på natur og by."
-  ogtitle="Gæstesejler i Veddelev Havn – Priser, faciliteter og oplevelser"
-  ogdescription="Sejl ind i naturskønne omgivelser ved Roskilde Fjord. Veddelev Havn byder gæstesejlere velkommen med gode faciliteter, enkel betaling og kort afstand til Roskilde by."
->
+<MainLayout title="Gæstesejler" description="Gæstesejler i Veddelev Havn? Læs om priser, faciliteter, adgang til Roskilde og hvor du kan proviantere. En hyggelig havn tæt på natur og by." ogtitle="Gæstesejler i Veddelev Havn – Priser, faciliteter og oplevelser" ogdescription="Sejl ind i naturskønne omgivelser ved Roskilde Fjord. Veddelev Havn byder gæstesejlere velkommen med gode faciliteter, enkel betaling og kort afstand til Roskilde by.">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero
-        gemt_video="hidden"
-        overskrift="Gæstesejler"
-        tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum."
-        billede_foto="/hero_undersider_gaestesejler.webp"
-        billede_foto_alt="Både i havnen med udkig til klubhuset"
-        knap_tekst1="Priser"
-        knap_tekst2="Faciliteter"
-        url1="#fakta"
-        url2="#g_faciliteter"
-      />
+      <Hero gemt_video="hidden" overskrift="Gæstesejler" tekst="Veddelev Havn er en lystbådhavn, som er beliggende naturskønt ved Roskilde Fjord – kun få kilometer fra Roskilde centrum." billede_foto="/hero_undersider_gaestesejler.webp" billede_foto_alt="Både i havnen med udkig til klubhuset" knap_tekst1="Priser" knap_tekst2="Faciliteter" url1="#fakta" url2="#g_faciliteter" />
     </section>
     <!-- Card fakta om priser, betaling og bådstørrelser -->
     <section id="fakta" class="fakta_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-3 items-start">
         <Card_fakta overskrift="Priser" underoverskrift="190 kr. per overnatning" tekst1="Prisen for en overnatning i Veddelev Havn er 190 kr. for alle både. Dette er inklusiv miljøafgift og strøm samt adgang til bad- og toiletfaciliteter." />
-        <Card_fakta
-          overskrift="Betaling"
-          underoverskrift="Betalingen foregår via MobilePay til 81527."
-          tekst1="Betalingen for en overnatning foregår via MobilePay til 81527. Koden til klubhuset, toilet og bad samt sejlerstuen bliver efter betaling sendt til mobilnummeret."
-          tekst2="Oplever du problemer eller har du spørgsmål så kontakt havnefogeden her."
-        />
+        <Card_fakta overskrift="Betaling" underoverskrift="Betalingen foregår via MobilePay til 81527." tekst1="Betalingen for en overnatning foregår via MobilePay til 81527. Koden til klubhuset, toilet og bad samt sejlerstuen bliver efter betaling sendt til mobilnummeret." tekst2="Oplever du problemer eller har du spørgsmål så kontakt havnefogeden her." />
         <Card_fakta overskrift="Bådstørrelse" underoverskrift="Max 14,5 m x 4,5 m" tekst1="Havnen kan tage imod både op til 14,5 meter i længden og 4,5 meter i bredden." tekst2="Ledige gæstepladser er markeret med grønne skilte." />
       </div>
     </section>
@@ -55,16 +35,7 @@ import { Image } from "astro:assets";
         </div>
         <div class="roskilde_animation relative lg:col-start-1 lg:col-span-5 pt-m lg:pt-null">
           <div class="absolute z-50 bottom-m left-m">
-            <Link
-              href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/4000+Roskilde/@55.6603783,12.0399263,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525fc995012f29:0xa00afcc1d507710!2m2!1d12.087845!2d55.64191!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
-              target="_blank"
-              variant="primary"
-              size="large"
-              hover="primary"
-              press="primary"
-              textcolor="primary"
-              showIcon={false}>Google Maps</Link
-            >
+            <Link href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/4000+Roskilde/@55.6603783,12.0399263,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525fc995012f29:0xa00afcc1d507710!2m2!1d12.087845!2d55.64191!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
           </div>
           <div class="relative w-full lg:h-full 2xl:h-[500px] overflow-hidden" id="videoonhover" x-data>
             <div class="absolute top-sm right-sm">
@@ -107,16 +78,7 @@ import { Image } from "astro:assets";
         </div>
         <div class="proviantere_animation relative lg:col-start-4 lg:col-span-5">
           <div class="absolute z-50 bottom-m left-m">
-            <Link
-              href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/Netto+Himmelev,+Himmelev+Bygade,+Roskilde/@55.6719325,12.0672563,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525e384fa8efd1:0xd799d59f4e8418c6!2m2!1d12.1061387!2d55.6646352!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
-              target="_blank"
-              variant="primary"
-              size="large"
-              hover="primary"
-              press="primary"
-              textcolor="primary"
-              showIcon={false}>Google Maps</Link
-            >
+            <Link href="https://www.google.com/maps/dir/Veddelev+Havn,+Fiskervejen,+Roskilde/Netto+Himmelev,+Himmelev+Bygade,+Roskilde/@55.6719325,12.0672563,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x46526185fcdd0307:0x62857d430500cc1d!2m2!1d12.0692364!2d55.6794037!1m5!1m1!1s0x46525e384fa8efd1:0xd799d59f4e8418c6!2m2!1d12.1061387!2d55.6646352!3e1?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" variant="primary" size="large" hover="primary" press="primary" textcolor="primary" showIcon={false}>Google Maps</Link>
           </div>
           <div class="relative w-full h-[350px] lg:h-[400px] 2xl:h-[450px] overflow-hidden">
             <Image src={proviantere} alt="Græsareal syd for Veddelev Havn" class="rounded-10 lg:rounded-15 w-full h-full object-cover object-[52%_25%]" />
@@ -130,7 +92,7 @@ import { Image } from "astro:assets";
 <script type="module">
   import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
 
-  // stagger animation på sektioner
+  // Staggeranimation på sektioner
   inView(".fakta_stagger", () => {
     animate(
       ".fakta_animation",
