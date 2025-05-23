@@ -6,7 +6,7 @@ import Link from "../components/Link.astro";
   <div x-data="{ showmenu: false }" class="h-full">
     <nav id="desktopmenu" class="flex flex-col justify-between h-full">
       <ul class="flex flex-col gap-sm">
-        <li class="flex justify-center"><a href="/"><img src="/logo.webp" alt="Logo" class="max-w-7xl hidden lg:block lg:pb-l 2xl:pb-3xl" /> </a></li>
+        <li class="flex justify-center"><a href="/"><img src="/logo.webp" alt="Logo" class="w-7xl h-auto hidden lg:block lg:pb-l 2xl:pb-3xl" /> </a></li>
         <!-- accordion -->
         <li x-data="{ open: false }" class="flex flex-col">
           <button @click="open = !open" class="text-left text-neutral-50 lg:text-d_menupunkt text-m_menupunkt font-montserrat flex gap-xs items-center hover:underline">
@@ -32,7 +32,7 @@ import Link from "../components/Link.astro";
         <li class=""><Link href="#" target="_self" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>FAQ</Link></li>
       </ul>
       <ul class="lg:flex gap-xs">
-        <a href="/"><img src="/login.svg" alt="Login-ikon" class="hidden lg:block" /> </a>
+        <a href="/"><img src="/login.svg" alt="Login-ikon" class="w-[26px] h-auto hidden lg:block" /> </a>
         <li class=""><Link href="#" target="_blank" variant="menupunkt" size="" hover="tertiary" textcolor="secondary" showIcon={false}>Login</Link></li>
       </ul>
     </nav>
@@ -43,9 +43,9 @@ import Link from "../components/Link.astro";
 <div x-data="{ showmenu: false }" class="">
   <div class="lg:hidden fixed px-ml py-xs z-60 bg-green-700 w-screen">
     <div class="flex justify-between">
-      <a href="/"><img src="/logo.webp" alt="Logo" class="max-w-[35px] lg:hidden" /> </a>
+      <a href="/"><img src="/logo.webp" alt="Logo" class="w-ml h-auto lg:hidden" /> </a>
       <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = !showmenu">
-        <img :src="showmenu ? '/kryds.svg' : '/burgermenu.svg'" alt="Kryds-ikon eller burgermenu" />
+        <img :src="showmenu ? '/kryds.svg' : '/burgermenu.svg'" alt="Kryds-ikon eller burgermenu" class="w-ml h-auto" />
       </button>
     </div>
     <!-- Åben burgermenu på mobil -->
