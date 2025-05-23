@@ -12,57 +12,17 @@ import kort from "../assets/images/kort.webp";
 import sikkerhavn from "../assets/images/sikkerhavn.webp";
 ---
 
-<MainLayout
-  title="Om Havnen"
-  description="Lær mere om Veddelev Havn – en aktiv lystbådehavn ved Roskilde Fjord med moderne faciliteter, to foreninger og certificeret som Sikker Havn."
-  ogtitle="Om Veddelev Havn – En sikker og aktiv lystbådehavn"
-  ogdescription="Få indblik i Veddelev Havn: Se faciliteterne, mød foreningerne VSB og VSL, og læs om sikkerheden for bådejere og gæstesejlere. Alt samlet ét sted."
->
+<MainLayout title="Om Havnen" description="Lær mere om Veddelev Havn – en aktiv lystbådehavn ved Roskilde Fjord med moderne faciliteter, to foreninger og certificeret som Sikker Havn." ogtitle="Om Veddelev Havn – En sikker og aktiv lystbådehavn" ogdescription="Få indblik i Veddelev Havn: Se faciliteterne, mød foreningerne VSB og VSL, og læs om sikkerheden for bådejere og gæstesejlere. Alt samlet ét sted.">
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero
-        gemt_billede="hidden"
-        overskrift="Om havnen"
-        tekst="Veddelev Havn er en mindre lystbådehavn beliggende nord for Roskilde med en smuk udsigt over Roskilde Fjord."
-        video="/havnen_video_stor.mp4"
-        video_mobil="/havnen_video_stor.mp4"
-        video_type="video/mp4"
-        knap_tekst1="Kort over havnen"
-        knap_tekst2="Faciliteter"
-        url1="#overblik"
-        url2="#faciliteter"
-      />
+      <Hero gemt_billede="hidden" overskrift="Om havnen" tekst="Veddelev Havn er en mindre lystbådehavn beliggende nord for Roskilde med en smuk udsigt over Roskilde Fjord." video="/havnen_video_stor.mp4" video_mobil="/havnen_video_stor.mp4" video_type="video/mp4" knap_tekst1="Kort over havnen" knap_tekst2="Faciliteter" url1="#overblik" url2="#faciliteter" />
     </section>
     <!-- Én havn to foreninger -->
     <section class="enhavntoforeninger_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h3 class="enhavntoforeninger_animation text-m_h3 lg:text-d_h3 font-montserrat pb-m lg:pb-ml lg:text-center">Én havn – to foreninger</h3>
       <div class="grid lg:grid-cols-2 gap-m lg:gap-2xl items-start">
-        <Card_vsbvsl
-          url="/sejlklub"
-          knap_url="/sejlklub"
-          overskrift="VSB"
-          tekst1="Veddelev Strand Bådelaug er en"
-          bold1="sejlklub"
-          tekst2="beliggende på Veddelev Havn. Klubben har omkring"
-          bold2="300 medlemmer"
-          tekst3="og tilbyder både sejlerskole, kapsejladser og sociale aktiviteter året rundt. Med faciliteter som klubhus, masteskur og gode havneforhold danner sejlklubben rammen om et aktivt og inkluderende"
-          bold3="sejlerfællesskab"
-          tekst4="på havnen."
-          knap_tekst="Læs mere om sejlklubben"
-        />
-        <Card_vsbvsl
-          url=""
-          knap_url=""
-          overskrift="VSL"
-          tekst1="Veddelev Strands Lystbådehavn AmbA er et andelsselskab med"
-          bold1="110 andelshavere"
-          tekst2=", der i fællesskab ejer og driver lystbådehavnen. Havnen har"
-          bold2="117 bådpladser"
-          tekst3="af forskellig størrelse, som bestyrelsen fordeler mellem andelshaverne en gang årligt."
-          bold3=""
-          tekst4=""
-          knap_tekst="Læs mere om andel"
-        />
+        <Card_vsbvsl url="/sejlklub" knap_url="/sejlklub" overskrift="VSB" tekst1="Veddelev Strand Bådelaug er en" bold1="sejlklub" tekst2="beliggende på Veddelev Havn. Klubben har omkring" bold2="300 medlemmer" tekst3="og tilbyder både sejlerskole, kapsejladser og sociale aktiviteter året rundt. Med faciliteter som klubhus, masteskur og gode havneforhold danner sejlklubben rammen om et aktivt og inkluderende" bold3="sejlerfællesskab" tekst4="på havnen." knap_tekst="Læs mere om sejlklubben" />
+        <Card_vsbvsl url="#" knap_url="#" overskrift="VSL" tekst1="Veddelev Strands Lystbådehavn AmbA er et andelsselskab med" bold1="110 andelshavere" tekst2=", der i fællesskab ejer og driver lystbådehavnen. Havnen har" bold2="117 bådpladser" tekst3="af forskellig størrelse, som bestyrelsen fordeler mellem andelshaverne en gang årligt." bold3="" tekst4="" knap_tekst="Læs mere om andel" />
       </div>
     </section>
     <!-- Få overblikket -->
@@ -74,10 +34,7 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
         <div class="overblik_animation col-span-2 w-full h-auto">
           <Image src={kort} alt="Kort over Veddelev Havn" class="w-full h-auto rounded-10 lg:rounded-15" />
         </div>
-        <p class="overblik_animation col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">
-          På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både
-          store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.
-        </p>
+        <p class="overblik_animation col-span-1 text-m_p lg:text-d_p font-opensans lg:pt-l">På kortet kan du få et overblik over Veddelev Havn og de mange faciliteter, der er til rådighed for både fastliggere og gæstesejlere. Havnen har el-standere og vandposter på alle broer, toilet- og badefaciliteter i klubhuset samt et havnekontor med fast tilknyttet havnefoged, der står klar til at hjælpe. Havnen rummer pladser til både store og mindre både, og der er god plads og nem adgang til havnebassinet fra Roskilde Fjord.</p>
       </div>
     </section>
     <!-- Link til pdf'er -->
@@ -128,9 +85,7 @@ import sikkerhavn from "../assets/images/sikkerhavn.webp";
     <!-- Sikker Havn -->
     <section class="sikkerhavn_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <h2 class="sikkerhavn_animation text-m_h2 lg:text-d_h2 font-montserrat pb-m">Vi er certificeret som sikker havn</h2>
-      <p class="sikkerhavn_animation text-m_p lg:text-d_p font-opensans pb-ml lg:pb-l lg:max-w-[471px]">
-        Veddelev Havn er certificeret af Foreningen af Lystbådehavne I Danmark (FLID) som Sikker Havn. Det betyder, at vi lever op til en række krav om sikkerhed og beredskab. I hele havneområdet finder du redningsstiger, redningskranse og tydelig skiltning, der sikrer hurtig hjælp i nødssituationer – for både sejlere, gæster og besøgende på land.
-      </p>
+      <p class="sikkerhavn_animation text-m_p lg:text-d_p font-opensans pb-ml lg:pb-l lg:max-w-[471px]">Veddelev Havn er certificeret af Foreningen af Lystbådehavne I Danmark (FLID) som Sikker Havn. Det betyder, at vi lever op til en række krav om sikkerhed og beredskab. I hele havneområdet finder du redningsstiger, redningskranse og tydelig skiltning, der sikrer hurtig hjælp i nødssituationer – for både sejlere, gæster og besøgende på land.</p>
       <div class="sikkerhavn_animation relative w-full h-[393px] lg:h-[450px] overflow-hidden grid lg:grid-cols-10 rounded-10 lg:rounded-15">
         <Image src={sikkerhavn} alt="Billede af skilt på havnen om sikkerhed" class="rounded-10 lg:rounded-15 lg:col-start-2 xl:col-start-2 lg:col-span-7 xl:col-span-6 w-full h-full object-cover object-[52%_25%]" />
       </div>
