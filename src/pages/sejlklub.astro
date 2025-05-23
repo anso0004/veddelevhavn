@@ -16,11 +16,27 @@ import video_kapsejlads_mp4 from "../assets/videos/kapsejlads_video_stor.mp4";
 import { Image } from "astro:assets";
 ---
 
-<MainLayout title="Sejlklub" description="Bliv medlem af Veddelev Havns sejlklub og deltag i sejlads, sejlerskole og fællesskab. Læs om medlemskab, kapsejlads, frivillighed og arrangementer." ogtitle="Sejlklub på Veddelev Havn – Medlemskab, Sejlerskole og Aktiviteter" ogdescription="Oplev fællesskabet i Veddelev Havns sejlklub – medlemskab, sejlerskole, kapsejladser og spændende aktiviteter for alle klubbens sejlere.">
+<MainLayout
+  title="Sejlklub"
+  description="Bliv medlem af Veddelev Havns sejlklub og deltag i sejlads, sejlerskole og fællesskab. Læs om medlemskab, kapsejlads, frivillighed og arrangementer."
+  ogtitle="Sejlklub på Veddelev Havn – Medlemskab, Sejlerskole og Aktiviteter"
+  ogdescription="Oplev fællesskabet i Veddelev Havns sejlklub – medlemskab, sejlerskole, kapsejladser og spændende aktiviteter for alle klubbens sejlere."
+>
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero gemt_billede="hidden" overskrift="Sejlklub" tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt." video="/sejlklub_video_stor.mp4" video_mobil="/sejlklub_video_stor.mp4" video_type="video/mp4" knap_tekst1="Medlemsskab" knap_tekst2="Kontakt" url1="#tilmeld" url2="/kontakt" />
+      <Hero
+        gemt_billede="hidden"
+        overskrift="Sejlklub"
+        tekst="VSB Sejlklub er en aktiv forening for sejlere på Veddelev Havn. Klubben tilbyder både sejlerskole, kapsejlads og sociale arrangementer året rundt."
+        video="/sejlklub_video_stor.mp4"
+        video_mobil="/sejlklub_video_stor.mp4"
+        video_type="video/mp4"
+        knap_tekst1="Medlemsskab"
+        knap_tekst2="Kontakt"
+        url1="#tilmeld"
+        url2="/kontakt"
+      />
     </section>
     <!-- formular til sejlklub -->
     <section id="tilmeld" class="formular_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
@@ -197,7 +213,7 @@ import { Image } from "astro:assets";
     <section class="fakta_stagger mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
       <div class="grid gap-ml lg:grid-cols-3 items-start">
         <Card_fakta overskrift="Havnefogede" tekst1="Havnefoged Tommy Jørgensen kan kontaktes på tlf. 51 90 66 75 eller mail havnefoged@vsb.dk." />
-        <Card_fakta overskrift="Bestyrelsen" tekst1="Bestyrelsesformand Anders Vognsen kan kontaktes på tlf. 21 71 24 06." tekst2="Næstformand Anders Terkildsen kan kontaktes på tlf. 00 00 00 00. " />
+        <Card_fakta overskrift="Bestyrelsen" tekst1="Bestyrelsesformand Anders Vognsen kan kontaktes på tlf. 21 71 24 06." tekst2="Næstformand Anders Terkildsen kan kontaktes på tlf. 40 33 46 36. " />
         <Card_fakta overskrift="Tilmelding" tekst1="Har du spørgsmål til tilmelding af VSB Sejlklub, så kontakt Niels-Erik Hansen på tlf. 42 32 69 65. " />
       </div>
       <div class="fakta_animation pt-sm lg:pt-null flex justify-end">
