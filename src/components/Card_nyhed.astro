@@ -9,30 +9,31 @@ const variantClasses = {
 ---
 
 <article class="@container card cursor-pointer">
-  <a href={url}></a>
-  <div class:list={[variantClasses[variant], "group relative"]}>
-    <!-- Dato badge -->
-    <div class="absolute z-50 bg-green-700 w-[46px] h-[63px] rounded-b-full ml-m pt-2">
-      <p class="text-labeldato font-montserrat text-neutral-100 text-center">{dato}</p>
-      <p class="text-labelmaaned font-montserrat text-neutral-100 text-center">{maaned}</p>
-    </div>
-    <!-- Billed-container med overlay -->
-    <div class="relative">
-      <img src={billede} alt={billede_alt} class="rounded-t-10 lg:rounded-t-15 w-full h-auto" />
-      <!-- Tekst nedenunder billedet -->
-      <div class="h-[90px] flex items-center justify-center px-xl">
-        <h6 class="text-m_h7 lg:text-d_h7 font-montserrat text-center">{overskrift}</h6>
+  <a href={url}>
+    <div class:list={[variantClasses[variant], "group relative"]}>
+      <!-- Dato badge -->
+      <div class="absolute z-50 bg-green-700 w-[46px] h-[63px] rounded-b-full ml-m pt-2">
+        <p class="text-labeldato font-montserrat text-neutral-100 text-center">{dato}</p>
+        <p class="text-labelmaaned font-montserrat text-neutral-100 text-center">{maaned}</p>
       </div>
-      <!-- Overlay (kun synlig på hover) -->
-      <div
-        class="px-s pt-6xl pb-ml @3xs:px-sm @3xs:pt-8xl @3xs:pb-ml @2xs:px-xl @2xs:pt-9xl @2xs:pb-ml @xs:px-xl @xs:pt-11xl @xs:pb-ml @sm:px-xl @sm:pt-13xl @sm:pb-ml absolute inset-0 bg-baggrund-primary flex flex-col items-center justify-between text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-10 lg:rounded-15"
-      >
-        <p class="text-[27px] font-montserrat font-semibold text-neutral-950 pb-xs @3xs:pb-s @xs:pb-m">Nyhed!</p>
-        <h6 class="text-d_h7 font-montserrat text-neutral-950">{overskrift}</h6>
-        <Link class="" href="#" target="_self" variant="secondary" size="small" hover="primary" press="secondary" textcolor="secondary">Læs mere</Link>
+      <!-- Billed-container med overlay -->
+      <div class="relative">
+        <img src={billede} alt={billede_alt} class="rounded-t-10 lg:rounded-t-15 w-full h-auto" />
+        <!-- Tekst nedenunder billedet -->
+        <div class="h-[90px] flex items-center justify-center px-xl">
+          <h6 class="text-m_h7 lg:text-d_h7 font-montserrat text-center">{overskrift}</h6>
+        </div>
+        <!-- Overlay (kun synlig på hover) -->
+        <div
+          class="px-s pt-6xl pb-ml @3xs:px-sm @3xs:pt-8xl @3xs:pb-ml @2xs:px-xl @2xs:pt-9xl @2xs:pb-ml @xs:px-xl @xs:pt-11xl @xs:pb-ml @sm:px-xl @sm:pt-13xl @sm:pb-ml absolute inset-0 bg-baggrund-primary flex flex-col items-center justify-between text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-10 lg:rounded-15"
+        >
+          <p class="text-[27px] font-montserrat font-semibold text-neutral-950 pb-xs @3xs:pb-s @xs:pb-m">Nyhed!</p>
+          <h6 class="text-d_h7 font-montserrat text-neutral-950">{overskrift}</h6>
+          <Link class="" href="#" target="_self" variant="secondary" size="small" hover="primary" press="secondary" textcolor="secondary">Læs mere</Link>
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </article>
 
 <!-- Hover udarbejdet i samarbejde med ChatGPT -->
