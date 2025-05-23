@@ -28,7 +28,12 @@ import sam_11 from "../assets/images/samarbejdspartner_11.webp";
 import sam_12 from "../assets/images/samarbejdspartner_12.webp";
 ---
 
-<MainLayout title="Veddelev Havn">
+<MainLayout
+  title="Veddelev Havn"
+  description="Oplev Veddelev Havn – en hyggelig havn ved Roskilde Fjord med faciliteter for både gæstesejlere og fastliggere. Få overblik over aktiviteter, sejlerskole, joller og kapsejladser."
+  ogtitle="Velkommen til Veddelev Havn"
+  ogdescription="Velkommen til Veddelev Havn – et hyggeligt havnemiljø med sejlerskole, jolleliv og spændende kapsejladser. Se nyheder, kontakt havnefogeden eller planlæg dit besøg."
+>
   <article class="">
     <!-- Landingpage -->
     <section class="landingpage_nyhed_stagger bg-[url(../assets/images/hero_landingpage_dark.webp)] bg-cover px-ml lg:px-5xl xl:px-9xl 2xl:px-11xl pt-ml pb-ml lg:pt-5xl lg:pb-7xl">
@@ -193,6 +198,47 @@ import sam_12 from "../assets/images/samarbejdspartner_12.webp";
   </article>
 </MainLayout>
 
+<!-- Schema Markup -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Om Havnen",
+        "item": "https://veddelevhavn.netlify.app/omhavnen/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gæstesejler",
+        "item": "https://veddelevhavn.netlify.app/gaestesejler/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "VSB Sejlklub",
+        "item": "https://veddelevhavn.netlify.app/sejlklub/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Andel",
+        "item": "https://veddelevhavn.netlify.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Kontakt",
+        "item": "https://veddelevhavn.netlify.app/kontakt/"
+      }
+    ]
+  }
+</script>
+
+<!-- Animationer -->
 <script type="module">
   import { inView, animate, stagger } from "https://cdn.skypack.dev/@motionone/dom";
 

@@ -7,11 +7,26 @@ import CardKontaktInfo from "../components/Card_kontakt_info.astro";
 import Card_kontakt from "../components/Card_kontakt.astro";
 ---
 
-<MainLayout title="Kontakt">
+<MainLayout
+  title="Kontakt"
+  description="Find kontaktoplysninger på Veddelev Havns havnefoged, udvalg, sejlklub og frivillige. Vi hjælper dig gerne – kontakt os via mail eller telefon."
+  ogtitle="Kontakt Veddelev Havn – Havnefoged, udvalg og frivillige"
+  ogdescription="Har du spørgsmål om havnen, sejlklubben eller vores aktiviteter? Find kontaktoplysninger til havnefogeden, udvalg og frivillige hos Veddelev Havn."
+>
   <article class="flex flex-col gap-4xl lg:gap-10xl">
     <!-- Herosektion -->
     <section class="mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
-      <Hero gemt_video="hidden" overskrift="Kontakt" tekst="Har du spørgsmål til havnefogeden, VSL, VSB eller en af vores frivillige på havnen er du velkommen til at kontakte dem telefonisk eller på mail." billede_foto="/hero_undersider_kontakt.webp" billede_foto_alt="Klubhuset med VSB-logo" knap_tekst1="Havnefoged" knap_tekst2="Udvalg" url1="#havnefoged" url2="#udvalg" />
+      <Hero
+        gemt_video="hidden"
+        overskrift="Kontakt"
+        tekst="Har du spørgsmål til havnefogeden, VSL, VSB eller en af vores frivillige på havnen er du velkommen til at kontakte dem telefonisk eller på mail."
+        billede_foto="/hero_undersider_kontakt.webp"
+        billede_foto_alt="Klubhuset med VSB-logo"
+        knap_tekst1="Havnefoged"
+        knap_tekst2="Udvalg"
+        url1="#havnefoged"
+        url2="#udvalg"
+      />
     </section>
     <!-- Havnefogeden -->
     <section id="havnefoged" class="havnefoged_stagger2 mx-ml lg:mx-5xl xl:mx-9xl 2xl:mx-11xl">
